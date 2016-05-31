@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+	<assert>
+		<scope>BR-33</scope>
+		<scope>BR-38</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify that an allowance charge VAT category ID is present</description>
+			<success>BR-33</success>
+			<success>BR-38</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+			<cac:AllowanceCharge>
+				<cac:TaxCategory>
+					<cbc:ID>S</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+		</Invoice>
+	</test>
+
+
+	<test>
+		<assert>
+			<description>Trigger error when allowance charge VAT category ID is missing</description>
+			<error>BR-33</error>
+			<error>BR-38</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+			<cac:AllowanceCharge>
+				<!-- <cac:TaxCategory>
+					<cbc:ID>S</cbc:ID>
+				</cac:TaxCategory> -->
+			</cac:AllowanceCharge>
+		</Invoice>
+	</test>
+	
+	<test>
+		<assert>
+			<description>Trigger error when allowance charge VAT category ID is missing</description>
+			<error>BR-33</error>
+			<error>BR-38</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			
+			<cac:AllowanceCharge>
+				<cac:TaxCategory>
+					<!-- <cbc:ID>S</cbc:ID> -->
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+		</Invoice>
+	</test>
+	
+
+
+</testSet>

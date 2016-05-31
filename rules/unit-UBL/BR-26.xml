@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+	<assert>
+		<scope>BR-26</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify that an invoice period has a start date</description>
+			<success>BR-26</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+			<cac:InvoicePeriod>
+				<cbc:StartDate>2013-06-01</cbc:StartDate>
+			</cac:InvoicePeriod>
+		</Invoice>
+	</test>
+
+
+	<test>
+		<assert>
+			<description>Trigger error when invoice period does not have a start date</description>
+			<error>BR-26</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+			<cac:InvoicePeriod>
+				<!-- <cbc:StartDate>2013-06-01</cbc:StartDate> -->
+			</cac:InvoicePeriod>
+		</Invoice>
+	</test>
+
+
+</testSet>

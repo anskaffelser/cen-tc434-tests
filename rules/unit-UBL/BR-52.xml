@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+	<assert>
+		<scope>BR-52</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify that the bank creditor is present when payment means is direct
+				debit</description>
+			<success>BR-52</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:PayeeParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeID="SEPA">2298740918237</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:PayeeParty>
+
+			<cac:PaymentMeans>
+				<cbc:PaymentMeansCode>49</cbc:PaymentMeansCode>
+			</cac:PaymentMeans>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Verify that the bank creditor is not mandatory when payment means is not direct
+				debit</description>
+			<success>BR-52</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<!-- <cac:PayeeParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeID="SEPA">2298740918237</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:PayeeParty> -->
+			
+			<cac:PaymentMeans>
+				<cbc:PaymentMeansCode>31</cbc:PaymentMeansCode>
+			</cac:PaymentMeans>
+		</Invoice>
+	</test>
+
+	<test>
+		<assert>
+			<description>Trigger error if bank creditor is missing when payment means is direct
+				debit</description>
+			<error>BR-52</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:PayeeParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeID="GLN">2298740918237</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:PayeeParty>
+
+			<cac:PaymentMeans>
+				<cbc:PaymentMeansCode>49</cbc:PaymentMeansCode>
+			</cac:PaymentMeans>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if payment mandate is missing when payment means is direct
+				debit</description>
+			<error>BR-52</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<!-- <cac:PayeeParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeID="SEPA">2298740918237</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:PayeeParty> -->
+
+			<cac:PaymentMeans>
+				<cbc:PaymentMeansCode>49</cbc:PaymentMeansCode>
+			</cac:PaymentMeans>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if payment mandate is missing when payment means is direct
+				debit</description>
+			<error>BR-52</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:PayeeParty>
+				<!-- <cac:PartyIdentification>
+					<cbc:ID schemeID="SEPA">2298740918237</cbc:ID>
+				</cac:PartyIdentification> -->
+			</cac:PayeeParty>
+
+			<cac:PaymentMeans>
+				<cbc:PaymentMeansCode>49</cbc:PaymentMeansCode>
+			</cac:PaymentMeans>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if payment mandate is missing when payment means is direct
+				debit</description>
+			<error>BR-52</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:PayeeParty>
+				<cac:PartyIdentification>
+					<!-- <cbc:ID schemeID="SEPA">2298740918237</cbc:ID> -->
+				</cac:PartyIdentification>
+			</cac:PayeeParty>
+
+			<cac:PaymentMeans>
+				<cbc:PaymentMeansCode>49</cbc:PaymentMeansCode>
+			</cac:PaymentMeans>
+		</Invoice>
+	</test>
+</testSet>

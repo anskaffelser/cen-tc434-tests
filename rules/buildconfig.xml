@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+    
+
+    <testfolder>unit-UBL</testfolder>
+    
+    <!-- TC434 UBL -->
+    <configuration>
+        <identifier>tc434-ubl</identifier>
+        <title>TC434 UBL</title>
+        <inherit>ubl-invoice-2.1</inherit>
+        <file source="validation/ubl/schematron/TC434-UBL-TC434.sch" path="xsl/TC434-UBL-TC434.xsl" />
+    </configuration>
+</buildConfigurations>
