@@ -23,7 +23,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when invoiced quantity unitcode is missing</description>
-			<error>BR-19</error>
+			<error>BR-20</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
