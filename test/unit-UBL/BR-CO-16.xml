@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+	<assert>
+		<scope>BR-CO-16</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify that Amount due for payment = Invoice total VAT amount - Paid amount.</description>
+			<success>BR-CO-16</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:LegalMonetaryTotal>
+				<cbc:TaxInclusiveAmount currencyID="NOK">1200.00</cbc:TaxInclusiveAmount>
+				<cbc:PrepaidAmount currencyID="NOK">1000</cbc:PrepaidAmount>
+				<cbc:PayableAmount currencyID="NOK">200.00</cbc:PayableAmount>
+			</cac:LegalMonetaryTotal>
+
+		</Invoice>
+	</test>
+
+	<test>
+		<assert>
+			<description>Verify that Amount due for payment = Invoice total VAT amount - Paid amount.</description>
+			<success>BR-CO-16</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:LegalMonetaryTotal>
+				<cbc:TaxInclusiveAmount currencyID="NOK">1200.00</cbc:TaxInclusiveAmount>
+				<cbc:PrepaidAmount currencyID="NOK">0</cbc:PrepaidAmount>
+				<cbc:PayableAmount currencyID="NOK">1200.00</cbc:PayableAmount>
+			</cac:LegalMonetaryTotal>
+			
+		</Invoice>
+	</test>	
+	
+	<test>
+		<assert>
+			<description>Verify that Amount due for payment = Invoice total VAT amount - Paid amount.</description>
+			<success>BR-CO-16</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:LegalMonetaryTotal>
+				<cbc:TaxInclusiveAmount currencyID="NOK">1200.00</cbc:TaxInclusiveAmount>
+				<!-- <cbc:PrepaidAmount currencyID="NOK">1000</cbc:PrepaidAmount>-->
+				<cbc:PayableAmount currencyID="NOK">1200.00</cbc:PayableAmount>
+			</cac:LegalMonetaryTotal>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Verify that Amount due for payment = Invoice total VAT amount - Paid amount.</description>
+			<success>BR-CO-16</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:LegalMonetaryTotal>
+				<cbc:TaxInclusiveAmount currencyID="NOK">1200.00</cbc:TaxInclusiveAmount>
+				<cbc:PrepaidAmount currencyID="NOK">1200</cbc:PrepaidAmount>
+				<cbc:PayableAmount currencyID="NOK">0</cbc:PayableAmount>
+			</cac:LegalMonetaryTotal>
+			
+		</Invoice>
+	</test>
+	
+
+	<test>
+		<assert>
+			<description>Trigger error if Amount due for payment != Invoice total VAT amount - Paid amount</description>
+			<error>BR-CO-16</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:LegalMonetaryTotal>
+				<cbc:TaxInclusiveAmount currencyID="NOK">1200.00</cbc:TaxInclusiveAmount>
+				<cbc:PrepaidAmount currencyID="NOK">100</cbc:PrepaidAmount>
+				<cbc:PayableAmount currencyID="NOK">1200.00</cbc:PayableAmount>
+			</cac:LegalMonetaryTotal>
+		</Invoice>
+	</test>
+	
+	
+	<test>
+		<assert>
+			<description>Trigger error if Amount due for payment != Invoice total VAT amount - Paid amount</description>
+			<error>BR-CO-16</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:LegalMonetaryTotal>
+				<cbc:TaxInclusiveAmount currencyID="NOK">1200.00</cbc:TaxInclusiveAmount>
+				<!-- <cbc:PrepaidAmount currencyID="NOK">100</cbc:PrepaidAmount>-->
+				<cbc:PayableAmount currencyID="NOK">1100.00</cbc:PayableAmount>
+			</cac:LegalMonetaryTotal>
+		</Invoice>
+	</test>
+	
+</testSet>
