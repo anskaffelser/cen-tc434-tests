@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+	<assert>
+		<scope>BR-S-01</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify that an Invoice that contains a line where the Invoiced item VAT category code is “S” contain a VAT breakdown with VAT category code = "S"</description>
+			<success>BR-S-01</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “S”, does not contain a VAT breakdown with VAT category code = "S"</description>
+			<error>BR-S-01</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>A</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “S”, does not contain a VAT breakdown with VAT category code = "S"</description>
+			<error>BR-S-01</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<!-- <cbc:ID>S</cbc:ID> -->
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+		</Invoice>
+	</test>
+	
+	
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “S”, does not contain a VAT breakdown with VAT category code = "S"</description>
+			<error>BR-S-01</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+			<!--	<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal> -->
+			</cac:TaxTotal>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “S”, does not contain a VAT breakdown with VAT category code = "S"</description>
+			<error>BR-S-01</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+		<!--  	<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal> -->
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+		</Invoice>
+	</test>
+</testSet>

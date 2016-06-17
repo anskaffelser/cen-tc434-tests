@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<scope>BR-42</scope>
-		<scope>BR-44</scope>
+		<scope>BR-O-06</scope>
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an invoice line allowance charge amount is
-				present</description>
-			<success>BR-42</success>
-			<success>BR-44</success>
+			<description>Verify that an Invoice line where VAT category code (BT-142) is "O" does
+				not contain an invoiced item VAT rate (BT-143).</description>
+			<success>BR-O-06</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:InvoiceLine>
-				<cac:AllowanceCharge>
-					<cbc:Amount currencyID="NOK">100</cbc:Amount>
-				</cac:AllowanceCharge>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>O</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-
-
 	<test>
 		<assert>
-			<description>Trigger error when invoice line allowance charge amount is
-				missing</description>
-			<error>BR-42</error>
-			<error>BR-44</error>
+			<description>Trigger error when an Invoice line where VAT category code (BT-142) is "O"
+				does contain an invoiced item VAT rate (BT-143).</description>
+			<error>BR-O-06</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:InvoiceLine>
-				<cac:AllowanceCharge>
-					<!-- 	<cbc:Amount currencyID="NOK">100</cbc:Amount> -->
-				</cac:AllowanceCharge>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>O</cbc:ID>
+						<cbc:Percent>2</cbc:Percent>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
 			</cac:InvoiceLine>
+
 		</Invoice>
 	</test>
-
-
+	
 </testSet>

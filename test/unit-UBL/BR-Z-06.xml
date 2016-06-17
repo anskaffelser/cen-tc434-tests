@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+	<assert>
+		<scope>BR-Z-06</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify that in a VAT breakdown (BG-21) where VAT category code (BT-111) is
+				"Z", the VAT category taxable amount (BT-109) shall equal the sum of: Invoice line
+				net amounts where the VAT category codes (BT-142) is "Z" (BT-122) minus document
+				level allowance amount (BT-86) plus document level charge amount (BT-93) where the
+				VAT category codes (BT-142, BT-89, BT-96) are “Z". </description>
+			<success>BR-Z-06</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:Amount>100</cbc:Amount>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxableAmount>1100</cbc:TaxableAmount>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+
+			<cac:InvoiceLine>
+				<cbc:LineExtensionAmount>1000</cbc:LineExtensionAmount>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Verify that in a VAT breakdown (BG-21) where VAT category code (BT-111) is
+				"Z", the VAT category taxable amount (BT-109) shall equal the sum of: Invoice line
+				net amounts where the VAT category codes (BT-142) is "Z" (BT-122) minus document
+				level allowance amount (BT-86) plus document level charge amount (BT-93) where the
+				VAT category codes (BT-142, BT-89, BT-96) are “Z". </description>
+			<success>BR-Z-06</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:Amount>100</cbc:Amount>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxableAmount>-900</cbc:TaxableAmount>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:InvoiceLine>
+				<cbc:LineExtensionAmount>-1000</cbc:LineExtensionAmount>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Verify that in a VAT breakdown (BG-21) where VAT category code (BT-111) is
+				"Z", the VAT category taxable amount (BT-109) shall equal the sum of: Invoice line
+				net amounts where the VAT category codes (BT-142) is "Z" (BT-122) minus document
+				level allowance amount (BT-86) plus document level charge amount (BT-93) where the
+				VAT category codes (BT-142, BT-89, BT-96) are “Z". </description>
+			<success>BR-Z-06</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:Amount>100</cbc:Amount>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxableAmount>900</cbc:TaxableAmount>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:InvoiceLine>
+				<cbc:LineExtensionAmount>1000</cbc:LineExtensionAmount>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+			<cac:InvoiceLine>
+				<cbc:LineExtensionAmount>200</cbc:LineExtensionAmount>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Verify that in a VAT breakdown (BG-21) where VAT category code (BT-111) is
+				"Z", the VAT category taxable amount (BT-109) shall equal the sum of: Invoice line
+				net amounts where the VAT category codes (BT-142) is "Z" (BT-122) minus document
+				level allowance amount (BT-86) plus document level charge amount (BT-93) where the
+				VAT category codes (BT-142, BT-89, BT-96) are “Z". </description>
+			<success>BR-Z-06</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:Amount>100</cbc:Amount>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:Amount>50</cbc:Amount>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxableAmount>1050</cbc:TaxableAmount>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:InvoiceLine>
+				<cbc:LineExtensionAmount>1000</cbc:LineExtensionAmount>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	
+	<test>
+		<assert>
+			<description>Verify that in a VAT breakdown (BG-21) where VAT category code (BT-111) is
+				"Z", the VAT category taxable amount (BT-109) shall equal the sum of: Invoice line
+				net amounts where the VAT category codes (BT-142) is "Z" (BT-122) minus document
+				level allowance amount (BT-86) plus document level charge amount (BT-93) where the
+				VAT category codes (BT-142, BT-89, BT-96) are “Z". </description>
+			<success>BR-Z-06</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:Amount>100</cbc:Amount>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:Amount>50</cbc:Amount>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxableAmount>1550</cbc:TaxableAmount>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:InvoiceLine>
+				<cbc:LineExtensionAmount>1000</cbc:LineExtensionAmount>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+			<cac:InvoiceLine>
+				<cbc:LineExtensionAmount>500</cbc:LineExtensionAmount>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if a VAT breakdown (BG-21) where VAT category code (BT-111) is
+				"Z", the VAT category taxable amount (BT-109) does not equal the sum of: Invoice line
+				net amounts where the VAT category codes (BT-142) is "Z" (BT-122) minus document
+				level allowance amount (BT-86) plus document level charge amount (BT-93) where the
+				VAT category codes (BT-142, BT-89, BT-96) are “Z". </description>
+			<error>BR-Z-06</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:Amount>100</cbc:Amount>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:Amount>50</cbc:Amount>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxableAmount>1450</cbc:TaxableAmount>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:InvoiceLine>
+				<cbc:LineExtensionAmount>1000</cbc:LineExtensionAmount>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+			<cac:InvoiceLine>
+				<cbc:LineExtensionAmount>500</cbc:LineExtensionAmount>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+		</Invoice>
+	</test>
+
+
+	<test>
+		<assert>
+			<description>Trigger error if a VAT breakdown (BG-21) where VAT category code (BT-111) is
+				"Z", the VAT category taxable amount (BT-109) does not equal the sum of: Invoice line
+				net amounts where the VAT category codes (BT-142) is "Z" (BT-122) minus document
+				level allowance amount (BT-86) plus document level charge amount (BT-93) where the
+				VAT category codes (BT-142, BT-89, BT-96) are “Z". </description>
+			<error>BR-Z-06</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:Amount>100</cbc:Amount>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxableAmount>-500</cbc:TaxableAmount>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:InvoiceLine>
+				<cbc:LineExtensionAmount>-1000</cbc:LineExtensionAmount>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+			<cac:InvoiceLine>
+				<cbc:LineExtensionAmount>500</cbc:LineExtensionAmount>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+		</Invoice>
+	</test>
+
+</testSet>

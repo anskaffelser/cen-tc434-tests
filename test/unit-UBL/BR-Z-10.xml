@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+	<assert>
+		<scope>BR-Z-10</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify that an Invoice where VAT category code (BT-111) is "Z" does not
+				contain the VAT exemption reason text (BT-113) for that VAT category </description>
+			<success>BR-Z-10</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+						<!-- <cbc:TaxExemptionReason>Exempt New Means of Transport</cbc:TaxExemptionReason> -->
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when an Verify that an Invoice where VAT category code
+				(BT-111) is "Z" does contain the VAT exemption reason text (BT-113) for that VAT
+				category</description>
+			<error>BR-Z-10</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+						<cbc:TaxExemptionReason>Exempt New Means of
+							Transport</cbc:TaxExemptionReason>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+
+		</Invoice>
+	</test>
+
+
+</testSet>

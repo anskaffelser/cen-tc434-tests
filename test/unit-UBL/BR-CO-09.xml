@@ -98,7 +98,7 @@
 			
 			<cac:TaxRepresentativeParty>
 				<cac:PartyTaxScheme>
-					<cbc:CompanyID schemeID="NL:VAT">967611265</cbc:CompanyID>
+					<cbc:CompanyID>967611265</cbc:CompanyID>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
 		</Invoice>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+	<assert>
+		<scope>BR-IC-09</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify that in an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC" the deliver to country code (BT-75) is not blank</description>
+			<success>BR-IC-09</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			
+			<cac:Delivery>
+				<cac:DeliveryLocation>
+					<cac:Address>
+						<cac:Country>
+							<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+						</cac:Country>
+					</cac:Address>
+				</cac:DeliveryLocation>
+			</cac:Delivery>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the deliver to country code (BT-75) blank</description>
+			<error>BR-IC-09</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:Delivery>
+				<cac:DeliveryLocation>
+					<cac:Address>
+						<cac:Country>
+							<cbc:IdentificationCode></cbc:IdentificationCode>
+						</cac:Country>
+					</cac:Address>
+				</cac:DeliveryLocation>
+			</cac:Delivery>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the deliver to country code (BT-75) blank</description>
+			<error>BR-IC-09</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:Delivery>
+				<cac:DeliveryLocation>
+					<cac:Address>
+						<cac:Country>
+							<cbc:IdentificationCode><!--comment only--></cbc:IdentificationCode>
+						</cac:Country>
+					</cac:Address>
+				</cac:DeliveryLocation>
+			</cac:Delivery>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+	
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the deliver to country code (BT-75) blank</description>
+			<error>BR-IC-09</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:Delivery>
+				<cac:DeliveryLocation>
+					<cac:Address>
+						<cac:Country>
+							<cbc:IdentificationCode/>
+						</cac:Country>
+					</cac:Address>
+				</cac:DeliveryLocation>
+			</cac:Delivery>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the deliver to country code (BT-75) blank</description>
+			<error>BR-IC-09</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:Delivery>
+				<cac:DeliveryLocation>
+					<cac:Address>
+						<!--  <cac:Country>
+							<cbc:IdentificationCode/> 
+						</cac:Country> -->
+					</cac:Address>
+				</cac:DeliveryLocation>
+			</cac:Delivery>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the deliver to country code (BT-75) blank</description>
+			<error>BR-IC-09</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:Delivery>
+				<cac:DeliveryLocation>
+					<!-- <cac:Address>
+					 <cac:Country>
+							<cbc:IdentificationCode/> 
+						</cac:Country> 
+					</cac:Address> -->
+				</cac:DeliveryLocation>
+			</cac:Delivery>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+	
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the deliver to country code (BT-75) blank</description>
+			<error>BR-IC-09</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:Delivery>
+				<!-- 	<cac:DeliveryLocation>
+					<cac:Address>
+					 <cac:Country>
+							<cbc:IdentificationCode/> 
+						</cac:Country> 
+					</cac:Address> 
+				</cac:DeliveryLocation> -->
+			</cac:Delivery>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+	
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the deliver to country code (BT-75) blank</description>
+			<error>BR-IC-09</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<!-- <cac:Delivery>
+					<cac:DeliveryLocation>
+					<cac:Address>
+					 <cac:Country>
+							<cbc:IdentificationCode/> 
+						</cac:Country> 
+					</cac:Address> 
+				</cac:DeliveryLocation> 
+			</cac:Delivery> -->
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+
+</testSet>
