@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that Amount due for payment = Invoice total VAT amount - Paid amount.</description>
+			<description>Verify that Amount due for payment = Invoice total with VAT - Paid amount.</description>
 			<success>BR-CO-16</success>
 		</assert>
 		<Invoice
@@ -23,7 +23,7 @@
 
 	<test>
 		<assert>
-			<description>Verify that Amount due for payment = Invoice total VAT amount - Paid amount.</description>
+			<description>Verify that Amount due for payment = Invoice total with VAT - Paid amount.</description>
 			<success>BR-CO-16</success>
 		</assert>
 		<Invoice
@@ -41,7 +41,7 @@
 	
 	<test>
 		<assert>
-			<description>Verify that Amount due for payment = Invoice total VAT amount - Paid amount.</description>
+			<description>Verify that Amount due for payment = Invoice total with VAT - Paid amount.</description>
 			<success>BR-CO-16</success>
 		</assert>
 		<Invoice
@@ -58,7 +58,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that Amount due for payment = Invoice total VAT amount - Paid amount.</description>
+			<description>Verify that Amount due for payment = Invoice total with VAT - Paid amount.</description>
 			<success>BR-CO-16</success>
 		</assert>
 		<Invoice
@@ -77,7 +77,7 @@
 
 	<test>
 		<assert>
-			<description>Trigger error if Amount due for payment != Invoice total VAT amount - Paid amount</description>
+			<description>Trigger error if Amount due for payment != Invoice total with VAT - Paid amount</description>
 			<error>BR-CO-16</error>
 		</assert>
 		<Invoice
@@ -95,7 +95,7 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error if Amount due for payment != Invoice total VAT amount - Paid amount</description>
+			<description>Trigger error if Amount due for payment != Invoice total with VAT - Paid amount</description>
 			<error>BR-CO-16</error>
 		</assert>
 		<Invoice

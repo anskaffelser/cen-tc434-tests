@@ -2,21 +2,21 @@
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
 		<scope>BR-Z-04</scope>
-		<scope>BR-Z-05</scope>
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that for a document level allowance or charge where the Document level
-				allowance/charge VAT category code (BT-89) is "Z" the Document level allowance/charge rate
+			<description>Verify that for a document level allowance where the Document level
+				allowance VAT category code (BT-89) is "Z" the Document level allowance rate
 				= 0 (zero). </description>
 			<success>BR-Z-04</success>
-			<success>BR-Z-05</success>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>Z</cbc:ID>
 					<cbc:Percent>0</cbc:Percent>
@@ -26,17 +26,17 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error for a document level allowance or charge where the Document level
-				allowance/charge VAT category code (BT-89) is "Z", and the Document level allowance/charge rate
+			<description>Trigger error for a document level allowance where the Document level
+				allowance VAT category code (BT-89) is "Z", and the Document level allowance rate
 				!= 0 (zero).  </description>
 			<error>BR-Z-04</error>
-			<error>BR-Z-05</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>Z</cbc:ID>
 					<cbc:Percent>10</cbc:Percent>
@@ -47,11 +47,10 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error for a document level allowance or charge where the Document level
-				allowance/charge VAT category code (BT-89) is "Z", and the Document level allowance/charge rate
+			<description>Trigger error for a document level allowance where the Document level
+				allowance VAT category code (BT-89) is "Z", and the Document level allowance rate
 				!= 0 (zero).  </description>
 			<error>BR-Z-04</error>
-			<error>BR-Z-05</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -59,6 +58,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:AllowanceCharge>
 				<cac:TaxCategory>
+					<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 					<cbc:ID>Z</cbc:ID>
 					<cbc:Percent>-10</cbc:Percent>
 				</cac:TaxCategory>

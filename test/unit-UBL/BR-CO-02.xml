@@ -22,21 +22,7 @@
 			</cac:PaymentMeans>
 		</Invoice>
 	</test>
-	<test>
-		<assert>
-			<description>Verify that account identification is not mandatory when payment means is not
-				credit transfer</description>
-			<success>BR-CO-02</success>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:PaymentMeans>
-				<cbc:PaymentMeansCode>31</cbc:PaymentMeansCode>
-			</cac:PaymentMeans>
-		</Invoice>
-	</test>
+	
 	<test>
 		<assert>
 			<description>Trigger error if account identification is missing when payment means is credit transfer</description>

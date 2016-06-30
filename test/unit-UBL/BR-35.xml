@@ -2,13 +2,13 @@
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
 		<scope>BR-35</scope>
-		<scope>BR-40</scope>
+
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an allowance charge reason is present</description>
+			<description>Verify that an allowance reason is present</description>
 			<success>BR-35</success>
-			<success>BR-40</success>
+			
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -16,6 +16,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:AllowanceChargeReason>Freight</cbc:AllowanceChargeReason>
 			</cac:AllowanceCharge>
 		</Invoice>
@@ -24,9 +25,8 @@
 
 	<test>
 		<assert>
-			<description>Trigger error when allowance charge reason is missing</description>
+			<description>Trigger error when allowance reason is missing</description>
 			<error>BR-35</error>
-			<error>BR-40</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -34,6 +34,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<!-- <cbc:AllowanceChargeReason>Freight</cbc:AllowanceChargeReason> -->
 			</cac:AllowanceCharge>
 

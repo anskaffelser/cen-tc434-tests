@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level allowance or charge
+			<description>Verify that an Invoice that contains a document level allowance
 				with a document level allowance/charge VAT category code (BT-89) that is "G" does
 				contain the Seller's VAT identifier (BT-30). </description>
 			<success>BR-G-03</success>
@@ -32,7 +32,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance or charge
+			<description>Trigger error if an Invoice that contains a document level allowance
 				with a document level allowance/charge VAT category code (BT-89) that is "G" does not
 				contain the Seller's VAT identifier (BT-30). </description>
 			<error>BR-G-03</error>
@@ -60,7 +60,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance or charge
+			<description>Trigger error if an Invoice that contains a document level allowance
 				with a document level allowance/charge VAT category code (BT-89) that is "G" does not
 				contain the Seller's VAT identifier (BT-30). </description>
 			<error>BR-G-03</error>

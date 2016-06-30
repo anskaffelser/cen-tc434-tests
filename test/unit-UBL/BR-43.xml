@@ -2,13 +2,13 @@
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
 		<scope>BR-43</scope>
-		<scope>BR-45</scope>
+
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an allowance charge reason is present</description>
+			<description>Verify that an allowance reason is present</description>
 			<success>BR-43</success>
-			<success>BR-45</success>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -25,9 +25,9 @@
 
 	<test>
 		<assert>
-			<description>Trigger error when allowance charge reason is missing</description>
+			<description>Trigger error when allowance reason is missing</description>
 			<error>BR-43</error>
-			<error>BR-45</error>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

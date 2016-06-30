@@ -2,17 +2,17 @@
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
 		<scope>BR-AE-03</scope>
-		<scope>BR-AE-04</scope>
+
 	</assert>
 
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level allowance or charge
-				with a document level allowance/charge VAT category code that is "AE" contains both
+			<description>Verify that an Invoice that contains a document level allowance
+				with a document level allowance VAT category code that is "AE" contains both
 				the Seller's VAT identifier (BT-30) and Buyer's VAT identifier
 				(BT-46).</description>
 			<success>BR-AE-03</success>
-			<success>BR-AE-04</success>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -35,6 +35,7 @@
 			</cac:AccountingCustomerParty>
 
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>AE</cbc:ID>
 				</cac:TaxCategory>
@@ -44,12 +45,11 @@
 
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a document level allowance or
-				charge with a document level allowance/charge VAT category code that is "AE" does
+			<description>Trigger error when an Invoice that contains a document level allowance with a document level allowance VAT category code that is "AE" does
 				not contain both the Seller's VAT identifier (BT-30) and Buyer's VAT identifier
 				(BT-46).</description>
 			<error>BR-AE-03</error>
-			<error>BR-AE-04</error>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -72,6 +72,7 @@
 			</cac:AccountingCustomerParty>
 
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>AE</cbc:ID>
 				</cac:TaxCategory>
@@ -84,11 +85,11 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a document level allowance or
-				charge with a document level allowance/charge VAT category code that is "AE" does
+				charge with a document level allowance VAT category code that is "AE" does
 				not contain both the Seller's VAT identifier (BT-30) and Buyer's VAT identifier
 				(BT-46).</description>
 			<error>BR-AE-03</error>
-			<error>BR-AE-04</error>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -110,6 +111,7 @@
 				</cac:Party>
 			</cac:AccountingCustomerParty>
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>AE</cbc:ID>
 				</cac:TaxCategory>
@@ -119,12 +121,11 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a document level allowance or
-				charge with a document level allowance/charge VAT category code that is "AE" does
+			<description>Trigger error when an Invoice that contains a document level allowance with a document level allowance VAT category code that is "AE" does
 				not contain both the Seller's VAT identifier (BT-30) and Buyer's VAT identifier
 				(BT-46).</description>
 			<error>BR-AE-03</error>
-			<error>BR-AE-04</error>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -147,6 +148,7 @@
 			</cac:AccountingCustomerParty>
 
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>AE</cbc:ID>
 				</cac:TaxCategory>
@@ -156,12 +158,10 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a document level allowance or
-				charge with a document level allowance/charge VAT category code that is "AE" does
+			<description>Trigger error when an Invoice that contains a document level allowance with a document level allowance VAT category code that is "AE" does
 				not contain both the Seller's VAT identifier (BT-30) and Buyer's VAT identifier
 				(BT-46).</description>
 			<error>BR-AE-03</error>
-			<error>BR-AE-04</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -184,6 +184,7 @@
 			</cac:AccountingCustomerParty>
 
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>AE</cbc:ID>
 				</cac:TaxCategory>
