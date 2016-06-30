@@ -58,7 +58,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “Z”, does not contain a VAT breakdown with VAT category code = "S"</description>
+			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “Z”, does not contain the Seller's VAT identifier.</description>
 			<error>BR-Z-02</error>
 		</assert>
 		<Invoice
@@ -87,7 +87,7 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “Z”, does not contain a VAT breakdown with VAT category code = "S"</description>
+			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “Z”, does not contain the Seller's VAT identifier.</description>
 			<error>BR-Z-02</error>
 		</assert>
 		<Invoice

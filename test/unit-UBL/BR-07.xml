@@ -60,13 +60,14 @@
 					</cac:PartyName>
 				</cac:Party>
 				-->
-			</cac:AccountingCustomerParty> -- </Invoice>
+			</cac:AccountingCustomerParty>
+		</Invoice>
 	</test>
 
 	<test>
 		<assert>
 			<description>Trigger error when buyers name is missing</description>
-			<Trigger>BR-07</Trigger>
+			<error>BR-07</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

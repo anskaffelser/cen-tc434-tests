@@ -2,7 +2,6 @@
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
 		<scope>BR-G-03</scope>
-		<scope>BR-G-04</scope>
 	</assert>
 	<test>
 		<assert>
@@ -10,7 +9,6 @@
 				with a document level allowance/charge VAT category code (BT-89) that is "G" does
 				contain the Seller's VAT identifier (BT-30). </description>
 			<success>BR-G-03</success>
-			<success>BR-G-04</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -25,6 +23,7 @@
 			</cac:AccountingSupplierParty>
 
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>G</cbc:ID>
 				</cac:TaxCategory>
@@ -37,7 +36,6 @@
 				with a document level allowance/charge VAT category code (BT-89) that is "G" does not
 				contain the Seller's VAT identifier (BT-30). </description>
 			<error>BR-G-03</error>
-			<error>BR-G-04</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -52,6 +50,7 @@
 			</cac:AccountingSupplierParty>
 			
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>G</cbc:ID>
 				</cac:TaxCategory>
@@ -65,7 +64,6 @@
 				with a document level allowance/charge VAT category code (BT-89) that is "G" does not
 				contain the Seller's VAT identifier (BT-30). </description>
 			<error>BR-G-03</error>
-			<error>BR-G-04</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -80,6 +78,7 @@
 			</cac:AccountingSupplierParty>
 			
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>G</cbc:ID>
 				</cac:TaxCategory>
@@ -87,8 +86,5 @@
 			
 		</Invoice>
 	</test>
-	
-
-
 
 </testSet>

@@ -2,13 +2,12 @@
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
 		<scope>BR-32</scope>
-		<scope>BR-37</scope>
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an allowance charge amount is present</description>
+			<description>Verify that an allowance amount is present</description>
 			<success>BR-32</success>
-			<success>BR-37</success>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -16,6 +15,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount>100</cbc:Amount>
 			</cac:AllowanceCharge>
 		</Invoice>
@@ -24,9 +24,8 @@
 
 	<test>
 		<assert>
-			<description>Trigger error when allowance charge amount is missing</description>
+			<description>Trigger error when allowance amount is missing</description>
 			<error>BR-32</error>
-			<error>BR-37</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -34,6 +33,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<!-- 	<cbc:Amount>100</cbc:Amount> -->
 			</cac:AllowanceCharge>
 
