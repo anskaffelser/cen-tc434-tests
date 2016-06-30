@@ -16,6 +16,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:InvoiceLine>
 				<cac:AllowanceCharge>
+					<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 					<cbc:AllowanceChargeReason>Freight</cbc:AllowanceChargeReason>
 				</cac:AllowanceCharge>
 			</cac:InvoiceLine>
@@ -35,6 +36,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:InvoiceLine>
 				<cac:AllowanceCharge>
+					<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 					<!-- <cbc:AllowanceChargeReason>Freight</cbc:AllowanceChargeReason> -->
 				</cac:AllowanceCharge>
 			</cac:InvoiceLine>
