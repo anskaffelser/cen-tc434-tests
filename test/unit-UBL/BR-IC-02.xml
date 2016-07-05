@@ -5,60 +5,59 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice line where the Invoice item VAT category code (BT-142) is "IC"  has an Invoiced item VAT rate (BT-143) = 0 (zero).  </description>
+			<description>Verify that the VAT category tax amount (BT-110) in a VAT breakdown (BG-21) where the VAT category code (BT-111) is “IC” = 0 (zero)  </description>
 			<success>BR-IC-02</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxAmount>0.00</cbc:TaxAmount>
+					<cac:TaxCategory>
 						<cbc:ID>IC</cbc:ID>
-						<cbc:Percent>0</cbc:Percent>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice line where the Invoice item VAT category code (BT-142) is "IC"  has an Invoiced item VAT rate (BT-143) not equal to 0 (zero). </description>
+			<description>Trigger error when the VAT category tax amount (BT-110) in a VAT breakdown (BG-21) where the VAT category code (BT-111) is “IC” != 0 (zero) </description>
 			<error>BR-IC-02</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxAmount>10.00</cbc:TaxAmount>
+					<cac:TaxCategory>
 						<cbc:ID>IC</cbc:ID>
-						<cbc:Percent>2</cbc:Percent>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
-
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice line where the Invoice item VAT category code (BT-142) is "IC"  has an Invoiced item VAT rate (BT-143) not equal to 0 (zero). </description>
+			<description>Trigger error when the VAT category tax amount (BT-110) in a VAT breakdown (BG-21) where the VAT category code (BT-111) is “IC” != 0 (zero) </description>
 			<error>BR-IC-02</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxAmount>-10.00</cbc:TaxAmount>
+					<cac:TaxCategory>
 						<cbc:ID>IC</cbc:ID>
-						<cbc:Percent>-10</cbc:Percent>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
 			
 		</Invoice>
 	</test>

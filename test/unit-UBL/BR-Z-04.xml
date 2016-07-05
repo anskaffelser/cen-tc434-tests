@@ -57,10 +57,10 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 					<cbc:ID>Z</cbc:ID>
-					<cbc:Percent>-10</cbc:Percent>
+					<cbc:Percent>-6</cbc:Percent>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
