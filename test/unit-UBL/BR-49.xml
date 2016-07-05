@@ -44,7 +44,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when VAT category percentage is missing</description>
-			<error>BR-48</error>
+			<error>BR-49</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
