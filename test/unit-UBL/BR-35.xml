@@ -34,7 +34,6 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-				<!--<cbc:AllowanceChargeReason>Promotion discount</cbc:AllowanceChargeReason>-->
 			</cac:AllowanceCharge>
 
 		</Invoice>
