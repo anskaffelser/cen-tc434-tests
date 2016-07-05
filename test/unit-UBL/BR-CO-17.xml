@@ -157,7 +157,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount>-2141.19</cbc:TaxableAmount>
-					<cbc:TaxAmount>-117.76</cbc:TaxAmount>
+					<cbc:TaxAmount>-117.77</cbc:TaxAmount>
 					<cac:TaxCategory>
 						<cbc:Percent>5.5</cbc:Percent>
 					</cac:TaxCategory>
