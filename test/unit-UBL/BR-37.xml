@@ -5,7 +5,7 @@
     </assert>
     <test>
         <assert>
-            <description>Verify that an charge amount is present</description
+            <description>Verify that an charge amount is present</description>
             <success>BR-37</success>
         </assert>
         <Invoice
