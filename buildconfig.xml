@@ -8,7 +8,7 @@
         <identifier>tc434-ubl</identifier>
         <title>TC434 UBL</title>
         <inherit>ubl-invoice-2.1</inherit>
-        <file source="rules/ubl/schematron/EN16931-UBL-model.sch" path="xsl/EN16931-UBL-model.xsl" />
+        <!-- <file source="rules/ubl/schematron/EN16931-UBL-model.sch" path="xsl/EN16931-UBL-model.xsl" /> -->
         <file source="rules/ubl/schematron/EN16931-UBL-validation.sch" path="xsl/EN16931-UBL-validation.xsl" />
     </configuration>
 
