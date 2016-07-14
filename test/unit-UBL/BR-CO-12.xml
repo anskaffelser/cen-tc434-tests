@@ -18,7 +18,7 @@
 			</cac:AllowanceCharge>
 
 			<cac:LegalMonetaryTotal>
-				<cbc:AllowanceTotalAmount>100</cbc:AllowanceTotalAmount>
+				<cbc:ChargeTotalAmount>100</cbc:ChargeTotalAmount>
 			</cac:LegalMonetaryTotal>
 
 		</Invoice>
@@ -44,7 +44,7 @@
 			</cac:AllowanceCharge>
 
 			<cac:LegalMonetaryTotal>
-				<cbc:AllowanceTotalAmount>100</cbc:AllowanceTotalAmount>
+				<cbc:ChargeTotalAmount>100</cbc:ChargeTotalAmount>
 			</cac:LegalMonetaryTotal>
 
 		</Invoice>
@@ -95,7 +95,7 @@
 			</cac:AllowanceCharge>
 			
 			<cac:LegalMonetaryTotal>
-				<cbc:AllowanceTotalAmount>1100.00</cbc:AllowanceTotalAmount>
+				<cbc:ChargeTotalAmount>1100.00</cbc:ChargeTotalAmount>
 			</cac:LegalMonetaryTotal>
 			
 		</Invoice>
@@ -121,7 +121,7 @@
 			</cac:AllowanceCharge>
 			
 			<cac:LegalMonetaryTotal>
-				<cbc:AllowanceTotalAmount>1000.00</cbc:AllowanceTotalAmount>
+				<cbc:ChargeTotalAmount>1000.00</cbc:ChargeTotalAmount>
 			</cac:LegalMonetaryTotal>
 
 		</Invoice>
@@ -146,7 +146,7 @@
 			</cac:AllowanceCharge>
 			
 			<cac:LegalMonetaryTotal>
-				<cbc:AllowanceTotalAmount>1000.00</cbc:AllowanceTotalAmount>
+				<cbc:ChargeTotalAmount>1000.00</cbc:ChargeTotalAmount>
 			</cac:LegalMonetaryTotal>
 			
 		</Invoice>

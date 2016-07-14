@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<scope>BR-IC-04</scope>
+		<scope>BR-IC-05</scope>
 	</assert>
 
 	<test>
@@ -10,7 +10,7 @@
 				with a document level allowance/charge VAT category code that is "IC" contains both
 				the Seller's VAT identifier (BT-30) and Buyer's VAT identifier
 				(BT-46).</description>
-			<success>BR-IC-04</success>
+			<success>BR-IC-05</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -33,7 +33,7 @@
 			</cac:AccountingCustomerParty>
 
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>IC</cbc:ID>
 				</cac:TaxCategory>
@@ -47,7 +47,7 @@
 				charge with a document level allowance/charge VAT category code that is "IC" does
 				not contain both the Seller's VAT identifier (BT-30) and Buyer's VAT identifier
 				(BT-46).</description>
-			<error>BR-IC-04</error>
+			<error>BR-IC-05</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -70,7 +70,7 @@
 			</cac:AccountingCustomerParty>
 
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>IC</cbc:ID>
 				</cac:TaxCategory>
@@ -86,7 +86,7 @@
 				charge with a document level allowance/charge VAT category code that is "IC" does
 				not contain both the Seller's VAT identifier (BT-30) and Buyer's VAT identifier
 				(BT-46).</description>
-			<error>BR-IC-04</error>
+			<error>BR-IC-05</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -108,7 +108,7 @@
 				</cac:Party>
 			</cac:AccountingCustomerParty>
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>IC</cbc:ID>
 				</cac:TaxCategory>
@@ -119,10 +119,10 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a document level allowance or
-				charge with a document level allowance/charge VAT category code that is "AE" does
+				charge with a document level allowance/charge VAT category code that is "IC" does
 				not contain both the Seller's VAT identifier (BT-30) and Buyer's VAT identifier
 				(BT-46).</description>
-			<error>BR-IC-04</error>
+			<error>BR-IC-05</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -145,7 +145,7 @@
 			</cac:AccountingCustomerParty>
 
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>IC</cbc:ID>
 				</cac:TaxCategory>
@@ -159,7 +159,7 @@
 				charge with a document level allowance/charge VAT category code that is "IC" does
 				not contain both the Seller's VAT identifier (BT-30) and Buyer's VAT identifier
 				(BT-46).</description>
-			<error>BR-IC-04</error>
+			<error>BR-IC-05</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -182,7 +182,7 @@
 			</cac:AccountingCustomerParty>
 
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>IC</cbc:ID>
 				</cac:TaxCategory>
