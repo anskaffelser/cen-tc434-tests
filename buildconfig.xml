@@ -2,7 +2,8 @@
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
 	<testfolder>test/unit-UBL</testfolder>
-
+    <testfolder>test/examples</testfolder>
+    
     <!-- TC434 UBL -->
     <configuration>
         <identifier>tc434-ubl</identifier>
