@@ -15,9 +15,9 @@
 
 			<cac:AccountingCustomerParty>
 				<cac:Party>
-					<cac:PartyName>
-						<cbc:Name>The Buyercompany</cbc:Name>
-					</cac:PartyName>
+					<cac:PartyLegalEntity>
+						<cbc:RegistrationName>Buyer Name</cbc:RegistrationName>
+					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
 		</Invoice>
@@ -34,9 +34,9 @@
 			<!--  	
 				<cac:AccountingCustomerParty>
 				<cac:Party>
-					<cac:PartyName>
-						<cbc:Name>The Buyercompany</cbc:Name>
-					</cac:PartyName>
+					<cac:PartyLegalEntity>
+						<cbc:RegistrationName>Buyer Name</cbc:RegistrationName>
+					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
 			-->
@@ -55,9 +55,9 @@
 			<cac:AccountingCustomerParty>
 				<!--
 				<cac:Party>
-					<cac:PartyName>
-						<cbc:Name>The Buyercompany</cbc:Name>
-					</cac:PartyName>
+					<cac:PartyLegalEntity>
+						<cbc:RegistrationName>Buyer Name</cbc:RegistrationName>
+					</cac:PartyLegalEntity>
 				</cac:Party>
 				-->
 			</cac:AccountingCustomerParty>
@@ -77,13 +77,35 @@
 
 			<cac:AccountingCustomerParty>
 				<cac:Party>
-				<!-- <cac:PartyName>
-							<cbc:Name>The Buyercompany</cbc:Name>
-					</cac:PartyName> -->
+					<!-- 			
+					<cac:PartyLegalEntity>
+						<cbc:RegistrationName>Buyer Name</cbc:RegistrationName>
+					</cac:PartyLegalEntity>
+					 -->
 				</cac:Party>
 			</cac:AccountingCustomerParty>
 		</Invoice>
 	</test>
 
+	<test>
+		<assert>
+			<description>Trigger error when buyers name is missing</description>
+			<error>BR-07</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>				
+					<cac:PartyLegalEntity>
+						<!-- <cbc:RegistrationName>Buyer Name</cbc:RegistrationName>-->
+					</cac:PartyLegalEntity>	 
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+		</Invoice>
+	</test>
 
 </testSet>

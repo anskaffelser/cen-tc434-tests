@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify Buyer postal address is present</description>
+			<description>Verify that a seller postal address contains a Seller country code</description>
 			<success>BR-09</success>
 		</assert>
 		<Invoice
@@ -13,43 +13,21 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
-			<cac:AccountingCustomerParty>
+			<cac:AccountingSupplierParty>
 				<cac:Party>
 					<cac:PostalAddress>
-						<cbc:StreetName>Main street 34</cbc:StreetName>
-						<cbc:AdditionalStreetName>Suite 123</cbc:AdditionalStreetName>
-						<cbc:CityName>Big city</cbc:CityName>
-						<cbc:PostalZone>54321</cbc:PostalZone>
-						<cbc:CountrySubentity>RegionA</cbc:CountrySubentity>
 						<cac:Country>
-							<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+							<cbc:IdentificationCode>NL</cbc:IdentificationCode>
 						</cac:Country>
 					</cac:PostalAddress>
 				</cac:Party>
-			</cac:AccountingCustomerParty>
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Verify Buyer postal address is present</description>
-			<success>BR-09</success>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			
-			<cac:AccountingCustomerParty>
-				<cac:Party>
-					<cac:PostalAddress></cac:PostalAddress>	
-				</cac:Party>
-			</cac:AccountingCustomerParty>
+			</cac:AccountingSupplierParty>
 		</Invoice>
 	</test>
 
 	<test>
 		<assert>
-			<description>Trigger error when Buyer postal address is missing</description>
+			<description>Trigger error when a seller postal address does not contain a Seller country code</description>
 			<error>BR-09</error>
 		</assert>
 		<Invoice
@@ -57,38 +35,21 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			
-				<!--
-			<cac:AccountingCustomerParty>
+			<cac:AccountingSupplierParty>
 				<cac:Party>
-					<cac:PostalAddress/>	
+					<cac:PostalAddress>
+						<!-- <cac:Country>
+							<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+						</cac:Country> -->
+					</cac:PostalAddress>
 				</cac:Party>
-			</cac:AccountingCustomerParty>
-				-->
+			</cac:AccountingSupplierParty>
 			</Invoice>
 	</test>
 
 	<test>
 		<assert>
-			<description>Trigger error when Buyer postal address is missing</description>
-			<error>BR-09</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-
-
-			<cac:AccountingCustomerParty>
-				<!-- <cac:Party>
-					<cac:PostalAddress/>	
-				</cac:Party> -->
-			</cac:AccountingCustomerParty>
-		</Invoice>
-	</test>
-	
-	<test>
-		<assert>
-			<description>Trigger error when Buyer postal address is missing</description>
+			<description>Trigger error when a seller postal address does not contain a Seller country code</description>
 			<error>BR-09</error>
 		</assert>
 		<Invoice
@@ -96,13 +57,16 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			
-			<cac:AccountingCustomerParty>
-				 <cac:Party>
-				 	<!-- <cac:PostalAddress></cac:PostalAddress> -->	
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<cac:PostalAddress>
+					 <cac:Country>
+					 	<!--<cbc:IdentificationCode>NL</cbc:IdentificationCode>-->
+						</cac:Country> 
+					</cac:PostalAddress>
 				</cac:Party>
-			</cac:AccountingCustomerParty>
+			</cac:AccountingSupplierParty>
 		</Invoice>
 	</test>
-
 
 </testSet>

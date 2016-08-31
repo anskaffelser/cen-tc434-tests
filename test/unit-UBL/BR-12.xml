@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify invoice total amount with VAT in document totals is present</description>
+			<description>Verify total line amount in document totals is present</description>
 			<success>BR-12</success>
 		</assert>
 		<Invoice
@@ -13,13 +13,14 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:LegalMonetaryTotal>
-				<cbc:TaxInclusiveAmount currencyID="NOK">1200</cbc:TaxInclusiveAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100.00</cbc:LineExtensionAmount>
 			</cac:LegalMonetaryTotal>
+
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when invoice total amount with VAT in document totals is missing</description>
+			<description>Trigger error when total line amount in document totals is missing</description>
 			<error>BR-12</error>
 		</assert>
 		<Invoice
@@ -28,7 +29,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
 			<cac:LegalMonetaryTotal>
-				<!-- <cbc:TaxInclusiveAmount currencyID="NOK">1200</cbc:TaxInclusiveAmount> -->
+				<!-- <cbc:LineExtensionAmount currencyID="EUR">100.00</cbc:LineExtensionAmount>-->
 			</cac:LegalMonetaryTotal>
 
 

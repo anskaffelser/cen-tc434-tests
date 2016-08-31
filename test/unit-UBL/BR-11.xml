@@ -5,33 +5,67 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify invoice total amount without VAT in document totals is present</description>
+			<description>Verify that a buyer postal address contains a Seller country code</description>
 			<success>BR-11</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:LegalMonetaryTotal>
-				<cbc:TaxExclusiveAmount currencyID="NOK">1200</cbc:TaxExclusiveAmount>
-			</cac:LegalMonetaryTotal>
+
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PostalAddress>
+						<cac:Country>
+							<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+						</cac:Country>
+					</cac:PostalAddress>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
 		</Invoice>
 	</test>
+
 	<test>
 		<assert>
-			<description>Trigger error when invoice total amount without VAT in document totals is missing</description>
+			<description>Trigger error when a buyer postal address does not contain a Seller country code</description>
 			<error>BR-11</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PostalAddress>
+						<!-- <cac:Country>
+							<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+						</cac:Country> -->
+					</cac:PostalAddress>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			</Invoice>
+	</test>
 
-			<cac:LegalMonetaryTotal>
-				<!-- <cbc:TaxExclusiveAmount currencyID="NOK">1200</cbc:TaxExclusiveAmount> -->
-			</cac:LegalMonetaryTotal>
-
-
+	<test>
+		<assert>
+			<description>Trigger error when a buyer postal address does not contain a Seller country code</description>
+			<error>BR-11</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PostalAddress>
+					 <cac:Country>
+					 	<!--<cbc:IdentificationCode>NL</cbc:IdentificationCode>-->
+						</cac:Country> 
+					</cac:PostalAddress>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
 		</Invoice>
 	</test>
 
