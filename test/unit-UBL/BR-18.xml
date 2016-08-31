@@ -3,9 +3,9 @@
 	<assert>
 		<scope>BR-18</scope>
 	</assert>
-	<test> 
+	<test>
 		<assert>
-			<description>Verify that payee name is present</description>
+			<description>Verify that tax representative name is present</description>
 			<success>BR-18</success>
 		</assert>
 		<Invoice
@@ -13,30 +13,30 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
-			<cac:PayeeParty>
+			<cac:TaxRepresentativeParty>
 				<cac:PartyName>
-					<cbc:Name>Payee name</cbc:Name>
+					<cbc:Name>Tax handling company AS</cbc:Name>
 				</cac:PartyName>
-			</cac:PayeeParty>
+			</cac:TaxRepresentativeParty>
 		</Invoice>
 	</test>
 
 
 	<test>
 		<assert>
-			<description>Trigger error when payee name is missing</description>
+			<description>Trigger error when tax representative name is missing</description>
 			<error>BR-18</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-
-			<cac:PayeeParty>
+			
+			<cac:TaxRepresentativeParty>
 				<!-- <cac:PartyName>
-					<cbc:Name>Payee name</cbc:Name>
-				</cac:PartyName>-->
-			</cac:PayeeParty>
+					<cbc:Name>Tax handling company AS</cbc:Name>
+				</cac:PartyName> -->
+			</cac:TaxRepresentativeParty>
 		</Invoice>
 	</test>
 	
