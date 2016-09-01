@@ -5,7 +5,7 @@
     </assert>
     <test>
         <assert>
-            <description>Verify that an charge amount is present</description>
+            <description>Verify that an charge VAT category ID is present</description>
             <success>BR-37</success>
         </assert>
         <Invoice
@@ -15,7 +15,9 @@
             
             <cac:AllowanceCharge>
                 <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
-                <cbc:Amount>100</cbc:Amount>
+                <cac:TaxCategory>
+                    <cbc:ID>S</cbc:ID>
+                </cac:TaxCategory>
             </cac:AllowanceCharge>
         </Invoice>
     </test>
@@ -23,7 +25,7 @@
     
     <test>
         <assert>
-            <description>Trigger error when charge amount is missing</description>
+            <description>Trigger error when charge VAT category ID is missing</description>
             <error>BR-37</error>
         </assert>
         <Invoice
@@ -33,11 +35,32 @@
             
             <cac:AllowanceCharge>
                 <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
-                <!-- 	<cbc:Amount>100</cbc:Amount> -->
+                <!-- <cac:TaxCategory>
+					<cbc:ID>S</cbc:ID>
+				</cac:TaxCategory> -->
             </cac:AllowanceCharge>
-            
         </Invoice>
     </test>
+    
+    <test>
+        <assert>
+            <description>Trigger error when charge VAT category ID is missing</description>
+            <error>BR-37</error>
+        </assert>
+        <Invoice
+            xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+            xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+            xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+            
+            <cac:AllowanceCharge>
+                <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+                <cac:TaxCategory>
+                    <!-- <cbc:ID>S</cbc:ID> -->
+                </cac:TaxCategory>
+            </cac:AllowanceCharge>
+        </Invoice>
+    </test>
+    
     
     
 </testSet>

@@ -5,9 +5,8 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an allowance amount is present</description>
+			<description>Verify that an allowance VAT category ID is present</description>
 			<success>BR-32</success>
-
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -16,7 +15,9 @@
 
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-				<cbc:Amount>100</cbc:Amount>
+				<cac:TaxCategory>
+					<cbc:ID>S</cbc:ID>
+				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
@@ -24,7 +25,26 @@
 
 	<test>
 		<assert>
-			<description>Trigger error when allowance amount is missing</description>
+			<description>Trigger error when allowance VAT category ID is missing</description>
+			<error>BR-32</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<!-- <cac:TaxCategory>
+					<cbc:ID>S</cbc:ID>
+				</cac:TaxCategory> -->
+			</cac:AllowanceCharge>
+		</Invoice>
+	</test>
+	
+	<test>
+		<assert>
+			<description>Trigger error when allowance VAT category ID is missing</description>
 			<error>BR-32</error>
 		</assert>
 		<Invoice
@@ -34,11 +54,11 @@
 			
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-				<!-- 	<cbc:Amount>100</cbc:Amount> -->
+				<cac:TaxCategory>
+					<!-- <cbc:ID>S</cbc:ID> -->
+				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-
 		</Invoice>
 	</test>
-	
 
 </testSet>
