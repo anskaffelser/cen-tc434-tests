@@ -6,8 +6,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an invoice line allowance amount is
-				present</description>
+			<description>Verify that an allowance reason or reason code is present</description>
 			<success>BR-42</success>
 
 		</assert>
@@ -18,18 +17,17 @@
 			<cac:InvoiceLine>
 				<cac:AllowanceCharge>
 					<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-					<cbc:Amount currencyID="NOK">100</cbc:Amount>
+					<cbc:AllowanceChargeReason>Freight</cbc:AllowanceChargeReason>
 				</cac:AllowanceCharge>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
 
-
 	<test>
 		<assert>
-			<description>Trigger error when invoice line allowance amount is
-				missing</description>
-			<error>BR-42</error>
+			<description>Verify that an allowance reason or reason code is present</description>
+			<success>BR-42</success>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -38,9 +36,31 @@
 			<cac:InvoiceLine>
 				<cac:AllowanceCharge>
 					<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-					<!-- 	<cbc:Amount currencyID="NOK">100</cbc:Amount> -->
+					<cbc:AllowanceChargeReasonCode>12</cbc:AllowanceChargeReasonCode>
 				</cac:AllowanceCharge>
 			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+
+
+	<test>
+		<assert>
+			<description>Trigger error when allowance reason or reason code is missing</description>
+			<error>BR-42</error>
+
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:InvoiceLine>
+				<cac:AllowanceCharge>
+					<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+					<!-- <cbc:AllowanceChargeReasonCode>12</cbc:AllowanceChargeReasonCode>					 -->
+					<!-- <cbc:AllowanceChargeReason>Freight</cbc:AllowanceChargeReason> -->
+				</cac:AllowanceCharge>
+			</cac:InvoiceLine>
+
 		</Invoice>
 	</test>
 
