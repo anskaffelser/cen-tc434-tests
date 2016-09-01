@@ -5,26 +5,42 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an invoice line period has an end date</description>
+			<description>Verify that if a period has a start date and an end date, the end date is equal to, or later than the start date </description>
+			<success>BR-29</success>
 			<success>BR-30</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:InvoiceLine>
-				<cac:InvoicePeriod>
-					<cbc:EndDate>2013-06-01</cbc:EndDate>
-				</cac:InvoicePeriod>
-			</cac:InvoiceLine>
+
+			<cac:InvoicePeriod>
+				<cbc:StartDate>2013-06-01</cbc:StartDate>
+				<cbc:EndDate>2013-06-01</cbc:EndDate>
+			</cac:InvoicePeriod>
 		</Invoice>
 	</test>
 
+	<test>
+		<assert>
+			<description>Verify that if a period has a start date and an end date, the end date is equal to, or later than the start date </description>
+			<success>BR-30</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			
+			<cac:InvoicePeriod>
+				<cbc:StartDate>2013-06-01</cbc:StartDate>
+				<cbc:EndDate>2013-08-01</cbc:EndDate>
+			</cac:InvoicePeriod>
+		</Invoice>
+	</test>
 
 	<test>
 		<assert>
-			<description>Trigger error when invoice line period does not have an end
-				date</description>
+			<description>Trigger error if a period has a start date and an end date,and the end date is earlier than the start date</description>
 			<error>BR-30</error>
 		</assert>
 		<Invoice
@@ -32,11 +48,11 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
-			<cac:InvoiceLine>
-				<cac:InvoicePeriod>
-					<!-- <cbc:EndDate>2013-06-01</cbc:EndDate> -->
-				</cac:InvoicePeriod>
-			</cac:InvoiceLine>
+
+			<cac:InvoicePeriod>
+				<cbc:StartDate>2013-06-01</cbc:StartDate>
+				<cbc:EndDate>2013-05-01</cbc:EndDate>
+			</cac:InvoicePeriod>
 		</Invoice>
 	</test>
 

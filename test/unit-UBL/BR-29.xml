@@ -2,7 +2,6 @@
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
 		<scope>BR-29</scope>
-		<scope>BR-30</scope>
 	</assert>
 	<test>
 		<assert>
@@ -26,7 +25,6 @@
 		<assert>
 			<description>Verify that if a period has a start date and an end date, the end date is equal to, or later than the start date </description>
 			<success>BR-29</success>
-			<success>BR-30</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -44,7 +42,6 @@
 		<assert>
 			<description>Trigger error if a period has a start date and an end date,and the end date is earlier than the start date</description>
 			<error>BR-29</error>
-			<error>BR-30</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
