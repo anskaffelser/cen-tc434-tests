@@ -2,86 +2,91 @@
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
 		<scope>BR-54</scope>
+
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that only 4 to 6 digits is given in the card number</description>
+			<description>Verify that item attributes contain both value and name</description>
 			<success>BR-54</success>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:PaymentMeans>
-				<cac:CardAccount>
-					<cbc:PrimaryAccountNumberID>123456</cbc:PrimaryAccountNumberID>
-				</cac:CardAccount>
-			</cac:PaymentMeans>
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Verify that only 4 to 6 digits is given in the card number</description>
-			<success>BR-54</success>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:PaymentMeans>
-				<cac:CardAccount>
-					<cbc:PrimaryAccountNumberID>1234</cbc:PrimaryAccountNumberID>
-				</cac:CardAccount>
-			</cac:PaymentMeans>
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Verify that only 4 to 6 digits is given in the card number</description>
-			<success>BR-54</success>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:PaymentMeans>
-				<cac:CardAccount>
-					<cbc:PrimaryAccountNumberID>12345</cbc:PrimaryAccountNumberID>
-				</cac:CardAccount>
-			</cac:PaymentMeans>
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Trigger error if more than 4 digits is given in the card number</description>
-			<error>BR-54</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:PaymentMeans>
-				<cac:CardAccount>
-					<cbc:PrimaryAccountNumberID>12345678</cbc:PrimaryAccountNumberID>
-				</cac:CardAccount>
-			</cac:PaymentMeans>
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Trigger error if less than 4 digits is given in the card number</description>
-			<error>BR-54</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:PaymentMeans>
-				<cac:CardAccount>
-					<cbc:PrimaryAccountNumberID>123</cbc:PrimaryAccountNumberID>
-				</cac:CardAccount>
-			</cac:PaymentMeans>
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:AdditionalItemProperty>
+						<cbc:Name>Color</cbc:Name>
+						<cbc:Value>Black</cbc:Value>
+					</cac:AdditionalItemProperty>
+				</cac:Item>
+			</cac:InvoiceLine>
 		</Invoice>
 	</test>
 	
+	<test>
+		<assert>
+			<description>Trigger error if item attributes does not contain both name and value</description>
+			<error>BR-54</error>
+
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:AdditionalItemProperty>
+						<!-- <cbc:Name>Color</cbc:Name> -->
+						<cbc:Value>Black</cbc:Value>
+					</cac:AdditionalItemProperty>
+				</cac:Item>
+			</cac:InvoiceLine>
+
+		</Invoice>
+	</test>
+
+	<test>
+		<assert>
+			<description>Trigger error if item attributes does not contain both name and value</description>
+			<error>BR-54</error>
+			
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:AdditionalItemProperty>
+					 	<cbc:Name>Color</cbc:Name>
+					<!--	<cbc:Value>Black</cbc:Value> -->
+					</cac:AdditionalItemProperty>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if item attributes does not contain both name and value</description>
+			<error>BR-54</error>
+			
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:AdditionalItemProperty>
+						<!-- <cbc:Name>Color</cbc:Name> -->
+						<!-- <cbc:Value>Black</cbc:Value> -->
+					</cac:AdditionalItemProperty>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+		</Invoice>
+	</test>
 </testSet>

@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that the mandate reference is present when payment means is direct debit</description>
+			<description>Verify that only 4 to 6 digits is given in the card number</description>
 			<success>BR-51</success>
 		</assert>
 		<Invoice
@@ -13,16 +13,15 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:PaymentMeans>
-				<cbc:PaymentMeansCode>49</cbc:PaymentMeansCode>
-				<cac:PaymentMandate>
-					<cbc:ID>12345677</cbc:ID>
-				</cac:PaymentMandate>
+				<cac:CardAccount>
+					<cbc:PrimaryAccountNumberID>123456</cbc:PrimaryAccountNumberID>
+				</cac:CardAccount>
 			</cac:PaymentMeans>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Verify that mandate reference is not mandatory when payment means is not direct debit</description>
+			<description>Verify that only 4 to 6 digits is given in the card number</description>
 			<success>BR-51</success>
 		</assert>
 		<Invoice
@@ -30,44 +29,59 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:PaymentMeans>
-				<cbc:PaymentMeansCode>31</cbc:PaymentMeansCode>
+				<cac:CardAccount>
+					<cbc:PrimaryAccountNumberID>1234</cbc:PrimaryAccountNumberID>
+				</cac:CardAccount>
 			</cac:PaymentMeans>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if payment mandate is missing when payment means is direct debit</description>
+			<description>Verify that only 4 to 6 digits is given in the card number</description>
+			<success>BR-51</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:PaymentMeans>
+				<cac:CardAccount>
+					<cbc:PrimaryAccountNumberID>12345</cbc:PrimaryAccountNumberID>
+				</cac:CardAccount>
+			</cac:PaymentMeans>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if more than 4 digits is given in the card number</description>
 			<error>BR-51</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-
 			<cac:PaymentMeans>
-				<cbc:PaymentMeansCode>49</cbc:PaymentMeansCode>
-				<!-- <cac:PaymentMandate>
-					<cbc:ID>12345677</cbc:ID>
-				</cac:PaymentMandate> -->
+				<cac:CardAccount>
+					<cbc:PrimaryAccountNumberID>12345678</cbc:PrimaryAccountNumberID>
+				</cac:CardAccount>
 			</cac:PaymentMeans>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if payment mandate is missing when payment means is direct debit</description>
+			<description>Trigger error if less than 4 digits is given in the card number</description>
 			<error>BR-51</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			
 			<cac:PaymentMeans>
-				<cbc:PaymentMeansCode>49</cbc:PaymentMeansCode>
-				 <cac:PaymentMandate>
-				 	<!-- <cbc:ID>12345677</cbc:ID> -->
-				</cac:PaymentMandate> 
+				<cac:CardAccount>
+					<cbc:PrimaryAccountNumberID>123</cbc:PrimaryAccountNumberID>
+				</cac:CardAccount>
 			</cac:PaymentMeans>
 		</Invoice>
 	</test>
+	
 </testSet>
