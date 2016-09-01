@@ -6,7 +6,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that each invoice line has a line extension amount</description>
+			<description>Verify that each invoice line has a line ID</description>
 			<success>BR-21</success>
 
 		</assert>
@@ -15,14 +15,14 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:InvoiceLine>
-				<cbc:LineExtensionAmount>123</cbc:LineExtensionAmount>
+				<cbc:ID>1</cbc:ID>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
 
 	<test>
 		<assert>
-			<description>Trigger error if invoice line extension amount is missing</description>
+			<description>Trigger error if invoice line ID is missing</description>
 			<error>BR-21</error>
 
 		</assert>
@@ -31,7 +31,7 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:InvoiceLine>
-				<!-- <cbc:LineExtensionAmount>123</cbc:LineExtensionAmount> -->
+				<!-- <cbc:ID>1</cbc:ID>-->
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>

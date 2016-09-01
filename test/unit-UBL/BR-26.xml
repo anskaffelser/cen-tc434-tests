@@ -5,24 +5,25 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an invoice period has a start date</description>
+			<description>Verify that price amount is present</description>
 			<success>BR-26</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-
-			<cac:InvoicePeriod>
-				<cbc:StartDate>2013-06-01</cbc:StartDate>
-			</cac:InvoicePeriod>
+			<cac:InvoiceLine>
+				<cac:Price>
+					<cbc:PriceAmount currencyID="NOK">1273</cbc:PriceAmount>
+				</cac:Price>
+			</cac:InvoiceLine>
 		</Invoice>
 	</test>
 
 
 	<test>
 		<assert>
-			<description>Trigger error when invoice period does not have a start date</description>
+			<description>Trigger error when price amount is missing</description>
 			<error>BR-26</error>
 		</assert>
 		<Invoice
@@ -30,9 +31,11 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
-			<cac:InvoicePeriod>
-				<!-- <cbc:StartDate>2013-06-01</cbc:StartDate> -->
-			</cac:InvoicePeriod>
+			<cac:InvoiceLine>
+				<!--<cac:Price>
+					<cbc:PriceAmount currencyID="NOK">1273</cbc:PriceAmount>
+				</cac:Price> -->
+			</cac:InvoiceLine>
 		</Invoice>
 	</test>
 

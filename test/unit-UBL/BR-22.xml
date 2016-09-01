@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that item name is present</description>
+			<description>Verify that invoiced quantity is present</description>
 			<success>BR-22</success>
 		</assert>
 		<Invoice
@@ -14,9 +14,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
 			<cac:InvoiceLine>
-				<cac:Item>
-					<cbc:Name>Laptop computer</cbc:Name>
-				</cac:Item>
+				<cbc:InvoicedQuantity>1</cbc:InvoicedQuantity>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
@@ -24,17 +22,16 @@
 
 	<test>
 		<assert>
-			<description>Trigger error when item name is missing</description>
+			<description>Trigger error when invoiced quantity is missing</description>
 			<error>BR-22</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			
 			<cac:InvoiceLine>
-				<cac:Item>
-					<!-- <cbc:Name>Laptop computer</cbc:Name>-->
-				</cac:Item>
+				<!-- <cbc:InvoicedQuantity>1</cbc:InvoicedQuantity> -->
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>

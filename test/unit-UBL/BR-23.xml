@@ -5,17 +5,16 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that price amount is present</description>
+			<description>Verify that invoiced quantity unitcode is present</description>
 			<success>BR-23</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
 			<cac:InvoiceLine>
-				<cac:Price>
-					<cbc:PriceAmount currencyID="NOK">1273</cbc:PriceAmount>
-				</cac:Price>
+				<cbc:InvoicedQuantity unitCode="NAR">1</cbc:InvoicedQuantity>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
@@ -23,21 +22,19 @@
 
 	<test>
 		<assert>
-			<description>Trigger error when price amount is missing</description>
+			<description>Trigger error when invoiced quantity unitcode is missing</description>
 			<error>BR-23</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-
+			
 			<cac:InvoiceLine>
-				<!--<cac:Price>
-					<cbc:PriceAmount currencyID="NOK">1273</cbc:PriceAmount>
-				</cac:Price> -->
+				<cbc:InvoicedQuantity>1</cbc:InvoicedQuantity>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-
+	
 
 </testSet>

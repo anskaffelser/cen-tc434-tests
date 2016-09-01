@@ -5,38 +5,18 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that gross price amount is zero or above</description>
+			<description>Verify that item name is present</description>
 			<success>BR-25</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
 			<cac:InvoiceLine>
-				<cac:Price>
-					<cac:AllowanceCharge>
-						<cbc:BaseAmount currencyID="NOK">1</cbc:BaseAmount>
-					</cac:AllowanceCharge>
-				</cac:Price>
-			</cac:InvoiceLine>
-		</Invoice>
-	</test>
-	
-	<test>
-		<assert>
-			<description>Verify that gross price amount is zero or above</description>
-			<success>BR-25</success>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:InvoiceLine>
-				<cac:Price>
-					<cac:AllowanceCharge>
-						<cbc:BaseAmount currencyID="NOK">0</cbc:BaseAmount>
-					</cac:AllowanceCharge>
-				</cac:Price>
+				<cac:Item>
+					<cbc:Name>Laptop computer</cbc:Name>
+				</cac:Item>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
@@ -44,23 +24,20 @@
 
 	<test>
 		<assert>
-			<description>Trigger error when gross price amount is negative</description>
+			<description>Trigger error when item name is missing</description>
 			<error>BR-25</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-
 			<cac:InvoiceLine>
-				<cac:Price>
-					<cac:AllowanceCharge>
-						<cbc:BaseAmount currencyID="NOK">-1</cbc:BaseAmount>
-					</cac:AllowanceCharge>
-				</cac:Price>
+				<cac:Item>
+					<!-- <cbc:Name>Laptop computer</cbc:Name>-->
+				</cac:Item>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-
+	
 
 </testSet>
