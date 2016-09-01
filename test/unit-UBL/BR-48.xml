@@ -5,7 +5,8 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify each VAT breakdown has VAT category ID present</description>
+			<description>Verify each VAT breakdown has VAT category percentage present, except if
+				VAT is out of scope</description>
 			<success>BR-48</success>
 		</assert>
 		<Invoice
@@ -16,6 +17,7 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>S</cbc:ID>
+						<cbc:Percent>25</cbc:Percent>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -23,8 +25,9 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when VAT category ID is missing</description>
-			<error>BR-48</error>
+			<description>Verify each VAT breakdown has VAT category percentage present, except if
+				VAT is out of scope</description>
+			<success>BR-48</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -32,18 +35,17 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<!-- <cac:TaxCategory>
-						<cbc:ID>S</cbc:ID>
-					</cac:TaxCategory> -->
+					<cac:TaxCategory>
+						<cbc:ID>O</cbc:ID>
+					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-
-
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when VAT category ID is missing</description>
+			<description>Trigger error when VAT category percentage is missing, except if VAT is out
+				of scope</description>
 			<error>BR-48</error>
 		</assert>
 		<Invoice
@@ -53,13 +55,15 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<!-- <cbc:ID>S</cbc:ID> -->
+						<cbc:ID>S</cbc:ID>
+						<!-- <cbc:Percent>25</cbc:Percent> -->
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
-			
+
+
 		</Invoice>
 	</test>
+
 
 </testSet>

@@ -5,60 +5,31 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify each VAT breakdown has VAT category percentage present</description>
+			<description>Verify that Paymentmeans code is present for all payment instructions</description>
 			<success>BR-49</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:Percent>25</cbc:Percent>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
+			<cac:PaymentMeans>
+				<cbc:PaymentMeansCode>31</cbc:PaymentMeansCode>
+			</cac:PaymentMeans>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when VAT category percentage is missing</description>
+			<description>Trigger error when payment means code is missing</description>
 			<error>BR-49</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<!-- <cac:TaxCategory>
-							<cbc:Percent>25</cbc:Percent>
-					</cac:TaxCategory> -->
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
 
-
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Trigger error when VAT category percentage is missing</description>
-			<error>BR-49</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<!-- <cbc:Percent>25</cbc:Percent> -->
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
-			
-			
+			<cac:PaymentMeans>
+				<!-- <cbc:PaymentMeansCode>31</cbc:PaymentMeansCode> -->
+			</cac:PaymentMeans>
 		</Invoice>
 	</test>
 

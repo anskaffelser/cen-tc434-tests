@@ -5,8 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify each VAT breakdown has VAT category taxable amount
-				present</description>
+			<description>Verify each VAT breakdown has VAT category tax amount present</description>
 			<success>BR-46</success>
 		</assert>
 		<Invoice
@@ -16,14 +15,14 @@
 			
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="NOK">1460.5</cbc:TaxableAmount>
+					<cbc:TaxAmount currencyID="NOK">365.13</cbc:TaxAmount>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when VAT category taxable amount is missing</description>
+			<description>Trigger error when VAT category tax amount is missing</description>
 			<error>BR-46</error>
 		</assert>
 		<Invoice
@@ -32,7 +31,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<!-- <cbc:TaxableAmount currencyID="NOK">1460.5</cbc:TaxableAmount> -->
+					<!-- <cbc:TaxAmount currencyID="NOK">365.13</cbc:TaxAmount> -->
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 

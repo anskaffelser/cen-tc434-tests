@@ -5,24 +5,25 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify each VAT breakdown has VAT category tax amount present</description>
+			<description>Verify each VAT breakdown has VAT category ID present</description>
 			<success>BR-47</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxAmount currencyID="NOK">365.13</cbc:TaxAmount>
+					<cac:TaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when VAT category tax amount is missing</description>
+			<description>Trigger error when VAT category ID is missing</description>
 			<error>BR-47</error>
 		</assert>
 		<Invoice
@@ -31,11 +32,33 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<!-- <cbc:TaxAmount currencyID="NOK">365.13</cbc:TaxAmount> -->
+					<!-- <cac:TaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:TaxCategory> -->
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 
 
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when VAT category ID is missing</description>
+			<error>BR-47</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<!-- <cbc:ID>S</cbc:ID> -->
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			
 		</Invoice>
 	</test>
 
