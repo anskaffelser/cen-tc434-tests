@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
     <assert>
-        <scope>BR-36</scope>
+        <scope>BR-35</scope>
     </assert>
     <test>
         <assert>
             <description>Verify that a document level allowance base amount is not negative.</description>
-            <success>BR-36</success>
+            <success>BR-35</success>
         </assert>
         <Invoice
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -23,7 +23,7 @@
     <test>
         <assert>
             <description>Verify that a document level allowance base amount is not negative.</description>
-            <success>BR-36</success>
+            <success>BR-35</success>
         </assert>
         <Invoice
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -41,7 +41,7 @@
     <test>
         <assert>
             <description>Trigger error when a document level allowance base amount is not negative.</description>
-            <error>BR-36</error>
+            <error>BR-35</error>
         </assert>
         <Invoice
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
