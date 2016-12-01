@@ -33,7 +33,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:PaymentMeans>
 				<cac:PayeeFinancialAccount>
-					
+					<!-- <cbc:ID>123</cbc:ID> -->
 				</cac:PayeeFinancialAccount>		
 			</cac:PaymentMeans>
 		</Invoice>
