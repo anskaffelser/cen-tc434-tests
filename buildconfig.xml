@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
+	<testfolder>test/examples</testfolder>
 	<testfolder>test/unit-UBL</testfolder>
-    <testfolder>test/examples</testfolder>
-    
-    <!-- TC434 UBL -->
-    <configuration>
-        <identifier>tc434-ubl</identifier>
-        <title>TC434 UBL</title>
-        <standardId>urn:cen.eu:en16931:2017</standardId>
-        <inherit>ubl-invoice-2.1</inherit>
-        <!-- <file source="rules/ubl/schematron/EN16931-UBL-model.sch" path="xsl/EN16931-UBL-model.xsl" /> -->
-        <file source="rules/ubl/schematron/EN16931-UBL-validation.sch" path="xsl/EN16931-UBL-validation.xsl" />
-    </configuration>
+
+	<!-- TC434 UBL -->
+	<configuration>
+		<identifier>tc434-ubl</identifier>
+		<title>TC434 UBL</title>
+		<declaration type="xml.ubl">urn:cen.eu:en16931:2017</declaration>
+		<inherit>ubl-invoice-2.1</inherit>
+		<!-- <file source="rules/ubl/schematron/EN16931-UBL-model.sch" path="xsl/EN16931-UBL-model.xsl" /> -->
+		<file source="rules/ubl/schematron/EN16931-UBL-validation.sch" path="xsl/EN16931-UBL-validation.xsl" />
+	</configuration>
 
 </buildConfigurations>
