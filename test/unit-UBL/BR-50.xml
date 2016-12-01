@@ -5,129 +5,38 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that the bank creditor is present when payment means is direct
-				debit</description>
+			<description>Verify that a payment account identifier is be present if Credit Transfer identification information is provided in the Invoice.</description>
 			<success>BR-50</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:PayeeParty>
-				<cac:PartyIdentification>
-					<cbc:ID schemeID="SEPA">2298740918237</cbc:ID>
-				</cac:PartyIdentification>
-			</cac:PayeeParty>
-
+	
 			<cac:PaymentMeans>
-				<cbc:PaymentMeansCode>49</cbc:PaymentMeansCode>
-			</cac:PaymentMeans>
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Verify that the bank creditor is not mandatory when payment means is not direct
-				debit</description>
-			<success>BR-50</success>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<!-- <cac:PayeeParty>
-				<cac:PartyIdentification>
-					<cbc:ID schemeID="SEPA">2298740918237</cbc:ID>
-				</cac:PartyIdentification>
-			</cac:PayeeParty> -->
-			
-			<cac:PaymentMeans>
-				<cbc:PaymentMeansCode>31</cbc:PaymentMeansCode>
+				<cac:PayeeFinancialAccount>
+					<cbc:ID>123</cbc:ID>
+				</cac:PayeeFinancialAccount>		
 			</cac:PaymentMeans>
 		</Invoice>
 	</test>
 
+
 	<test>
 		<assert>
-			<description>Trigger error if bank creditor is missing when payment means is direct
-				debit</description>
+			<description>Trigger error if a payment account identifier is not present when Credit Transfer identification information is provided in the Invoice.</description>
 			<error>BR-50</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:PayeeParty>
-				<cac:PartyIdentification>
-					<cbc:ID schemeID="GLN">2298740918237</cbc:ID>
-				</cac:PartyIdentification>
-			</cac:PayeeParty>
-
 			<cac:PaymentMeans>
-				<cbc:PaymentMeansCode>49</cbc:PaymentMeansCode>
+				<cac:PayeeFinancialAccount>
+					<!-- <cbc:ID>123</cbc:ID> -->
+				</cac:PayeeFinancialAccount>		
 			</cac:PaymentMeans>
 		</Invoice>
 	</test>
-	<test>
-		<assert>
-			<description>Trigger error if payment mandate is missing when payment means is direct
-				debit</description>
-			<error>BR-50</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<!-- <cac:PayeeParty>
-				<cac:PartyIdentification>
-					<cbc:ID schemeID="SEPA">2298740918237</cbc:ID>
-				</cac:PartyIdentification>
-			</cac:PayeeParty> -->
 
-			<cac:PaymentMeans>
-				<cbc:PaymentMeansCode>49</cbc:PaymentMeansCode>
-			</cac:PaymentMeans>
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Trigger error if payment mandate is missing when payment means is direct
-				debit</description>
-			<error>BR-50</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:PayeeParty>
-				<!-- <cac:PartyIdentification>
-					<cbc:ID schemeID="SEPA">2298740918237</cbc:ID>
-				</cac:PartyIdentification> -->
-			</cac:PayeeParty>
-
-			<cac:PaymentMeans>
-				<cbc:PaymentMeansCode>49</cbc:PaymentMeansCode>
-			</cac:PaymentMeans>
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Trigger error if payment mandate is missing when payment means is direct
-				debit</description>
-			<error>BR-50</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:PayeeParty>
-				<cac:PartyIdentification>
-					<!-- <cbc:ID schemeID="SEPA">2298740918237</cbc:ID> -->
-				</cac:PartyIdentification>
-			</cac:PayeeParty>
-
-			<cac:PaymentMeans>
-				<cbc:PaymentMeansCode>49</cbc:PaymentMeansCode>
-			</cac:PaymentMeans>
-		</Invoice>
-	</test>
 </testSet>
