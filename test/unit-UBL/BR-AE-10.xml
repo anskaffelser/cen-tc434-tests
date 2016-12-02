@@ -5,8 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice with a VAT category code "AE" have the VAT category
-				rate (BT-112) = 0 (zero). </description>
+			<description>Verify that a VAT Breakdown (BG-23) with VAT Category code (BT-118) "Reverse charge" shall have a VAT Exemption reason code (BT-121) or the VAT Exemption reason text.</description>
 			<success>BR-AE-10</success>
 		</assert>
 		<Invoice
@@ -17,19 +16,17 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>AE</cbc:ID>
-						<cbc:Percent>0</cbc:Percent>
+						<cbc:TaxExemptionReason>Reverse charge</cbc:TaxExemptionReason>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 
 		</Invoice>
 	</test>
-
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT category code "AE" have the VAT
-				category rate (BT-112) != 0 (zero).</description>
-			<error>BR-AE-10</error>
+			<description>Verify that a VAT Breakdown (BG-23) with VAT Category code (BT-118) "Reverse charge" shall have a VAT Exemption reason code (BT-121) or the VAT Exemption reason text.</description>
+			<success>BR-AE-10</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -39,18 +36,39 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>AE</cbc:ID>
-						<cbc:Percent>10</cbc:Percent>
+						<cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Verify that a VAT Breakdown (BG-23) with VAT Category code (BT-118) "Reverse charge" shall have a VAT Exemption reason code (BT-121) or the VAT Exemption reason text.</description>
+			<success>BR-AE-10</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxAmount>0</cbc:TaxAmount>
+					<cac:TaxCategory>
+						<cbc:ID>AE</cbc:ID>
+						<cbc:TaxExemptionReason>Reverse charge</cbc:TaxExemptionReason>
+						<cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
 		</Invoice>
 	</test>
 
-
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT category code "AE" have the VAT
-				category rate (BT-112) != 0 (zero).</description>
+			<description>Trigger error if a VAT Breakdown (BG-23) with VAT Category code (BT-118) "Reverse charge" does not have a VAT Exemption reason code (BT-121) or a VAT Exemption reason text.</description>
 			<error>BR-AE-10</error>
 		</assert>
 		<Invoice
@@ -59,13 +77,15 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
+					<cbc:TaxAmount>0</cbc:TaxAmount>
 					<cac:TaxCategory>
 						<cbc:ID>AE</cbc:ID>
-						<cbc:Percent>-10</cbc:Percent>
+					<!--	<cbc:TaxExemptionReason>Reverse charge</cbc:TaxExemptionReason>
+						<cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode> -->
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
+			
 		</Invoice>
 	</test>
-
 </testSet>
