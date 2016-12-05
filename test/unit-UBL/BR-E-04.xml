@@ -5,9 +5,10 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level allowance or charge
-				with a document level allowance/charge VAT category code (BT-89) that is "E" does
-				contain the Seller's VAT identifier (BT-30). </description>
+			<description>Verify that an Invoice that contains a document level charge
+				with a document level charge VAT category code (BT-89) that is "E" does
+				contain the Sellers VAT Identifier (BT-31), the Seller Tax registration identifier
+				(BT-32) or the Seller tax representative VAT identifier (BT-63) </description>
 			<success>BR-E-04</success>
 		</assert>
 		<Invoice
@@ -31,10 +32,93 @@
 		</Invoice>
 	</test>
 	<test>
+			<assert>
+				<description>Verify that an Invoice that contains a document level charge
+					with a document level charge VAT category code (BT-89) that is "E" does
+					contain the Sellers VAT Identifier (BT-31), the Seller Tax registration identifier
+					(BT-32) or the Seller tax representative VAT identifier (BT-63) </description>
+				<success>BR-E-04</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<cbc:CompanyID>999999999</cbc:CompanyID>
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>E</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+		</Invoice>
+	</test>
+	
+	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance or charge
-				with a document level allowance/charge VAT category code (BT-89) that is "E" does not
-				contain the Seller's VAT identifier (BT-30). </description>
+			<description>Trigger error if an Invoice that contains a document level
+				charge with a document level charge VAT category code (BT-89) that is "E"
+				does not contain the Sellers VAT Identifier (BT-31), the Seller Tax registration
+				identifier (BT-32) or the Seller tax representative VAT identifier (BT-63) </description>
+			<error>BR-E-04</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<!--				<cac:PartyTaxScheme>
+					<cbc:CompanyID>999999999</cbc:CompanyID>
+				</cac:PartyTaxScheme>-->
+			</cac:TaxRepresentativeParty>
+
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>E</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a document level 
+				charge with a document level charge VAT category code (BT-89) that is "E"
+				does not contain the Sellers VAT Identifier (BT-31), the Seller Tax registration
+				identifier (BT-32) or the Seller tax representative VAT identifier (BT-63) </description>
+			<error>BR-E-04</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<!--					<cbc:CompanyID>999999999</cbc:CompanyID>-->
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>E</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+
+		</Invoice>
+	</test>
+
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a document level 
+				charge with a document level charge VAT category code (BT-89) that is "E"
+				does not contain the Sellers VAT Identifier (BT-31), the Seller Tax registration
+				identifier (BT-32) or the Seller tax representative VAT identifier (BT-63) </description>
 			<error>BR-E-04</error>
 		</assert>
 		<Invoice
@@ -48,7 +132,7 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
@@ -60,9 +144,10 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance or charge
-				with a document level allowance/charge VAT category code (BT-89) that is "E" does not
-				contain the Seller's VAT identifier (BT-30). </description>
+			<description>Trigger error if an Invoice that contains a document level 
+				charge with a document level charge VAT category code (BT-89) that is "E"
+				does not contain the Sellers VAT Identifier (BT-31), the Seller Tax registration
+				identifier (BT-32) or the Seller tax representative VAT identifier (BT-63) </description>
 			<error>BR-E-04</error>
 		</assert>
 		<Invoice
@@ -71,22 +156,22 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:AccountingSupplierParty>
 				<cac:Party>
-				<!--	<cac:PartyTaxScheme>
+					<!--	<cac:PartyTaxScheme>
 						<cbc:CompanyID>123456789MVA</cbc:CompanyID>
 					</cac:PartyTaxScheme> -->
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>E</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
-	
+
 
 
 
