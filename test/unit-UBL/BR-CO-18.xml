@@ -39,7 +39,7 @@
 	<test>
 		<assert>
 			<description>Trigger error if an invoice does not have at least one VAT breakdown group (BG-23)</description>
-			<error>BR-AE-10</error>
+			<error>BR-CO-18</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
