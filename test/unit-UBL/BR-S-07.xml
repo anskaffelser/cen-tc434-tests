@@ -5,47 +5,61 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice where VAT category code (BT-111) is "S" does not
-				contain the VAT exemption reason text (BT-113) for that VAT category </description>
+			<description>Verify that in a document level charge where the Invoice item VAT category code (BT-95) is "Standard rated" the Invoiced item VAT rate (BT-96) shall be greater than zero. </description>
 			<success>BR-S-07</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:ID>S</cbc:ID>
-						<!-- <cbc:TaxExemptionReason>Exempt New Means of Transport</cbc:TaxExemptionReason> -->
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+					<cbc:Percent>10</cbc:Percent>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Verify that an Invoice where VAT category code
-				(BT-111) is "S" does contain the VAT exemption reason text (BT-113) for that VAT
-				category</description>
+			<description>Trigger error when a document level charge where the Invoice item VAT category code (BT-95) is "Standard rated" the Invoiced item VAT rate (BT-96) is 0 (zero). </description>
 			<error>BR-S-07</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:ID>S</cbc:ID>
-						<cbc:TaxExemptionReason>Exempt New Means of
-							Transport</cbc:TaxExemptionReason>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+					<cbc:Percent>0</cbc:Percent>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
 
 		</Invoice>
 	</test>
+	<test>
+		<assert>
+			<description>Trigger error when a document level charge where the Invoice item VAT category code (BT-95) is "Standard rated" the Invoiced item VAT rate (BT-96) is noegative. </description>
+			<error>BR-S-07</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+					<cbc:Percent>-10</cbc:Percent>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+
 
 
 </testSet>

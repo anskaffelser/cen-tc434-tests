@@ -5,62 +5,65 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice with a VAT category code "S" shall have the VAT category rate (BT-112) greater (&gt;) than 0 (zero).</description>
+			<description>Verify that in an Invoice line where the Invoice item VAT category code (BT-151) is "Standard rated" the Invoiced item VAT rate (BT-152) shall be greater than zero </description>
 			<success>BR-S-05</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
+			<cac:InvoiceLine>	
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
 						<cbc:ID>S</cbc:ID>
-						<cbc:Percent>25</cbc:Percent>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
+						<cbc:Percent>10</cbc:Percent>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+
 		</Invoice>
 	</test>
+
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice with a VAT category code "S" have the VAT category rate (BT-112) lesser than 0 (zero).</description>
+			<description>Trigger error if an Invoice line where the Invoice item VAT category code (BT-151) is "Standard rated" the Invoiced item VAT rate (BT-152) is 0.</description>
 			<error>BR-S-05</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:ID>S</cbc:ID>
-						<cbc:Percent>-1</cbc:Percent>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
-			
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Trigger error when an Invoice with a VAT category code "S" have the VAT category rate (BT-112) equal to 0 (zero).</description>
-			<error>BR-S-05</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
+			<cac:InvoiceLine>	
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
 						<cbc:ID>S</cbc:ID>
 						<cbc:Percent>0</cbc:Percent>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
-			
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
 		</Invoice>
-	</test>	
-	
+	</test>
+
+
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice line where the Invoice item VAT category code (BT-151) is "Standard rated" the Invoiced item VAT rate (BT-152) is negative.</description>
+			<error>BR-S-05</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:InvoiceLine>	
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>S</cbc:ID>
+						<cbc:Percent>-10</cbc:Percent>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+
+
 </testSet>
