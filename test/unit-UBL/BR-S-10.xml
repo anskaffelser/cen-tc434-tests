@@ -25,7 +25,7 @@
 	<test>
 		<assert>
 			<description>Trigger error if a VAT Breakdown (BG-23) with VAT Category code (BT-118) "Standard rate" shall has a VAT Exemption reason code (BT-121) or VAT Exemption reason text (BT-120).</description>
-			<success>BR-S-10</success>
+			<error>BR-S-10</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -47,7 +47,7 @@
 	<test>
 		<assert>
 			<description>Trigger error if a VAT Breakdown (BG-23) with VAT Category code (BT-118) "Standard rate" shall has a VAT Exemption reason code (BT-121) or VAT Exemption reason text (BT-120).</description>
-			<success>BR-S-10</success>
+			<error>BR-S-10</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -68,7 +68,7 @@
 	<test>
 		<assert>
 			<description>Trigger error if a VAT Breakdown (BG-23) with VAT Category code (BT-118) "Standard rate" shall has a VAT Exemption reason code (BT-121) or VAT Exemption reason text (BT-120).</description>
-			<success>BR-S-10</success>
+			<error>BR-S-10</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
