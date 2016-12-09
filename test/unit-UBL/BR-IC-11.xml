@@ -5,64 +5,93 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice with a VAT category code "IC" have the VAT category rate (BT-112) = 0 (zero). </description>
+			<description>Verify that in an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC" the actual delivery date (BT-69) is not blank</description>
 			<success>BR-IC-11</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			
+			<cac:Delivery>        
+				<cbc:ActualDeliveryDate>2016-06-01</cbc:ActualDeliveryDate>
+			</cac:Delivery>
+			
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>IC</cbc:ID>
-						<cbc:Percent>0</cbc:Percent>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-
 		</Invoice>
 	</test>
-	
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT category code "IC" have the VAT category rate (BT-112) != 0 (zero). </description>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the actual delivery date (BT-69) blank</description>
 			<error>BR-IC-11</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:Delivery>        
+				<cbc:ActualDeliveryDate></cbc:ActualDeliveryDate>
+			</cac:Delivery>
+			
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>IC</cbc:ID>
-						<cbc:Percent>10</cbc:Percent>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
-		</Invoice>
-	</test>
-	
-	
-	<test>
-		<assert>
-			<description>Trigger error if an Invoice with a VAT category code "IC" have the VAT category rate (BT-112) != 0 (zero). </description>
-			<error>BR-IC-11</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
-						<cbc:Percent>-10</cbc:Percent>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
 
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the actual delivery date (BT-69) blank</description>
+			<error>BR-IC-11</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:Delivery>        
+				<cbc:ActualDeliveryDate><!--comment only--></cbc:ActualDeliveryDate>
+			</cac:Delivery>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+	
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the actual delivery date (BT-69) blank</description>
+			<error>BR-IC-11</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:Delivery>        
+				<cbc:ActualDeliveryDate/>
+			</cac:Delivery>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
 </testSet>

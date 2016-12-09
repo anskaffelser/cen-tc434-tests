@@ -5,63 +5,288 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that the VAT category tax amount (BT-110) in a VAT breakdown (BG-21) where the VAT category code (BT-111) is “IC” = 0 (zero)  </description>
+			<description>Verify that an Invoice that contains a line where the invoiced item VAT
+				category code (BT-142) is “IC” contains the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				Buyer's VAT identifier (BT-46).</description>
 			<success>BR-IC-02</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cbc:TaxAmount>0.00</cbc:TaxAmount>
-					<cac:TaxCategory>
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
 						<cbc:ID>IC</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when the VAT category tax amount (BT-110) in a VAT breakdown (BG-21) where the VAT category code (BT-111) is “IC” != 0 (zero) </description>
+			<description>Verify that an Invoice that contains a line where the invoiced item VAT
+				category code (BT-142) is “IC” contains the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				Buyer's VAT identifier (BT-46).</description>
+			<success>BR-IC-02</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
+				category code (BT-142) is “IC” does not contain both the Seller's VAT identifier (BT-30)or the Seller tax representative VAT identifier,  and
+				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-02</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cbc:TaxAmount>10.00</cbc:TaxAmount>
-					<cac:TaxCategory>
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<!-- <cbc:CompanyID>NO123456789</cbc:CompanyID>-->
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
 						<cbc:ID>IC</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Trigger error when the VAT category tax amount (BT-110) in a VAT breakdown (BG-21) where the VAT category code (BT-111) is “IC” != 0 (zero) </description>
-			<error>BR-IC-02</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cbc:TaxAmount>-10.00</cbc:TaxAmount>
-					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
 			
 		</Invoice>
 	</test>
-	
-
-
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
+				category code (BT-142) is “IC” does not contain both the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				Buyer's VAT identifier (BT-46).</description>
+			<error>BR-IC-02</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<!--	<cac:PartyTaxScheme>
+						 <cbc:CompanyID>NO123456789</cbc:CompanyID>
+					</cac:PartyTaxScheme> -->
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
+				category code (BT-142) is “IC” does not contain both the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				Buyer's VAT identifier (BT-46).</description>
+			<error>BR-IC-02</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<!-- <cbc:CompanyID>987654321MVA</cbc:CompanyID>-->
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
+				category code (BT-142) is “IC” does not contain both the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				Buyer's VAT identifier (BT-46).</description>
+			<error>BR-IC-02</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<!-- <cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme> -->
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a line where the invoiced item VAT
+				category code (BT-142) is “IC” does not contain the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				Buyer's VAT identifier (BT-46).</description>
+			<error>BR-IC-02</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<!--				<cac:PartyTaxScheme>
+					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
+				</cac:PartyTaxScheme>-->
+			</cac:TaxRepresentativeParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a line where the invoiced item VAT
+				category code (BT-142) is “IC” does not contain the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				Buyer's VAT identifier (BT-46).</description>
+			<error>BR-IC-02</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<!--					<cbc:CompanyID>999999999MVA</cbc:CompanyID>-->
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID> IC</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
 </testSet>

@@ -5,7 +5,47 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a line where the Invoiced item VAT category code is “IC” contain a VAT breakdown with VAT category code = "IC"</description>
+			<description>Verify that An Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “Intra-community supply” contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "Intra-community supply".</description>
+			<success>BR-IC-01</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Verify that An Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “Intra-community supply” contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "Intra-community supply".</description>
 			<success>BR-IC-01</success>
 		</assert>
 		<Invoice
@@ -29,9 +69,62 @@
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
+	
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “IC”, does not contain a VAT breakdown with VAT category code = "IC"</description>
+			<description>Verify that An Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “Intra-community supply” contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "Intra-community supply".</description>
+			<success>BR-IC-01</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Verify that An Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “Intra-community supply” contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "Intra-community supply".</description>
+			<success>BR-IC-01</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “Intra-community supply” does not contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "Intra-community supply".</description>
 			<error>BR-IC-01</error>
 		</assert>
 		<Invoice
@@ -41,7 +134,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>A</cbc:ID>
+						<cbc:ID>S</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -56,9 +149,44 @@
 			
 		</Invoice>
 	</test>
+	
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “IC”, does not contain a VAT breakdown with VAT category code = "IC"</description>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “Export outside the EU” does not contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "Export outside the EU"</description>
+			<error>BR-IC-01</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “Export outside the EU” does not contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "Export outside the EU"</description>
 			<error>BR-IC-01</error>
 		</assert>
 		<Invoice
@@ -73,55 +201,25 @@
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
 			
 		</Invoice>
 	</test>
-	
-	
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “IC”, does not contain a VAT breakdown with VAT category code = "IC"</description>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “Export outside the EU” does not contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "Export outside the EU"</description>
 			<error>BR-IC-01</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-			<!--	<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal> -->
-			</cac:TaxTotal>
-			
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
-			
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “IC”, does not contain a VAT breakdown with VAT category code = "IC"</description>
-			<error>BR-IC-01</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-		<!--  	<cac:TaxTotal>
+			<!-- <cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>IC</cbc:ID>
@@ -139,4 +237,32 @@
 			
 		</Invoice>
 	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “Export outside the EU” does not contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "Export outside the EU"</description>
+			<error>BR-IC-01</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<!-- <cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>IC</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal> -->
+			</cac:TaxTotal>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+	
+	
 </testSet>

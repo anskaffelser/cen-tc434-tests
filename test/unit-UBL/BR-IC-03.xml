@@ -2,13 +2,17 @@
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
 		<scope>BR-IC-03</scope>
+
 	</assert>
+
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “IC” contains both the Seller's VAT identifier (BT-30) and
-				Buyer's VAT identifier (BT-46).</description>
+			<description>Verify that an Invoice that contains a document level allowance with a
+				document level allowance VAT category code that is "IC" contains both the Seller's
+				VAT identifier or the Sellers Tax Representative VAT identifier (BT-30) and Buyer's
+				VAT identifier (BT-46).</description>
 			<success>BR-IC-03</success>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -30,21 +34,58 @@
 				</cac:Party>
 			</cac:AccountingCustomerParty>
 
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “IC” does not contain both the Seller's VAT identifier (BT-30) and
+			<description>Verify that an Invoice that contains a document level allowance with a
+				document level allowance VAT category code that is "IC" contains both the Seller's
+				VAT identifier or the Sellers Tax Representative VAT identifier (BT-30) and Buyer's
+				VAT identifier (BT-46).</description>
+			<success>BR-IC-03</success>
+
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<cbc:CompanyID>1234567</cbc:CompanyID>
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+		</Invoice>
+	</test>
+
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a document level allowance with
+				a document level allowance VAT category code that is "IC" does not contain both the
+				Seller's VAT identifier (BT-30) or the Sellers Tax Representative VAT identifier and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-03</error>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -57,7 +98,7 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<cac:PartyTaxScheme>
@@ -65,23 +106,26 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
-			
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
+
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
 
 		</Invoice>
 	</test>
+
+
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “IC” does not contain both the Seller's VAT identifier (BT-30) and
-				Buyer's VAT identifier (BT-46).</description>
+			<description>Trigger error when an Invoice that contains a document level allowance or
+				charge with a document level allowance VAT category code that is "IC" does not
+				contain both the Seller's VAT identifier (BT-30) or the Sellers Tax Representative
+				VAT identifier and Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-03</error>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -89,12 +133,12 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:AccountingSupplierParty>
 				<cac:Party>
-				<!--	<cac:PartyTaxScheme>
+					<!--	<cac:PartyTaxScheme>
 						 <cbc:CompanyID>NO123456789</cbc:CompanyID>
 					</cac:PartyTaxScheme> -->
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<cac:PartyTaxScheme>
@@ -102,23 +146,23 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
-			
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
-			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “IC” does not contain both the Seller's VAT identifier (BT-30) and
+			<description>Trigger error when an Invoice that contains a document level allowance with
+				a document level allowance VAT category code that is "IC" does not contain both the
+				Seller's VAT identifier (BT-30) or the Sellers Tax Representative VAT identifier and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-03</error>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -131,7 +175,7 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<cac:PartyTaxScheme>
@@ -139,21 +183,21 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
-			
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
-			
+
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “IC” does not contain both the Seller's VAT identifier (BT-30) and
+			<description>Trigger error when an Invoice that contains a document level allowance with
+				a document level allowance VAT category code that is "IC" does not contain both the
+				Seller's VAT identifier (BT-30) or the Sellers Tax Representative VAT identifier and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-03</error>
 		</assert>
@@ -168,7 +212,7 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<!-- <cac:PartyTaxScheme>
@@ -176,15 +220,85 @@
 					</cac:PartyTaxScheme> -->
 				</cac:Party>
 			</cac:AccountingCustomerParty>
+
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a document level allowance or
+				charge with a document level allowance VAT category code that is "IC" does not
+				contain both the Seller's VAT identifier (BT-30) or the Sellers Tax Representative
+				VAT identifier and Buyer's VAT identifier (BT-46).</description>
+			<error>BR-IC-03</error>
+
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<!--				<cac:PartyTaxScheme>
+					<cbc:CompanyID>1234567</cbc:CompanyID>
+				</cac:PartyTaxScheme>-->
+			</cac:TaxRepresentativeParty>
+
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a document level allowance or
+				charge with a document level allowance VAT category code that is "IC" does not
+				contain both the Seller's VAT identifier (BT-30) or the Sellers Tax Representative
+				VAT identifier and Buyer's VAT identifier (BT-46).</description>
+			<error>BR-IC-03</error>
+
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<!--					<cbc:CompanyID>1234567</cbc:CompanyID>-->
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
 			
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
-			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>IC</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+
 		</Invoice>
 	</test>
 </testSet>
