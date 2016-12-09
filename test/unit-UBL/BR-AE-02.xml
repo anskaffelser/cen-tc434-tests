@@ -6,7 +6,7 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “AE” contains both the Seller's VAT identifier (BT-30) and
+				category code (BT-142) is “AE” contains the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
 				Buyer's VAT identifier (BT-46).</description>
 			<success>BR-AE-02</success>
 		</assert>
@@ -41,8 +41,42 @@
 	</test>
 	<test>
 		<assert>
+			<description>Verify that an Invoice that contains a line where the invoiced item VAT
+				category code (BT-142) is “AE” contains the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				Buyer's VAT identifier (BT-46).</description>
+			<success>BR-AE-02</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>AE</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
 			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “AE” does not contain both the Seller's VAT identifier (BT-30) and
+				category code (BT-142) is “AE” does not contain both the Seller's VAT identifier (BT-30)or the Seller tax representative VAT identifier,  and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-AE-02</error>
 		</assert>
@@ -79,7 +113,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “AE” does not contain both the Seller's VAT identifier (BT-30) and
+				category code (BT-142) is “AE” does not contain both the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-AE-02</error>
 		</assert>
@@ -116,7 +150,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “AE” does not contain both the Seller's VAT identifier (BT-30) and
+				category code (BT-142) is “AE” does not contain both the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-AE-02</error>
 		</assert>
@@ -153,7 +187,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “AE” does not contain both the Seller's VAT identifier (BT-30) and
+				category code (BT-142) is “AE” does not contain both the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-AE-02</error>
 		</assert>
@@ -185,6 +219,74 @@
 				</cac:Item>
 			</cac:InvoiceLine>
 			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a line where the invoiced item VAT
+				category code (BT-142) is “AE” does not contain the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				Buyer's VAT identifier (BT-46).</description>
+			<error>BR-AE-02</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+<!--				<cac:PartyTaxScheme>
+					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
+				</cac:PartyTaxScheme>-->
+			</cac:TaxRepresentativeParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>AE</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a line where the invoiced item VAT
+				category code (BT-142) is “AE” does not contain the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				Buyer's VAT identifier (BT-46).</description>
+			<error>BR-AE-02</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+<!--					<cbc:CompanyID>999999999MVA</cbc:CompanyID>-->
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID> AE</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
 		</Invoice>
 	</test>
 </testSet>
