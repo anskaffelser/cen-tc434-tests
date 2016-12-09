@@ -7,7 +7,7 @@
 		<assert>
 			<description>Verify that an Invoice that contains a document level allowance
 				with a document level allowance VAT category code (BT-89) that is "G" does
-				contain the Seller's VAT identifier (BT-30). </description>
+				contain the Seller's VAT identifier (BT-30) or the seller tax representative VAT identifier. </description>
 			<success>BR-G-03</success>
 		</assert>
 		<Invoice
@@ -32,9 +32,34 @@
 	</test>
 	<test>
 		<assert>
+			<description>Verify that an Invoice that contains a document level allowance
+				with a document level allowance VAT category code (BT-89) that is "G" does
+				contain the Seller's VAT identifier (BT-30) or the seller tax representative VAT identifier. </description>
+			<success>BR-G-03</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>G</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
 			<description>Trigger error if an Invoice that contains a document level allowance
 				with a document level allowance VAT category code (BT-89) that is "G" does not
-				contain the Seller's VAT identifier (BT-30). </description>
+				contain the Seller's VAT identifier (BT-30) or the seller tax representative VAT identifier.. </description>
 			<error>BR-G-03</error>
 		</assert>
 		<Invoice
@@ -62,7 +87,7 @@
 		<assert>
 			<description>Trigger error if an Invoice that contains a document level allowance
 				with a document level allowance VAT category code (BT-89) that is "G" does not
-				contain the Seller's VAT identifier (BT-30). </description>
+				contain the Seller's VAT identifier (BT-30)or the seller tax representative VAT identifier.. </description>
 			<error>BR-G-03</error>
 		</assert>
 		<Invoice
@@ -86,5 +111,56 @@
 			
 		</Invoice>
 	</test>
-
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a document level allowance
+				with a document level allowance VAT category code (BT-89) that is "G" does not
+				contain the Seller's VAT identifier (BT-30) or the seller tax representative VAT identifier.. </description>
+			<error>BR-G-03</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+<!--				<cac:PartyTaxScheme>
+					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
+				</cac:PartyTaxScheme>-->
+			</cac:TaxRepresentativeParty>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>G</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a document level allowance
+				with a document level allowance VAT category code (BT-89) that is "G" does not
+				contain the Seller's VAT identifier (BT-30)or the seller tax representative VAT identifier.. </description>
+			<error>BR-G-03</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+<!--					<cbc:CompanyID>999999999MVA</cbc:CompanyID>-->
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>G</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
 </testSet>
