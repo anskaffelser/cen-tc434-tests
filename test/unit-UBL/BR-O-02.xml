@@ -5,49 +5,115 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that Invoice that contains a VAT breakdown group (BG-21) with a VAT
-				category code (BT-111) as "O" does not contain other VAT category codes (BT-111)
-				that are not "O".</description>
+			<description>Verify that an Invoice that contains a line where the Invoiced item VAT
+				category code is “O” does not contain the Sellers VAT Identifier , the Seller Tax
+				registration identifier or the Seller tax representative VAT identifier or the
+				Buyers VAT identifier</description>
 			<success>BR-O-02</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:ID>O</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
 
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>O</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a VAT breakdown group (BG-21) with a VAT
-				category code (BT-111) as "O" does contain other VAT category codes (BT-111)
-				that are not "O". </description>
+			<description>Trigger error when an Invoice that contains a line where the Invoiced item
+				VAT category code = “O” does not contain the Sellers VAT Identifier (BT-31), the
+				Seller Tax registration identifier (BT-32) or the Seller tax representative VAT
+				identifier or the Buyers VAT identifier</description>
 			<error>BR-O-02</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<cbc:CompanyID>999999999</cbc:CompanyID>
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:ID>G</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+
+		</Invoice>
+	</test>
+
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a line where the Invoiced item
+				VAT category code = “O” does not contain the Sellers VAT Identifier (BT-31), the
+				Seller Tax registration identifier (BT-32) or the Seller tax representative VAT
+				identifier (BT-63)</description>
+			<error>BR-O-02</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>O</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+
+		</Invoice>
+	</test>
+
+
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a line where the Invoiced item
+				VAT category code = “O” does not contain the Sellers VAT Identifier (BT-31), the
+				Seller Tax registration identifier (BT-32) or the Seller tax representative VAT
+				identifier or the Buyers VAT identifier</description>
+			<error>BR-O-02</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						 <cbc:CompanyID>NO123456789</cbc:CompanyID> 
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>O</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
 
 		</Invoice>
 	</test>

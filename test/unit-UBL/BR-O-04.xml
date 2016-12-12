@@ -2,14 +2,17 @@
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
 		<scope>BR-O-04</scope>
+		
 	</assert>
+	
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a VAT breakdown group (BG-21) with a
-				VAT category code (BT-111) as "O" does not contain a Document level allowances group
-				(BG-18) where Document level allowance VAT category code (BT-89) is not
-				"O".</description>
+			<description>Verify that an Invoice that contains a document level charge with a
+				document level charge VAT category code that is "O" does not contain the Seller's
+				VAT identifier or the Sellers Tax Representative VAT identifier or Buyer's VAT
+				identifier.</description>
 			<success>BR-O-04</success>
+			
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -17,88 +20,103 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>O</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+		</Invoice>
+	</test>
+	
+	
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a document level charge with a
+				document level charge VAT category code that = "O" does contain the Seller's VAT
+				identifier or the Sellers Tax Representative VAT identifier or Buyer's VAT
+				identifier.</description>
+			<error>BR-O-04</error>
+			
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>O</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:ID>O</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
-
 		</Invoice>
 	</test>
 	
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a VAT breakdown group (BG-21) with a
-				VAT category code (BT-111) as "O" does contain a Document level allowances group
-				(BG-18) where Document level allowance VAT category code (BT-89) is not
-				"O".</description>
+			<description>Trigger error if an Invoice that contains a document level charge with a
+				document level charge VAT category code that = "O" does contain the Seller's VAT
+				identifier or the Sellers Tax Representative VAT identifier or Buyer's VAT
+				identifier.</description>
 			<error>BR-O-04</error>
+			
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-				<cac:TaxCategory>
-					<cbc:ID>S</cbc:ID>
-				</cac:TaxCategory>
-			</cac:AllowanceCharge>
 			
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:ID>O</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
 			
-		</Invoice>
-
-	</test>
-
-	<test>
-		<assert>
-			<description>Trigger error when an Invoice that contains a VAT breakdown group (BG-21) with a
-				VAT category code (BT-111) as "O" does contain a Document level allowances group
-				(BG-18) where Document level allowance VAT category code (BT-89) is not
-				"O".</description>
-			<error>BR-O-04</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>O</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-
-			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-				<cac:TaxCategory>
-					<cbc:ID>S</cbc:ID>
-				</cac:TaxCategory>
-			</cac:AllowanceCharge>			
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:ID>O</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
 			
 		</Invoice>
-		
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a document level charge or
+				charge with a document level charge VAT category code that is "O" does not
+				contain both the Seller's VAT identifier (BT-30) or the Sellers Tax Representative
+				VAT identifier and Buyer's VAT identifier (BT-46).</description>
+			<error>BR-O-04</error>
+			
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<cbc:CompanyID>1234567</cbc:CompanyID>
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>O</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
 	</test>
 </testSet>

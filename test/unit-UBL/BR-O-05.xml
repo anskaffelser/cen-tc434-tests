@@ -5,101 +5,41 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a VAT breakdown group (BG-21) with a
-				VAT category code (BT-111) as "O" shall not contain a document Level charge group
-				(BG-18) where Document level charge VAT category code (BT-96) is not
-				"O".</description>
+			<description>Verify that an Invoice line where the Invoice item VAT category code is "O" does not contain an invoiced item VAT rate</description>
 			<success>BR-O-05</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-
-			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
-				<cac:TaxCategory>
-					<cbc:ID>O</cbc:ID>
-				</cac:TaxCategory>
-			</cac:AllowanceCharge>
-
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
-
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a VAT breakdown group (BG-21)
-				with a VAT category code (BT-111) as "O" does contain a Document level allowances
-				group (BG-18) where Document level allowance VAT category code (BT-89) is not
-				"O".</description>
+			<description>Trigger error if an Invoice line where the Invoice item VAT category code is "O" does contain an invoiced item VAT rate</description>
 			<error>BR-O-05</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
-				<cac:TaxCategory>
-					<cbc:ID>S</cbc:ID>
-				</cac:TaxCategory>
-			</cac:AllowanceCharge>
-
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
-
-		</Invoice>
-
-	</test>
-
-	<test>
-		<assert>
-			<description>Trigger error when an Invoice that contains a VAT breakdown group (BG-21)
-				with a VAT category code (BT-111) as "O" does contain a Document level allowances
-				group (BG-18) where Document level allowance VAT category code (BT-89) is not
-				"O".</description>
-			<error>BR-O-05</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
-				<cac:TaxCategory>
-					<cbc:ID>O</cbc:ID>
-				</cac:TaxCategory>
-			</cac:AllowanceCharge>
-
-			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
-				<cac:TaxCategory>
-					<cbc:ID>S</cbc:ID>
-				</cac:TaxCategory>
-			</cac:AllowanceCharge>
+						<cbc:Percent>2</cbc:Percent>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
 			
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:ID>O</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
-
 		</Invoice>
-
 	</test>
+	
 </testSet>

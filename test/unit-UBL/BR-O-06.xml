@@ -5,42 +5,38 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice line where VAT category code (BT-142) is "O" does
-				not contain an invoiced item VAT rate (BT-143).</description>
+			<description>Verify that a document level allowance where the Invoice item VAT category code = "O" does not contain an invoiced item VAT rate </description>
 			<success>BR-O-06</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
-						<cbc:ID>O</cbc:ID>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>O</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice line where VAT category code (BT-142) is "O"
-				does contain an invoiced item VAT rate (BT-143).</description>
+			<description>Trigger error if a document level allowance where the Invoice item VAT category code = "O" does contain an invoiced item VAT rate </description>
 			<error>BR-O-06</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
-						<cbc:ID>O</cbc:ID>
-						<cbc:Percent>2</cbc:Percent>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
-
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>O</cbc:ID>
+					<cbc:Percent>10</cbc:Percent>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
 		</Invoice>
 	</test>
 	
