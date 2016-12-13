@@ -5,9 +5,10 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a line where the Invoiced item VAT
-				category code (BT-142) is “Z” does contain in the VAT breakdown (BG-21) one VAT
-				category code (BT-111) equal with "Z". </description>
+			<description>Verify that an Invoice that contains a line, a document level allowance or
+				charge where the invoiced item VAT category code is “Z” shall contain in
+				the VAT breakdown one VAT category code equal with
+				"Z".</description>
 			<success>BR-Z-01</success>
 		</assert>
 		<Invoice
@@ -21,7 +22,21 @@
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -33,9 +48,98 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT
-				category code (BT-142) is “Z” does not contain in the VAT breakdown (BG-21) one VAT
-				category code (BT-111) equal with "Z". </description>
+			<description>Verify that an Invoice that contains a line, a document level allowance or
+				charge where the invoiced item VAT category code is “Z” shall contain in
+				the VAT breakdown one VAT category code equal with
+				"Z".</description>
+			<success>BR-Z-01</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	
+	<test>
+		<assert>
+			<description>Verify that an Invoice that contains a line, a document level allowance or
+				charge where the invoiced item VAT category code is “Z” shall contain in
+				the VAT breakdown one VAT category code equal with
+				"Z".</description>
+			<success>BR-Z-01</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Verify that an Invoice that contains a line, a document level allowance or
+				charge where the invoiced item VAT category code is “Z” shall contain in
+				the VAT breakdown one VAT category code equal with
+				"Z".</description>
+			<success>BR-Z-01</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or
+				charge where the invoiced item VAT category code is “Z” does not contain in
+				the VAT breakdown one VAT category code equal with
+				"Z".</description>
 			<error>BR-Z-01</error>
 		</assert>
 		<Invoice
@@ -57,14 +161,53 @@
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-
+			
+		</Invoice>
+	</test>
+	
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or
+				charge where the invoiced item VAT category code is “Z” does not contain in
+				the VAT breakdown one VAT category code equal with
+				"Z".</description>
+			<error>BR-Z-01</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT
-				category code (BT-142) is “Z” does not contain in the VAT breakdown (BG-21) one VAT
-				category code (BT-111) equal with "Z". </description>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or
+				charge where the invoiced item VAT category code is “Z” does not contain in
+				the VAT breakdown one VAT category code equal with
+				"Z".</description>
 			<error>BR-Z-01</error>
 		</assert>
 		<Invoice
@@ -79,21 +222,21 @@
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
-						<cbc:ID>Z</cbc:ID>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
 			
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT
-				category code (BT-142) is “Z” does not contain in the VAT breakdown (BG-21) one VAT
-				category code (BT-111) equal with "Z". </description>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or
+				charge where the invoiced item VAT category code is “Z” does not contain in
+				the VAT breakdown one VAT category code equal with
+				"Z".</description>
 			<error>BR-Z-01</error>
 		</assert>
 		<Invoice
@@ -120,9 +263,10 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT
-				category code (BT-142) is “Z” does not contain in the VAT breakdown (BG-21) one VAT
-				category code (BT-111) equal with "Z". </description>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or
+				charge where the invoiced item VAT category code is “Z” does not contain in
+				the VAT breakdown one VAT category code equal with
+				"Z".</description>
 			<error>BR-Z-01</error>
 		</assert>
 		<Invoice
@@ -137,16 +281,15 @@
 				</cac:TaxSubtotal> -->
 			</cac:TaxTotal>
 			
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
-						<cbc:ID>Z</cbc:ID>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
 			
 		</Invoice>
 	</test>
-
-
+	
+	
 </testSet>

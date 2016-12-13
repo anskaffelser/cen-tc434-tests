@@ -6,9 +6,9 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a document level allowance 
-				with a document level allowance VAT category code (BT-89) that is "E" does
-				contain the Sellers VAT Identifier (BT-31), the Seller Tax registration identifier
-				(BT-32) or the Seller tax representative VAT identifier (BT-63) </description>
+				with a document level allowance VAT category code that is "E" does
+				contain the Sellers VAT Identifier  the Seller Tax registration identifier
+			 or the Seller tax representative VAT identifier </description>
 			<success>BR-E-03</success>
 		</assert>
 		<Invoice
@@ -34,9 +34,9 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a document level allowance 
-				with a document level allowance VAT category code (BT-89) that is "E" does
-				contain the Sellers VAT Identifier (BT-31), the Seller Tax registration identifier
-				(BT-32) or the Seller tax representative VAT identifier (BT-63) </description>
+				with a document level allowance VAT category code that is "E" does
+				contain the Sellers VAT Identifier  the Seller Tax registration identifier
+			 or the Seller tax representative VAT identifier </description>
 			<success>BR-E-03</success>
 		</assert>
 		<Invoice
@@ -59,9 +59,9 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance with a document level allowance VAT category code (BT-89) that is "E"
-				does not contain the Sellers VAT Identifier (BT-31), the Seller Tax registration
-				identifier (BT-32) or the Seller tax representative VAT identifier (BT-63) </description>
+			<description>Trigger error if an Invoice that contains a document level allowance with a document level allowance VAT category code that is "E"
+				does not contain the Sellers VAT Identifier  the Seller Tax registration
+				identifier or the Seller tax representative VAT identifier </description>
 			<error>BR-E-03</error>
 		</assert>
 		<Invoice
@@ -85,9 +85,9 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance  with a document level allowance VAT category code (BT-89) that is "E"
-				does not contain the Sellers VAT Identifier (BT-31), the Seller Tax registration
-				identifier (BT-32) or the Seller tax representative VAT identifier (BT-63) </description>
+			<description>Trigger error if an Invoice that contains a document level allowance  with a document level allowance VAT category code that is "E"
+				does not contain the Sellers VAT Identifier  the Seller Tax registration
+				identifier or the Seller tax representative VAT identifier </description>
 			<error>BR-E-03</error>
 		</assert>
 		<Invoice
@@ -112,9 +112,9 @@
 
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance  with a document level allowance VAT category code (BT-89) that is "E"
-				does not contain the Sellers VAT Identifier (BT-31), the Seller Tax registration
-				identifier (BT-32) or the Seller tax representative VAT identifier (BT-63) </description>
+			<description>Trigger error if an Invoice that contains a document level allowance  with a document level allowance VAT category code that is "E"
+				does not contain the Sellers VAT Identifier  the Seller Tax registration
+				identifier or the Seller tax representative VAT identifier </description>
 			<error>BR-E-03</error>
 		</assert>
 		<Invoice
@@ -140,9 +140,9 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance with a document level allowance VAT category code (BT-89) that is "E"
-				does not contain the Sellers VAT Identifier (BT-31), the Seller Tax registration
-				identifier (BT-32) or the Seller tax representative VAT identifier (BT-63) </description>
+			<description>Trigger error if an Invoice that contains a document level allowance with a document level allowance VAT category code that is "E"
+				does not contain the Sellers VAT Identifier  the Seller Tax registration
+				identifier or the Seller tax representative VAT identifier </description>
 			<error>BR-E-03</error>
 		</assert>
 		<Invoice

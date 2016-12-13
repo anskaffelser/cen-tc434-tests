@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "Exempt from VAT" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “Exempt from VAT".</description>
+			<description>Verify that in a VAT breakdown where VAT category code is "E" the VAT category taxable amount shall equal the sum of Invoice line net amounts minus document level allowance amounts plus document level charge amounts where the VAT category codes are “E".</description>
 			<success>BR-E-08</success>
 		</assert>
 		<Invoice
@@ -48,7 +48,7 @@
 	
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "Exempt from VAT" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “Exempt from VAT".</description>
+			<description>Verify that in a VAT breakdown where VAT category code is "E" the VAT category taxable amount shall equal the sum of Invoice line net amounts minus document level allowance amounts plus document level charge amounts where the VAT category codes are “E".</description>
 			<success>BR-E-08</success>
 		</assert>
 		<Invoice
@@ -83,7 +83,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "Exempt from VAT" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “Exempt from VAT".</description>
+			<description>Verify that in a VAT breakdown where VAT category code is "E" the VAT category taxable amount shall equal the sum of Invoice line net amounts minus document level allowance amounts plus document level charge amounts where the VAT category codes are “E".</description>
 			<success>BR-E-08</success>
 		</assert>
 		<Invoice
@@ -119,7 +119,7 @@
 	
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "Exempt from VAT" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “Exempt from VAT".</description>
+			<description>Verify that in a VAT breakdown where VAT category code is "E" the VAT category taxable amount shall equal the sum of Invoice line net amounts minus document level allowance amounts plus document level charge amounts where the VAT category codes are “E".</description>
 			<success>BR-E-08</success>
 		</assert>
 		<Invoice
@@ -146,7 +146,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "Exempt from VAT" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “Exempt from VAT".</description>
+			<description>Verify that in a VAT breakdown where VAT category code is "E" the VAT category taxable amount shall equal the sum of Invoice line net amounts minus document level allowance amounts plus document level charge amounts where the VAT category codes are “E".</description>
 			<success>BR-E-08</success>
 		</assert>
 		<Invoice
@@ -182,7 +182,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "Exempt from VAT" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “Exempt from VAT".</description>
+			<description>Verify that in a VAT breakdown where VAT category code is "E" the VAT category taxable amount shall equal the sum of Invoice line net amounts minus document level allowance amounts plus document level charge amounts where the VAT category codes are “E".</description>
 			<success>BR-E-08</success>
 		</assert>
 		<Invoice
@@ -218,7 +218,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "Exempt from VAT" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “Exempt from VAT".</description>
+			<description>Verify that in a VAT breakdown where VAT category code is "E" the VAT category taxable amount shall equal the sum of Invoice line net amounts minus document level allowance amounts plus document level charge amounts where the VAT category codes are “E".</description>
 			<success>BR-E-08</success>
 		</assert>
 		<Invoice
@@ -276,7 +276,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if a VAT breakdown (BG-23) where VAT category code (BT-118) is "Exempt from VAT" the VAT category taxable amount (BT-116) is not equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “Exempt from VAT".</description>
+			<description>Trigger error if a VAT breakdown where VAT category code is "E" the VAT category taxable amount is not equal the sum of Invoice line net amounts minus document level allowance amounts plus document level charge amounts where the VAT category codes are “E".</description>
 			<error>BR-E-08</error>
 		</assert>
 		<Invoice
@@ -319,7 +319,7 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error if a VAT breakdown (BG-23) where VAT category code (BT-118) is "Exempt from VAT" the VAT category taxable amount (BT-116) is not equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “Exempt from VAT".</description>
+			<description>Trigger error if a VAT breakdown where VAT category code is "E" the VAT category taxable amount is not equal the sum of Invoice line net amounts minus document level allowance amounts plus document level charge amounts where the VAT category codes are “E".</description>
 			<error>BR-E-08</error>
 		</assert>
 		<Invoice
@@ -361,7 +361,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if a VAT breakdown (BG-23) where VAT category code (BT-118) is "Exempt from VAT" the VAT category taxable amount (BT-116) is not equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “Exempt from VAT".</description>
+			<description>Trigger error if a VAT breakdown where VAT category code is "E" the VAT category taxable amount is not equal the sum of Invoice line net amounts minus document level allowance amounts plus document level charge amounts where the VAT category codes are “E".</description>
 			<error>BR-E-08</error>
 		</assert>
 		<Invoice
@@ -397,7 +397,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if a VAT breakdown (BG-23) where VAT category code (BT-118) is "Exempt from VAT" the VAT category taxable amount (BT-116) is not equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “Exempt from VAT".</description>
+			<description>Trigger error if a VAT breakdown where VAT category code is "E" the VAT category taxable amount is not equal the sum of Invoice line net amounts minus document level allowance amounts plus document level charge amounts where the VAT category codes are “E".</description>
 			<error>BR-E-08</error>
 		</assert>
 		<Invoice

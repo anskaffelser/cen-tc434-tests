@@ -5,68 +5,174 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that for a document level allowance where the Document level
-				allowance VAT category code (BT-89) is "Z" the Document level allowance rate
-				= 0 (zero). </description>
+			<description>Verify that an Invoice that contains a document level charge
+				with a document level charge VAT category code that is "Z" does
+				contain the Sellers VAT Identifier  the Seller Tax registration identifier
+				or the Seller tax representative VAT identifier </description>
 			<success>BR-Z-04</success>
-
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>123456789MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+			
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>Z</cbc:ID>
-					<cbc:Percent>0</cbc:Percent>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error for a document level allowance where the Document level
-				allowance VAT category code (BT-89) is "Z", and the Document level allowance rate
-				!= 0 (zero).  </description>
-			<error>BR-Z-04</error>
+			<description>Verify that an Invoice that contains a document level charge
+				with a document level charge VAT category code that is "Z" does
+				contain the Sellers VAT Identifier  the Seller Tax registration identifier
+				or the Seller tax representative VAT identifier </description>
+			<success>BR-Z-04</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<cbc:CompanyID>999999999</cbc:CompanyID>
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+			
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>Z</cbc:ID>
-					<cbc:Percent>10</cbc:Percent>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-
 		</Invoice>
 	</test>
+	
 	<test>
 		<assert>
-			<description>Trigger error for a document level allowance where the Document level
-				allowance VAT category code (BT-89) is "Z", and the Document level allowance rate
-				!= 0 (zero).  </description>
+			<description>Trigger error if an Invoice that contains a document level
+				charge with a document level charge VAT category code that is "Z"
+				does not contain the Sellers VAT Identifier  the Seller Tax registration
+				identifier or the Seller tax representative VAT identifier </description>
 			<error>BR-Z-04</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<!--				<cac:PartyTaxScheme>
+					<cbc:CompanyID>999999999</cbc:CompanyID>
+				</cac:PartyTaxScheme>-->
+			</cac:TaxRepresentativeParty>
+			
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>Z</cbc:ID>
-					<cbc:Percent>-6</cbc:Percent>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
 		</Invoice>
 	</test>
-
-
-
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a document level 
+				charge with a document level charge VAT category code that is "Z"
+				does not contain the Sellers VAT Identifier  the Seller Tax registration
+				identifier or the Seller tax representative VAT identifier </description>
+			<error>BR-Z-04</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<!--					<cbc:CompanyID>999999999</cbc:CompanyID>-->
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+	
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a document level 
+				charge with a document level charge VAT category code that is "Z"
+				does not contain the Sellers VAT Identifier  the Seller Tax registration
+				identifier or the Seller tax representative VAT identifier </description>
+			<error>BR-Z-04</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<!--<cbc:CompanyID>123456789MVA</cbc:CompanyID>-->
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a document level 
+				charge with a document level charge VAT category code that is "Z"
+				does not contain the Sellers VAT Identifier  the Seller Tax registration
+				identifier or the Seller tax representative VAT identifier </description>
+			<error>BR-Z-04</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<!--	<cac:PartyTaxScheme>
+						<cbc:CompanyID>123456789MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme> -->
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+	
+	
+	
+	
 </testSet>

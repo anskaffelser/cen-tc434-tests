@@ -5,48 +5,64 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice line where Invoiced item VAT category code (BT-142)
-				is "Z" does not contain the Invoiced item VAT exemption reason text (BT-144) for
-				that line.</description>
+			<description>Verify that the VAT category tax amount in a VAT breakdown where the VAT category code is “Z” = 0 (zero). </description>
 			<success>BR-Z-09</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxAmount>0</cbc:TaxAmount>
+					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
-						<!-- <cbc:TaxExemptionReason>Exempt New Means of Transport</cbc:TaxExemptionReason>-->
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
 		</Invoice>
 	</test>
+	
 	<test>
 		<assert>
-			<description>Trigger error when An Invoice line where Invoiced item VAT category code
-				(BT-142) is "Z" shall not contain the Invoiced item VAT exemption reason text
-				(BT-144) for that line.</description>
+			<description>Trigger error if the VAT category tax amount in a VAT breakdown where the VAT category code is “Z” != 0 (zero). </description>
 			<error>BR-Z-09</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxAmount>10</cbc:TaxAmount>
+					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
-						<cbc:TaxExemptionReason>Exempt New Means of
-							Transport</cbc:TaxExemptionReason>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
-
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
 		</Invoice>
 	</test>
-
-
+	
+	
+	<test>
+		<assert>
+			<description>Trigger error if the VAT category tax amount in a VAT breakdown where the VAT category code is “Z” != 0 (zero). </description>
+			<error>BR-Z-09</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxAmount>-10</cbc:TaxAmount>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+	
 </testSet>

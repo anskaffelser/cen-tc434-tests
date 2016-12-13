@@ -6,8 +6,8 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line, a document level allowance or
-				charge where the invoiced item VAT category code (BT-142) is “E” shall contain in
-				the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
+				charge where the invoiced item VAT category code is “E” shall contain in
+				the VAT breakdown one VAT category code equal with
 				"E".</description>
 			<success>BR-E-01</success>
 		</assert>
@@ -49,8 +49,8 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line, a document level allowance or
-				charge where the invoiced item VAT category code (BT-142) is “E” shall contain in
-				the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
+				charge where the invoiced item VAT category code is “E” shall contain in
+				the VAT breakdown one VAT category code equal with
 				"E".</description>
 			<success>BR-E-01</success>
 		</assert>
@@ -79,8 +79,8 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line, a document level allowance or
-				charge where the invoiced item VAT category code (BT-142) is “E” shall contain in
-				the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
+				charge where the invoiced item VAT category code is “E” shall contain in
+				the VAT breakdown one VAT category code equal with
 				"E".</description>
 			<success>BR-E-01</success>
 		</assert>
@@ -108,8 +108,8 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line, a document level allowance or
-				charge where the invoiced item VAT category code (BT-142) is “E” shall contain in
-				the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
+				charge where the invoiced item VAT category code is “E” shall contain in
+				the VAT breakdown one VAT category code equal with
 				"E".</description>
 			<success>BR-E-01</success>
 		</assert>
@@ -137,8 +137,8 @@
 	<test>
 		<assert>
 			<description>Trigger error if an Invoice that contains a line, a document level allowance or
-				charge where the invoiced item VAT category code (BT-142) is “E” does not contain in
-				the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
+				charge where the invoiced item VAT category code is “E” does not contain in
+				the VAT breakdown one VAT category code equal with
 				"E".</description>
 			<error>BR-E-01</error>
 		</assert>
@@ -168,8 +168,8 @@
 	<test>
 		<assert>
 			<description>Trigger error if an Invoice that contains a line, a document level allowance or
-				charge where the invoiced item VAT category code (BT-142) is “E” does not contain in
-				the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
+				charge where the invoiced item VAT category code is “E” does not contain in
+				the VAT breakdown one VAT category code equal with
 				"E".</description>
 			<error>BR-E-01</error>
 		</assert>
@@ -205,8 +205,8 @@
 	<test>
 		<assert>
 			<description>Trigger error if an Invoice that contains a line, a document level allowance or
-				charge where the invoiced item VAT category code (BT-142) is “E” does not contain in
-				the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
+				charge where the invoiced item VAT category code is “E” does not contain in
+				the VAT breakdown one VAT category code equal with
 				"E".</description>
 			<error>BR-E-01</error>
 		</assert>
@@ -234,8 +234,8 @@
 	<test>
 		<assert>
 			<description>Trigger error if an Invoice that contains a line, a document level allowance or
-				charge where the invoiced item VAT category code (BT-142) is “E” does not contain in
-				the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
+				charge where the invoiced item VAT category code is “E” does not contain in
+				the VAT breakdown one VAT category code equal with
 				"E".</description>
 			<error>BR-E-01</error>
 		</assert>
@@ -264,8 +264,8 @@
 	<test>
 		<assert>
 			<description>Trigger error if an Invoice that contains a line, a document level allowance or
-				charge where the invoiced item VAT category code (BT-142) is “E” does not contain in
-				the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
+				charge where the invoiced item VAT category code is “E” does not contain in
+				the VAT breakdown one VAT category code equal with
 				"E".</description>
 			<error>BR-E-01</error>
 		</assert>

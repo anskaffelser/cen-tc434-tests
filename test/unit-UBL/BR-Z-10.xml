@@ -5,8 +5,8 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice where VAT category code (BT-111) is "Z" does not
-				contain the VAT exemption reason text (BT-113) for that VAT category </description>
+			<description>Verify that a VAT Breakdown with VAT Category code = "Z"
+				shall have a VAT Zxemption reason code or the VAT Zxemption reason text.</description>
 			<success>BR-Z-10</success>
 		</assert>
 		<Invoice
@@ -17,18 +17,18 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
-						<!-- <cbc:TaxExemptionReason>Exempt New Means of Transport</cbc:TaxExemptionReason> -->
+						<cbc:TaxZxemptionReason>Reverse charge</cbc:TaxZxemptionReason>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
+			
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Verify that an Invoice where VAT category code
-				(BT-111) is "Z" does contain the VAT exemption reason text (BT-113) for that VAT
-				category</description>
-			<error>BR-Z-10</error>
+			<description>Verify that a VAT Breakdown with VAT Category code = "Z"
+				shall have a VAT Zxemption reason code or the VAT Zxemption reason text.</description>
+			<success>BR-Z-10</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -38,14 +38,58 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
-						<cbc:TaxExemptionReason>Exempt New Means of
-							Transport</cbc:TaxExemptionReason>
+						<cbc:TaxZxemptionReasonCode>10</cbc:TaxZxemptionReasonCode>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-
+			
 		</Invoice>
 	</test>
-
-
+	<test>
+		<assert>
+			<description>Verify that a VAT Breakdown with VAT Category code = "Z"
+				shall have a VAT Zxemption reason code or the VAT Zxemption reason text.</description>
+			<success>BR-Z-10</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxAmount>0</cbc:TaxAmount>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+						<cbc:TaxZxemptionReason>Reverse charge</cbc:TaxZxemptionReason>
+						<cbc:TaxZxemptionReasonCode>10</cbc:TaxZxemptionReasonCode>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+		</Invoice>
+	</test>
+	
+	<test>
+		<assert>
+			<description>Trigger error if a VAT Breakdown with VAT Category code = "Z"
+				does not have a VAT Zxemption reason code or the VAT Zxemption reason text.</description>
+			<error>BR-Z-10</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxAmount>0</cbc:TaxAmount>
+					<cac:TaxCategory>
+						<cbc:ID>Z</cbc:ID>
+						<!--	<cbc:TaxZxemptionReason>Reverse charge</cbc:TaxZxemptionReason>
+						<cbc:TaxZxemptionReasonCode>10</cbc:TaxZxemptionReasonCode> -->
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+		</Invoice>
+	</test>
 </testSet>

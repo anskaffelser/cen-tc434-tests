@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice line where the Invoice item VAT category code (BT-142) is "E"  has an Invoiced item VAT rate (BT-143) = 0 (zero).  </description>
+			<description>Verify that an Invoice line where the Invoice item VAT category code is "E"  has an Invoiced item VAT rate   </description>
 			<success>BR-E-05</success>
 		</assert>
 		<Invoice
@@ -24,7 +24,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice line where the Invoice item VAT category code (BT-142) is "E"  has an Invoiced item VAT rate (BT-143) not equal to 0 (zero). </description>
+			<description>Trigger error when an Invoice line where the Invoice item VAT category code is "E"  has an Invoiced item VAT rate not equal to 0 (zero). </description>
 			<error>BR-E-05</error>
 		</assert>
 		<Invoice
@@ -44,7 +44,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice line where the Invoice item VAT category code (BT-142) is "E"  has an Invoiced item VAT rate (BT-143) not equal to 0 (zero). </description>
+			<description>Trigger error when an Invoice line where the Invoice item VAT category code is "E"  has an Invoiced item VAT rate not equal to 0 (zero). </description>
 			<error>BR-E-05</error>
 		</assert>
 		<Invoice
