@@ -5,7 +5,9 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a line where the Invoiced item VAT category code = “S”  contain the Seller's VAT identifier.</description>
+			<description>Verify that an Invoice that contains a line where the Invoiced item VAT
+				category code = “S” contain the Seller's VAT identifier or the Seller tax
+				representative.</description>
 			<success>BR-S-02</success>
 		</assert>
 		<Invoice
@@ -19,7 +21,7 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -31,7 +33,34 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code = “S”  does not contain the Seller's VAT identifier.</description>
+			<description>Verify that an Invoice that contains a line where the Invoiced item VAT
+				category code = “S” contain the Seller's VAT identifier or the Seller tax
+				representative.</description>
+			<success>BR-S-02</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a line where the Invoiced item
+				VAT category code = “S” does not contain the Seller's VAT identifier.</description>
 			<error>BR-S-02</error>
 		</assert>
 		<Invoice
@@ -45,7 +74,7 @@
 					</cac:PartyTaxScheme>
 				</cac:Party> -->
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -53,12 +82,14 @@
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-			
+
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “S”, does not contain a VAT breakdown with VAT category code = "S"</description>
+			<description>Trigger error when an Invoice that contains a line where the Invoiced item
+				VAT category code is “S”, does not contain a VAT breakdown with VAT category code =
+				"S"</description>
 			<error>BR-S-02</error>
 		</assert>
 		<Invoice
@@ -67,12 +98,12 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:AccountingSupplierParty>
 				<cac:Party>
-				<!-- 	<cac:PartyTaxScheme>
+					<!-- 	<cac:PartyTaxScheme>
 						<cbc:CompanyID>NO123456789</cbc:CompanyID>
 					</cac:PartyTaxScheme> -->
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -80,14 +111,16 @@
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-			
+
 		</Invoice>
 	</test>
-	
-	
+
+
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “S”, does not contain a VAT breakdown with VAT category code = "S"</description>
+			<description>Trigger error when an Invoice that contains a line where the Invoiced item
+				VAT category code is “S”, does not contain a VAT breakdown with VAT category code =
+				"S"</description>
 			<error>BR-S-02</error>
 		</assert>
 		<Invoice
@@ -101,7 +134,7 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -109,8 +142,62 @@
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-			
+
 		</Invoice>
 	</test>
-	
+
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a line where the Invoiced item
+				VAT category code = “S” does not contain the Seller's VAT identifier.</description>
+			<error>BR-S-02</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<!--				<cac:PartyTaxScheme>
+					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
+				</cac:PartyTaxScheme>-->
+			</cac:TaxRepresentativeParty>
+
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when an Invoice that contains a line where the Invoiced item
+				VAT category code is “S”, does not contain a VAT breakdown with VAT category code =
+				"S"</description>
+			<error>BR-S-02</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<!--					<cbc:CompanyID>999999999MVA</cbc:CompanyID>-->
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+
+		</Invoice>
+	</test>
+
 </testSet>

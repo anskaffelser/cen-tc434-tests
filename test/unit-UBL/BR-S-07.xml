@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that in a document level charge where the Invoice item VAT category code (BT-95) is "Standard rated" the Invoiced item VAT rate (BT-96) shall be greater than zero. </description>
+			<description>Verify that in a document level charge where the Invoice item VAT category code is "S" the Invoiced item VAT rate shall be > 0. </description>
 			<success>BR-S-07</success>
 		</assert>
 		<Invoice
@@ -23,7 +23,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when a document level charge where the Invoice item VAT category code (BT-95) is "Standard rated" the Invoiced item VAT rate (BT-96) is 0 (zero). </description>
+			<description>Trigger error when a document level charge where the Invoice item VAT category code is "S" the Invoiced item VAT rate = 0 </description>
 			<error>BR-S-07</error>
 		</assert>
 		<Invoice
@@ -42,7 +42,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when a document level charge where the Invoice item VAT category code (BT-95) is "Standard rated" the Invoiced item VAT rate (BT-96) is noegative. </description>
+			<description>Trigger error when a document level charge where the Invoice item VAT category code is "S" the Invoiced item VAT rate is negative. </description>
 			<error>BR-S-07</error>
 		</assert>
 		<Invoice

@@ -7,7 +7,7 @@
 
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level allowance where the Invoiced item VAT category code (BT-95) is “Standard rated” shall contain the Sellers VAT Identifier (BT-31), the Seller Tax registration identifier (BT-32) or the Seller tax representative VAT identifier (BT-63).</description>
+			<description>Verify that an Invoice that contains a document level allowance where the Invoiced item VAT category code is “S” shall contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
 			<success>BR-S-03</success>
 
 		</assert>
@@ -34,7 +34,7 @@
 
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level allowance where the Invoiced item VAT category code (BT-95) is “Standard rated” shall contain the Sellers VAT Identifier (BT-31), the Seller Tax registration identifier (BT-32) or the Seller tax representative VAT identifier (BT-63).</description>
+			<description>Verify that an Invoice that contains a document level allowance where the Invoiced item VAT category code is “S” shall contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
 			<success>BR-S-03</success>
 			
 		</assert>
@@ -60,7 +60,7 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code (BT-95) is “Standard rated” does not contain the Sellers VAT Identifier (BT-31), the Seller Tax registration identifier (BT-32) or the Seller tax representative VAT identifier (BT-63).</description>
+			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code is “S” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
 			<error>BR-S-03</error>
 			
 		</assert>
@@ -85,7 +85,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code (BT-95) is “Standard rated” does not contain the Sellers VAT Identifier (BT-31), the Seller Tax registration identifier (BT-32) or the Seller tax representative VAT identifier (BT-63).</description>
+			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code is “S” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
 			<error>BR-S-03</error>
 			
 		</assert>
@@ -110,7 +110,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code (BT-95) is “Standard rated” does not contain the Sellers VAT Identifier (BT-31), the Seller Tax registration identifier (BT-32) or the Seller tax representative VAT identifier (BT-63).</description>
+			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code is “S” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
 			<error>BR-S-03</error>
 			
 		</assert>
@@ -135,7 +135,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code (BT-95) is “Standard rated” does not contain the Sellers VAT Identifier (BT-31), the Seller Tax registration identifier (BT-32) or the Seller tax representative VAT identifier (BT-63).</description>
+			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code is “S” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
 			<error>BR-S-03</error>
 			
 		</assert>
@@ -162,7 +162,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code (BT-95) is “Standard rated” does not contain the Sellers VAT Identifier (BT-31), the Seller Tax registration identifier (BT-32) or the Seller tax representative VAT identifier (BT-63).</description>
+			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code is “S” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
 			<error>BR-S-03</error>
 			
 		</assert>

@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that the VAT category tax amount (BT-117) in VAT breakdown (BG-23) where VAT category code (BT-118) is "Standard rated" = the VAT category taxable amount (BT-116) multiplied by the VAT category rate (BT-119). </description>
+			<description>Verify that the VAT category tax amount in VAT breakdown where VAT category code is "Standard rated" = the VAT category taxable amount multiplied by the VAT category rate  </description>
 			<success>BR-S-09</success>
 		</assert>
 		<Invoice
@@ -27,7 +27,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that the VAT category tax amount (BT-117) in VAT breakdown (BG-23) where VAT category code (BT-118) is "Standard rated" = the VAT category taxable amount (BT-116) multiplied by the VAT category rate (BT-119). </description>
+			<description>Verify that the VAT category tax amount in VAT breakdown where VAT category code is "Standard rated" = the VAT category taxable amount multiplied by the VAT category rate  </description>
 			<success>BR-S-09</success>
 		</assert>
 		<Invoice
@@ -49,7 +49,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that the VAT category tax amount (BT-117) in VAT breakdown (BG-23) where VAT category code (BT-118) is "Standard rated" = the VAT category taxable amount (BT-116) multiplied by the VAT category rate (BT-119). </description>
+			<description>Verify that the VAT category tax amount in VAT breakdown where VAT category code is "Standard rated" = the VAT category taxable amount multiplied by the VAT category rate  </description>
 			<success>BR-S-09</success>
 		</assert>
 		<Invoice
@@ -80,7 +80,7 @@
 	
 	<test>
 		<assert>
-			<description>Trigger errror if the VAT category tax amount (BT-117) in VAT breakdown (BG-23) where VAT category code (BT-118) is "Standard rated" != the VAT category taxable amount (BT-116) multiplied by the VAT category rate (BT-119). </description>
+			<description>Trigger errror if the VAT category tax amount in VAT breakdown where VAT category code is "Standard rated" != the VAT category taxable amount multiplied by the VAT category rate  </description>
 			<error>BR-S-09</error>
 		</assert>
 		<Invoice

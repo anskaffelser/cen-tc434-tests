@@ -5,7 +5,48 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a line where the Invoiced item VAT category code is “S” contain a VAT breakdown with VAT category code = "S"</description>
+			<description>Verify that an Invoice that contains a line, a document level allowance or a document level charge 
+				where the Invoiced item VAT category code is “S” does contain in the VAT breakdown at least one VAT category code equal with "S"</description>
+			<success>BR-S-01</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>S</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>S</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “S” does contain in the VAT breakdown at least one VAT category code equal with "S"</description>
 			<success>BR-S-01</success>
 		</assert>
 		<Invoice
@@ -29,9 +70,62 @@
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
+	
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “S”, does not contain a VAT breakdown with VAT category code = "S"</description>
+			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “S” does contain in the VAT breakdown at least one VAT category code equal with "S"</description>
+			<success>BR-S-01</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>S</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “S” does contain in the VAT breakdown at least one VAT category code equal with "S"</description>
+			<success>BR-S-01</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>S</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “S” does not contain in the VAT breakdown at least one VAT category code equal with "S"</description>
 			<error>BR-S-01</error>
 		</assert>
 		<Invoice
@@ -41,7 +135,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>A</cbc:ID>
+						<cbc:ID>G</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -56,9 +150,11 @@
 			
 		</Invoice>
 	</test>
+	
+
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “S”, does not contain a VAT breakdown with VAT category code = "S"</description>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “S” does not contain in the VAT breakdown at least one VAT category code equal with "S"</description>
 			<error>BR-S-01</error>
 		</assert>
 		<Invoice
@@ -73,55 +169,25 @@
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
-						<cbc:ID>S</cbc:ID>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>S</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
 			
 		</Invoice>
 	</test>
-	
-	
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “S”, does not contain a VAT breakdown with VAT category code = "S"</description>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “S” does not contain in the VAT breakdown at least one VAT category code equal with "S"</description>
 			<error>BR-S-01</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxTotal>
-			<!--	<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:ID>S</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal> -->
-			</cac:TaxTotal>
-			
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
-						<cbc:ID>S</cbc:ID>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
-			
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item VAT category code is “S”, does not contain a VAT breakdown with VAT category code = "S"</description>
-			<error>BR-S-01</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-		<!--  	<cac:TaxTotal>
+			<!-- <cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>S</cbc:ID>
@@ -139,4 +205,32 @@
 			
 		</Invoice>
 	</test>
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “S” does not contain in the VAT breakdown at least one VAT category code equal with "S"</description>
+			<error>BR-S-01</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<!-- <cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>S</cbc:ID>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal> -->
+			</cac:TaxTotal>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>S</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+	
+	
 </testSet>

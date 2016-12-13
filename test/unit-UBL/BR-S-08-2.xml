@@ -6,7 +6,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that for each different value of VAT category rate (BT-119) where the VAT category code (BT-118) is "Standard rated", the VAT category taxable amount (BT-116) in a VAT breakdown (BG-23) shall equal the sum of Invoice line net amounts (BT-131) plus the sum of document level charge amounts (BT-99) minus the sum of document level allowance amounts (BT-92) where the VAT category code (BT-151, BT-102, BT-95) is “Standard rated” and the VAT rate (BT-152, BT-103, BT-96) equals the VAT category rate (BT-119).</description>
+			<description>Verify that for each different value of VAT category rate where the VAT category code is "Standard rated", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “Standard rated” and the VAT rate equals the VAT category rate (BT-119).</description>
 			<success>BR-S-08</success>
 		</assert>
 		<Invoice
@@ -47,7 +47,7 @@
 
 	<test>
 		<assert>
-			<description>Verify that for each different value of VAT category rate (BT-119) where the VAT category code (BT-118) is "Standard rated", the VAT category taxable amount (BT-116) in a VAT breakdown (BG-23) shall equal the sum of Invoice line net amounts (BT-131) plus the sum of document level charge amounts (BT-99) minus the sum of document level allowance amounts (BT-92) where the VAT category code (BT-151, BT-102, BT-95) is “Standard rated” and the VAT rate (BT-152, BT-103, BT-96) equals the VAT category rate (BT-119).</description>
+			<description>Verify that for each different value of VAT category rate where the VAT category code is "Standard rated", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “Standard rated” and the VAT rate equals the VAT category rate (BT-119).</description>
 			<success>BR-S-08</success>
 		</assert>
 		<Invoice
@@ -102,7 +102,7 @@
 
 	<test>
 		<assert>
-			<description>Verify that for each different value of VAT category rate (BT-119) where the VAT category code (BT-118) is "Standard rated", the VAT category taxable amount (BT-116) in a VAT breakdown (BG-23) shall equal the sum of Invoice line net amounts (BT-131) plus the sum of document level charge amounts (BT-99) minus the sum of document level allowance amounts (BT-92) where the VAT category code (BT-151, BT-102, BT-95) is “Standard rated” and the VAT rate (BT-152, BT-103, BT-96) equals the VAT category rate (BT-119).</description>
+			<description>Verify that for each different value of VAT category rate where the VAT category code is "Standard rated", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “Standard rated” and the VAT rate equals the VAT category rate (BT-119).</description>
 			<success>BR-S-08</success>
 		</assert>
 		<Invoice
@@ -164,7 +164,7 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error if for each different value of VAT category rate (BT-119) where the VAT category code (BT-118) is "Standard rated", the VAT category taxable amount (BT-116) in a VAT breakdown (BG-23) shall equal the sum of Invoice line net amounts (BT-131) plus the sum of document level charge amounts (BT-99) minus the sum of document level allowance amounts (BT-92) where the VAT category code (BT-151, BT-102, BT-95) is “Standard rated” and the VAT rate (BT-152, BT-103, BT-96) does not equal the VAT category rate (BT-119).</description>
+			<description>Trigger error if for each different value of VAT category rate where the VAT category code is "Standard rated", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “Standard rated” and the VAT rate does not equal the VAT category rate (BT-119).</description>
 			<error>BR-S-08</error>
 		</assert>
 		<Invoice
@@ -202,7 +202,7 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error if for each different value of VAT category rate (BT-119) where the VAT category code (BT-118) is "Standard rated", the VAT category taxable amount (BT-116) in a VAT breakdown (BG-23) shall equal the sum of Invoice line net amounts (BT-131) plus the sum of document level charge amounts (BT-99) minus the sum of document level allowance amounts (BT-92) where the VAT category code (BT-151, BT-102, BT-95) is “Standard rated” and the VAT rate (BT-152, BT-103, BT-96) does not equal the VAT category rate (BT-119).</description>
+			<description>Trigger error if for each different value of VAT category rate where the VAT category code is "Standard rated", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “Standard rated” and the VAT rate does not equal the VAT category rate (BT-119).</description>
 			<error>BR-S-08</error>
 		</assert>
 		<Invoice

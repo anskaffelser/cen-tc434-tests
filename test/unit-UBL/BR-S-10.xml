@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that VAT Breakdown (BG-23) with VAT Category code (BT-118) "Standard rate" shall not have a VAT Exemption reason code (BT-121) or VAT Exemption reason text (BT-120).</description>
+			<description>Verify that VAT Breakdown with VAT Category code "Standard rate" shall not have a VAT Exemption reason code or VAT Exemption reason text </description>
 			<success>BR-S-10</success>
 		</assert>
 		<Invoice
@@ -24,7 +24,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if a VAT Breakdown (BG-23) with VAT Category code (BT-118) "Standard rate" shall has a VAT Exemption reason code (BT-121) or VAT Exemption reason text (BT-120).</description>
+			<description>Trigger error if a VAT Breakdown with VAT Category code "Standard rate" shall has a VAT Exemption reason code or VAT Exemption reason text </description>
 			<error>BR-S-10</error>
 		</assert>
 		<Invoice
@@ -46,7 +46,7 @@
 
 	<test>
 		<assert>
-			<description>Trigger error if a VAT Breakdown (BG-23) with VAT Category code (BT-118) "Standard rate" shall has a VAT Exemption reason code (BT-121) or VAT Exemption reason text (BT-120).</description>
+			<description>Trigger error if a VAT Breakdown with VAT Category code "Standard rate" shall has a VAT Exemption reason code or VAT Exemption reason text </description>
 			<error>BR-S-10</error>
 		</assert>
 		<Invoice
@@ -67,7 +67,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if a VAT Breakdown (BG-23) with VAT Category code (BT-118) "Standard rate" shall has a VAT Exemption reason code (BT-121) or VAT Exemption reason text (BT-120).</description>
+			<description>Trigger error if a VAT Breakdown with VAT Category code "Standard rate" shall has a VAT Exemption reason code or VAT Exemption reason text </description>
 			<error>BR-S-10</error>
 		</assert>
 		<Invoice
