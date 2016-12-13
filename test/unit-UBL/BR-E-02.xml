@@ -6,9 +6,9 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line where the Invoiced item VAT
-				category code is “Exempt from VAT” contain the Sellers VAT Identifier
+				category code is “E” contain the Sellers VAT Identifier
 			  the Seller Tax registration identifier or the Seller tax
-				representative VAT identifier /description>
+				representative VAT identifier </description>
 			<success>BR-E-02</success>
 		</assert>
 		<Invoice
@@ -35,9 +35,9 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line where the Invoiced item VAT
-				category code is “Exempt from VAT” contain the Sellers VAT Identifier
+				category code is “E” contain the Sellers VAT Identifier
 			  the Seller Tax registration identifier or the Seller tax
-				representative VAT identifier (BT-63</description>
+				representative VAT identifier</description>
 			<success>BR-E-02</success>
 		</assert>
 		<Invoice
@@ -64,7 +64,7 @@
 			<description>Trigger error when an Invoice that contains a line where the Invoiced item
 				VAT category code = “E” does not contain the Sellers VAT Identifier
 			  the Seller Tax registration identifier or the Seller tax
-				representative VAT identifier /description>
+				representative VAT identifier </description>
 			<error>BR-E-02</error>
 		</assert>
 		<Invoice
@@ -120,7 +120,7 @@
 			<description>Trigger error when an Invoice that contains a line where the Invoiced item
 				VAT category code = “E” does not contain the Sellers VAT Identifier
 			  the Seller Tax registration identifier or the Seller tax
-				representative VAT identifier /description>
+				representative VAT identifier </description>
 			<error>BR-E-02</error>
 		</assert>
 		<Invoice
@@ -150,7 +150,7 @@
 			<description>Trigger error when an Invoice that contains a line where the Invoiced item
 				VAT category code is “E”, does not contain the Sellers VAT Identifier
 			  the Seller Tax registration identifier or the Seller tax
-				representative VAT identifier /description>
+				representative VAT identifier </description>
 			<error>BR-E-02</error>
 		</assert>
 		<Invoice

@@ -6,7 +6,7 @@
 	<test>
 		<assert>
 			<description>Verify that a VAT Breakdown with VAT Category code = "Z"
-				shall have a VAT Zxemption reason code or the VAT Zxemption reason text.</description>
+				shall have a VAT Exemption reason code or the VAT Exemption reason text.</description>
 			<success>BR-Z-10</success>
 		</assert>
 		<Invoice
@@ -17,7 +17,7 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
-						<cbc:TaxZxemptionReason>Reverse charge</cbc:TaxZxemptionReason>
+						<cbc:TaxExemptionReason>Reverse charge</cbc:TaxExemptionReason>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -27,7 +27,7 @@
 	<test>
 		<assert>
 			<description>Verify that a VAT Breakdown with VAT Category code = "Z"
-				shall have a VAT Zxemption reason code or the VAT Zxemption reason text.</description>
+				shall have a VAT Exemption reason code or the VAT Exemption reason text.</description>
 			<success>BR-Z-10</success>
 		</assert>
 		<Invoice
@@ -38,7 +38,7 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
-						<cbc:TaxZxemptionReasonCode>10</cbc:TaxZxemptionReasonCode>
+						<cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -48,7 +48,7 @@
 	<test>
 		<assert>
 			<description>Verify that a VAT Breakdown with VAT Category code = "Z"
-				shall have a VAT Zxemption reason code or the VAT Zxemption reason text.</description>
+				shall have a VAT Exemption reason code or the VAT Exemption reason text.</description>
 			<success>BR-Z-10</success>
 		</assert>
 		<Invoice
@@ -60,8 +60,8 @@
 					<cbc:TaxAmount>0</cbc:TaxAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
-						<cbc:TaxZxemptionReason>Reverse charge</cbc:TaxZxemptionReason>
-						<cbc:TaxZxemptionReasonCode>10</cbc:TaxZxemptionReasonCode>
+						<cbc:TaxExemptionReason>Reverse charge</cbc:TaxExemptionReason>
+						<cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -72,7 +72,7 @@
 	<test>
 		<assert>
 			<description>Trigger error if a VAT Breakdown with VAT Category code = "Z"
-				does not have a VAT Zxemption reason code or the VAT Zxemption reason text.</description>
+				does not have a VAT Exemption reason code or the VAT Exemption reason text.</description>
 			<error>BR-Z-10</error>
 		</assert>
 		<Invoice
@@ -84,8 +84,8 @@
 					<cbc:TaxAmount>0</cbc:TaxAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
-						<!--	<cbc:TaxZxemptionReason>Reverse charge</cbc:TaxZxemptionReason>
-						<cbc:TaxZxemptionReasonCode>10</cbc:TaxZxemptionReasonCode> -->
+						<!--	<cbc:TaxExemptionReason>Reverse charge</cbc:TaxExemptionReason>
+						<cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode> -->
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>

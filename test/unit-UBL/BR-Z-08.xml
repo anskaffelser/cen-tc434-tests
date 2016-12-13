@@ -5,7 +5,10 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown where VAT category code is "Z" the VAT category taxable amount shall equal the sum of Invoice line net amounts minus document level allowance amounts plus document level charge amounts where the VAT category codes are “Z".</description>
+			<description>Verify that in a VAT breakdown where VAT category code is "Z" 
+				the VAT category taxable amount shall equal the sum of Invoice line net amounts 
+				minus document level allowance amounts 
+				plus document level charge amounts where the VAT category codes are “Z".</description>
 			<success>BR-Z-08</success>
 		</assert>
 		<Invoice
@@ -22,21 +25,21 @@
 			
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-				<cbc:Amount currencyID="NOK">100</cbc:Amount>
+				<cbc:Amount>100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">Z</cbc:ID>
+					<cbc:ID>Z</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="ZUR">100</cbc:TaxableAmount>
+					<cbc:TaxableAmount>100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount>100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -65,14 +68,14 @@
 			
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="ZUR">200</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">200</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -100,14 +103,14 @@
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="ZUR">0</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">0</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -128,14 +131,14 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="ZUR">100</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -156,14 +159,14 @@
 
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="ZUR">100</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -171,7 +174,7 @@
 				</cac:Item>
 			</cac:InvoiceLine>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>S</cbc:ID>
@@ -192,14 +195,14 @@
 			
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="ZUR">600</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">600</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -207,7 +210,7 @@
 				</cac:Item>
 			</cac:InvoiceLine>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">500</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">500</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -242,14 +245,14 @@
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="ZUR">350</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">350</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -257,7 +260,7 @@
 				</cac:Item>
 			</cac:InvoiceLine>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -265,7 +268,7 @@
 				</cac:Item>
 			</cac:InvoiceLine>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>S</cbc:ID>
@@ -300,14 +303,14 @@
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="ZUR">200</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">200</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -343,14 +346,14 @@
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="ZUR">200</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">200</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -371,14 +374,14 @@
 
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="ZUR">100</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -386,7 +389,7 @@
 				</cac:Item>
 			</cac:InvoiceLine>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -407,14 +410,14 @@
 			
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="ZUR">300</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">300</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -422,7 +425,7 @@
 				</cac:Item>
 			</cac:InvoiceLine>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>Z</cbc:ID>
@@ -430,7 +433,7 @@
 				</cac:Item>
 			</cac:InvoiceLine>
 			<cac:InvoiceLine>
-				<cbc:LineZxtensionAmount currencyID="ZUR">100</cbc:LineZxtensionAmount>
+				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>S</cbc:ID>
