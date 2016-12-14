@@ -69,7 +69,7 @@
 		<assert>
 			<description>Trigger error if Country codes in an invoice is not coded using ISO code
 				list 3166-1</description>
-			<error>BR-CL-06</error>
+			<error number="6">BR-CL-06</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -80,42 +80,10 @@
 				<cac:Party>
 					<cac:PostalAddress>
 						<cac:Country>
-							<cbc:IdentificationCode>XX</cbc:IdentificationCode>
+							<cbc:IdentificationCode>AA</cbc:IdentificationCode>
 						</cac:Country>
 					</cac:PostalAddress>
-
-					<!--					<cac:PartyLegalEntity>
-						<cac:RegistrationAddress>
-							<cac:Country>
-								<cbc:IdentificationCode>SE</cbc:IdentificationCode>
-							</cac:Country>
-						</cac:RegistrationAddress>
-					</cac:PartyLegalEntity>-->
-
-				</cac:Party>
-			</cac:AccountingSupplierParty>
-
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Trigger error if Country codes in an invoice is not coded using ISO code
-				list 3166-1</description>
-			<error>BR-CL-06</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-
-			<cac:AccountingSupplierParty>
-				<cac:Party>
-					<!--<cac:PostalAddress>
-						<cac:Country>
-							<cbc:IdentificationCode>NO</cbc:IdentificationCode>
-						</cac:Country>
-					</cac:PostalAddress>-->
-
+					
 					<cac:PartyLegalEntity>
 						<cac:RegistrationAddress>
 							<cac:Country>
@@ -123,115 +91,43 @@
 							</cac:Country>
 						</cac:RegistrationAddress>
 					</cac:PartyLegalEntity>
-
+					
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Trigger error if Country codes in an invoice is not coded using ISO code
-				list 3166-1</description>
-			<error>BR-CL-06</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PostalAddress>
+						<cac:Country>
+							<cbc:IdentificationCode>XY</cbc:IdentificationCode>
+						</cac:Country>
+					</cac:PostalAddress>
+					<cac:PartyLegalEntity>
+						<cac:RegistrationAddress>
+							<cac:Country>
+								<cbc:IdentificationCode>YY</cbc:IdentificationCode>
+							</cac:Country>
+						</cac:RegistrationAddress>
+					</cac:PartyLegalEntity>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			<cac:TaxRepresentativeParty>
+				<cac:PostalAddress>
+					<cac:Country>
+						<cbc:IdentificationCode>ÅÅ</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:PostalAddress>
+			</cac:TaxRepresentativeParty>
 			<cac:Delivery>
 				<cac:DeliveryLocation>
 					<cac:Address>
 						<cac:Country>
-							<cbc:IdentificationCode>HA</cbc:IdentificationCode>
+							<cbc:IdentificationCode>XY</cbc:IdentificationCode>
 						</cac:Country>
 					</cac:Address>
 				</cac:DeliveryLocation>
 			</cac:Delivery>
-			
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Trigger error if Country codes in an invoice is not coded using ISO code
-				list 3166-1</description>
-			<error>BR-CL-06</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			
-			<cac:TaxRepresentativeParty>
-				<cac:PostalAddress>
-					<cac:Country>
-						<cbc:IdentificationCode>YY</cbc:IdentificationCode>
-					</cac:Country>
-				</cac:PostalAddress>
-			</cac:TaxRepresentativeParty>
-			
 		</Invoice>
 	</test>
 	
-	<test>
-		<assert>
-			<description>Trigger error if Country codes in an invoice is not coded using ISO code
-				list 3166-1</description>
-			<error>BR-CL-06</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:AccountingCustomerParty>
-			<cac:Party>
-				<cac:PostalAddress>
-					<cac:Country>
-						<cbc:IdentificationCode>YY</cbc:IdentificationCode>
-					</cac:Country>
-				</cac:PostalAddress>
-				<!--<cac:PartyLegalEntity>
-					<cac:RegistrationAddress>
-						<cac:Country>
-							<cbc:IdentificationCode>CN</cbc:IdentificationCode>
-						</cac:Country>
-					</cac:RegistrationAddress>
-				</cac:PartyLegalEntity>-->
-			</cac:Party>
-			</cac:AccountingCustomerParty>
-			
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Trigger error if Country codes in an invoice is not coded using ISO code
-				list 3166-1</description>
-			<error>BR-CL-06</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:AccountingCustomerParty>
-				<cac:Party>
-<!--					<cac:PostalAddress>
-						<cac:Country>
-							<cbc:IdentificationCode>YY</cbc:IdentificationCode>
-						</cac:Country>
-					</cac:PostalAddress>-->
-					<cac:PartyLegalEntity>
-					<cac:RegistrationAddress>
-						<cac:Country>
-							<cbc:IdentificationCode>HB</cbc:IdentificationCode>
-						</cac:Country>
-					</cac:RegistrationAddress>
-				</cac:PartyLegalEntity>
-				</cac:Party>
-			</cac:AccountingCustomerParty>
-			
-		</Invoice>
-	</test>
-
 
 </testSet>

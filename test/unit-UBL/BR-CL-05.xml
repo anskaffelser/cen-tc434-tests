@@ -26,7 +26,7 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			
-			<cbc:TaxCurrencyCode>XXX</cbc:TaxCurrencyCode>
+			<cbc:TaxCurrencyCode>GGG</cbc:TaxCurrencyCode>
 		</Invoice>
 	</test>
 </testSet>
