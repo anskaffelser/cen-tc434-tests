@@ -67,7 +67,7 @@
 				<cbc:Amount currencyID="NOK">12</cbc:Amount>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
-				<cbc:TaxAmount currencyID="XXX">365.28</cbc:TaxAmount>
+				<cbc:TaxAmount currencyID="XXA">365.28</cbc:TaxAmount>
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="USD">1460.5</cbc:TaxableAmount>
 					<cbc:TaxAmount currencyID="DKK">365.13</cbc:TaxAmount>

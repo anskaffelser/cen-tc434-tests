@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+	<assert>
+		<scope>BR-CL-08</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify that Payment means in an invoice MUST be coded using UNCL 4461 code
+				list</description>
+			<success>BR-CL-08</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:PaymentMeans>
+				<cbc:PaymentMeansCode>31</cbc:PaymentMeansCode>
+			</cac:PaymentMeans>
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error if Payment means in an invoice is not coded using UNCL 4461 code
+				list</description>
+			<success>BR-CL-08</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:PaymentMeans>
+				<cbc:PaymentMeansCode>54</cbc:PaymentMeansCode>
+			</cac:PaymentMeans>
+		</Invoice>
+	</test>
+
+</testSet>
