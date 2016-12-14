@@ -23,7 +23,7 @@
 		<assert>
 			<description>Trigger error if Mime code in attribute is not a valid
 				MIMEMediaType</description>
-			<success>BR-CL-12</success>
+			<error>BR-CL-12</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

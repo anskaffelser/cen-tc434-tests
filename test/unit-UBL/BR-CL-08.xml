@@ -22,7 +22,7 @@
 		<assert>
 			<description>Trigger error if Payment means in an invoice is not coded using UNCL 4461 code
 				list</description>
-			<success>BR-CL-08</success>
+			<error>BR-CL-08</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
