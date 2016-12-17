@@ -3,6 +3,7 @@
 
 	<package>CEN TC434 UBL</package>
 
+	<testfolder>rules/ubl/examples</testfolder>
 	<testfolder>test/examples</testfolder>
 	<testfolder>test/unit-UBL</testfolder>
 
