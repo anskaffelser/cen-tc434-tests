@@ -106,6 +106,30 @@
 	</test>
 	<test>
 		<assert>
+			<description>Verify that VAT category tax amount = VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
+			<success>BR-CO-17</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxableAmount>-25.00</cbc:TaxableAmount>
+					<cbc:TaxAmount>0.00</cbc:TaxAmount>
+					<cac:TaxCategory>
+						<cbc:Percent>0</cbc:Percent>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+	
+	
+	
+
+	<test>
+		<assert>
 			<description>Trigger error if VAT category tax amount != VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
 			<error>BR-CO-17</error>
 		</assert>
