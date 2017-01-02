@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<scope>BR-DT-01</scope>
+		<scope>UBL-DT-01</scope>
 	</assert>
 	<test>
 		<assert>
 			<description>Verify that amounts shall be decimal up to two fraction digits</description>
-			<success>BR-DT-01</success>
+			<success>UBL-DT-01</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -52,7 +52,7 @@
 	<test>
 		<assert>
 			<description>Trigger error if amounts have more than two fraction digits</description>
-			<error number="16">BR-DT-01</error>
+			<error number="16">UBL-DT-01</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<scope>BR-DT-06</scope>
+		<scope>UBL-DT-06</scope>
 	</assert>
 	<test>
 		<assert>
 			<description>Verify that Binary object elements contain the mime code attribute</description>
-			<success>BR-DT-06</success>
+			<success>UBL-DT-06</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -23,7 +23,7 @@
 	<test>
 		<assert>
 			<description>Trigger error if Binary object elements does not contain the mime code attribute</description>
-			<error>BR-DT-06</error>
+			<error>UBL-DT-06</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
