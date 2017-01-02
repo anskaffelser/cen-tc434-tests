@@ -6,7 +6,7 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line, a document level allowance or a document level charge 
-				where the Invoiced item VAT category code is “IGIC” does contain in the VAT breakdown at least one VAT category code equal with "IGIC"</description>
+				where the Invoiced item VAT category code is “L” does contain in the VAT breakdown at least one VAT category code equal with "L"</description>
 			<success>BR-IG-01</success>
 		</assert>
 		<Invoice
@@ -16,7 +16,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -24,21 +24,21 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IGIC</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IGIC</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -46,7 +46,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “IGIC” does contain in the VAT breakdown at least one VAT category code equal with "IGIC"</description>
+			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “L” does contain in the VAT breakdown at least one VAT category code equal with "L"</description>
 			<success>BR-IG-01</success>
 		</assert>
 		<Invoice
@@ -56,7 +56,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -64,7 +64,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -73,7 +73,7 @@
 	
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “IGIC” does contain in the VAT breakdown at least one VAT category code equal with "IGIC"</description>
+			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “L” does contain in the VAT breakdown at least one VAT category code equal with "L"</description>
 			<success>BR-IG-01</success>
 		</assert>
 		<Invoice
@@ -83,7 +83,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -91,7 +91,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IGIC</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -99,7 +99,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “IGIC” does contain in the VAT breakdown at least one VAT category code equal with "IGIC"</description>
+			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “L” does contain in the VAT breakdown at least one VAT category code equal with "L"</description>
 			<success>BR-IG-01</success>
 		</assert>
 		<Invoice
@@ -109,7 +109,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -117,7 +117,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IGIC</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -125,7 +125,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “IGIC” does not contain in the VAT breakdown at least one VAT category code equal with "IGIC"</description>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “L” does not contain in the VAT breakdown at least one VAT category code equal with "L"</description>
 			<error>BR-IG-01</error>
 		</assert>
 		<Invoice
@@ -143,7 +143,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -154,7 +154,7 @@
 
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “IGIC” does not contain in the VAT breakdown at least one VAT category code equal with "IGIC"</description>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “L” does not contain in the VAT breakdown at least one VAT category code equal with "L"</description>
 			<error>BR-IG-01</error>
 		</assert>
 		<Invoice
@@ -164,7 +164,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<!-- <cbc:ID>IGIC</cbc:ID> -->
+						<!-- <cbc:ID>L</cbc:ID> -->
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -172,7 +172,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IGIC</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -180,7 +180,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “IGIC” does not contain in the VAT breakdown at least one VAT category code equal with "IGIC"</description>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “L” does not contain in the VAT breakdown at least one VAT category code equal with "L"</description>
 			<error>BR-IG-01</error>
 		</assert>
 		<Invoice
@@ -190,7 +190,7 @@
 			<!-- <cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal> -->
@@ -198,7 +198,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -207,7 +207,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “IGIC” does not contain in the VAT breakdown at least one VAT category code equal with "IGIC"</description>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “L” does not contain in the VAT breakdown at least one VAT category code equal with "L"</description>
 			<error>BR-IG-01</error>
 		</assert>
 		<Invoice
@@ -217,7 +217,7 @@
 			<cac:TaxTotal>
 				<!-- <cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal> -->
 			</cac:TaxTotal>
@@ -225,7 +225,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IGIC</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			

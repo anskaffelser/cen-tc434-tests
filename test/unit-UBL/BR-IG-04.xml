@@ -7,7 +7,7 @@
 
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level charge where the Invoiced item VAT category code is “IGIC” 
+			<description>Verify that an Invoice that contains a document level charge where the Invoiced item VAT category code is “L” 
 				shall contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
 			<success>BR-IG-04</success>
 
@@ -27,7 +27,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IGIC</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
@@ -35,7 +35,7 @@
 
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level charge where the Invoiced item VAT category code is “IGIC” shall contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
+			<description>Verify that an Invoice that contains a document level charge where the Invoiced item VAT category code is “L” shall contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
 			<success>BR-IG-04</success>
 			
 		</assert>
@@ -53,7 +53,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IGIC</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
@@ -61,7 +61,7 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “IGIC” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
+			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “L” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
 			<error>BR-IG-04</error>
 			
 		</assert>
@@ -79,14 +79,14 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IGIC</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “IGIC” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
+			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “L” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
 			<error>BR-IG-04</error>
 			
 		</assert>
@@ -104,14 +104,14 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IGIC</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “IGIC” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
+			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “L” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
 			<error>BR-IG-04</error>
 			
 		</assert>
@@ -129,14 +129,14 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IGIC</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “IGIC” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
+			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “L” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
 			<error>BR-IG-04</error>
 			
 		</assert>
@@ -155,7 +155,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IGIC</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -163,7 +163,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “IGIC” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
+			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “L” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
 			<error>BR-IG-04</error>
 			
 		</assert>
@@ -182,7 +182,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IGIC</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			

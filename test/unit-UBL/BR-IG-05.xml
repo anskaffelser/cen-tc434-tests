@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that in an Invoice line where the Invoice item VAT category code is "IGIC" the Invoiced item VAT rate shall be >= 0.</description>
+			<description>Verify that in an Invoice line where the Invoice item VAT category code is "L" the Invoiced item VAT rate shall be >= 0.</description>
 			<success>BR-IG-05</success>
 		</assert>
 		<Invoice
@@ -15,7 +15,7 @@
 			<cac:InvoiceLine>	
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>10</cbc:Percent>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
@@ -26,7 +26,7 @@
 
 	<test>
 		<assert>
-			<description>Verify that in an Invoice line where the Invoice item VAT category code is "IGIC" the Invoiced item VAT rate shall be >= 0.</description>
+			<description>Verify that in an Invoice line where the Invoice item VAT category code is "L" the Invoiced item VAT rate shall be >= 0.</description>
 			<success>BR-IG-05</success>
 		</assert>
 		<Invoice
@@ -36,7 +36,7 @@
 			<cac:InvoiceLine>	
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>0</cbc:Percent>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
@@ -47,7 +47,7 @@
 
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice line where the Invoice item VAT category code is "IGIC" the Invoiced item VAT rate is negative.</description>
+			<description>Trigger error if an Invoice line where the Invoice item VAT category code is "L" the Invoiced item VAT rate is negative.</description>
 			<error>BR-IG-05</error>
 		</assert>
 		<Invoice
@@ -57,7 +57,7 @@
 			<cac:InvoiceLine>	
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>-10</cbc:Percent>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>

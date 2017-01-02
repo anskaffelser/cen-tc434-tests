@@ -6,7 +6,7 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line where the Invoiced item VAT
-				category code = “IGIC” contain the Seller's VAT identifier or the Seller tax
+				category code = “L” contain the Seller's VAT identifier or the Seller tax
 				representative.</description>
 			<success>BR-IG-02</success>
 		</assert>
@@ -25,7 +25,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -34,7 +34,7 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line where the Invoiced item VAT
-				category code = “IGIC” contain the Seller's VAT identifier or the Seller tax
+				category code = “L” contain the Seller's VAT identifier or the Seller tax
 				representative.</description>
 			<success>BR-IG-02</success>
 		</assert>
@@ -51,7 +51,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -60,7 +60,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “IGIC” does not contain the Seller's VAT identifier or the Seller tax
+				VAT category code = “L” does not contain the Seller's VAT identifier or the Seller tax
 				representative.</description>
 			<error>BR-IG-02</error>
 		</assert>
@@ -79,7 +79,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -89,7 +89,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “IGIC” does not contain the Seller's VAT identifier or the Seller tax
+				VAT category code = “L” does not contain the Seller's VAT identifier or the Seller tax
 				representative.</description>
 			<error>BR-IG-02</error>
 		</assert>
@@ -108,7 +108,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -120,7 +120,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “IGIC” does not contain the Seller's VAT identifier or the Seller tax
+				VAT category code = “L” does not contain the Seller's VAT identifier or the Seller tax
 				representative.</description>
 			<error>BR-IG-02</error>
 		</assert>
@@ -139,7 +139,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -150,7 +150,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “IGIC” does not contain the Seller's VAT identifier or the Seller tax
+				VAT category code = “L” does not contain the Seller's VAT identifier or the Seller tax
 				representative.</description>
 			<error>BR-IG-02</error>
 		</assert>
@@ -167,7 +167,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -177,7 +177,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “IGIC” does not contain the Seller's VAT identifier or the Seller tax
+				VAT category code = “L” does not contain the Seller's VAT identifier or the Seller tax
 				representative.</description>
 			<error>BR-IG-02</error>
 		</assert>
@@ -194,7 +194,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IGIC</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
