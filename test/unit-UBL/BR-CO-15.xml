@@ -12,6 +12,7 @@
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cbc:DocumentCurrencyCode>NOK</cbc:DocumentCurrencyCode>
 			<cac:TaxTotal>
 				<cbc:TaxAmount currencyID="NOK">300</cbc:TaxAmount>
 			</cac:TaxTotal>
@@ -33,6 +34,7 @@
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cbc:DocumentCurrencyCode>NOK</cbc:DocumentCurrencyCode>
 			<cac:TaxTotal>
 				<cbc:TaxAmount currencyID="NOK">300</cbc:TaxAmount>
 			</cac:TaxTotal>
@@ -53,6 +55,7 @@
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cbc:DocumentCurrencyCode>NOK</cbc:DocumentCurrencyCode>
 			<cac:TaxTotal>
 				<cbc:TaxAmount currencyID="NOK">100</cbc:TaxAmount>
 			</cac:TaxTotal>
@@ -73,6 +76,8 @@
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cbc:DocumentCurrencyCode>NOK</cbc:DocumentCurrencyCode>
+			<cbc:TaxCurrencyCode>NOK</cbc:TaxCurrencyCode>
 			<cac:TaxTotal>
 				<cbc:TaxAmount currencyID="NOK">0</cbc:TaxAmount>
 			</cac:TaxTotal>
@@ -94,6 +99,7 @@
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cbc:DocumentCurrencyCode>NOK</cbc:DocumentCurrencyCode>
 			<cac:TaxTotal>
 				<cbc:TaxAmount currencyID="NOK">250</cbc:TaxAmount>
 			</cac:TaxTotal>
@@ -115,6 +121,7 @@
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cbc:DocumentCurrencyCode>NOK</cbc:DocumentCurrencyCode>
 			<cac:TaxTotal>
 				<cbc:TaxAmount currencyID="NOK">0</cbc:TaxAmount>
 			</cac:TaxTotal>
@@ -135,6 +142,7 @@
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cbc:DocumentCurrencyCode>NOK</cbc:DocumentCurrencyCode>
 			<cac:TaxTotal>
 				<cbc:TaxAmount currencyID="NOK">100</cbc:TaxAmount>
 			</cac:TaxTotal>

@@ -50,7 +50,7 @@
         <cbc:ID>sales slip</cbc:ID>
         <cbc:DocumentType>your sales slip</cbc:DocumentType>
         <cac:Attachment>
-            <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" filename="EHF.pdf">JVBERi0xLjUNCiUNCjEgMCBvYmoOy6JTZX9bcgRVxIVG...tbLosChU2XRf9xb/omscgTY/lXEhUb</cbc:EmbeddedDocumentBinaryObject>
+            <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" filename="EHF.pdf">VGVzdGluZyBCYXNlNjQgZW5jb2Rpbmc=</cbc:EmbeddedDocumentBinaryObject>
         </cac:Attachment>
     </cac:AdditionalDocumentReference>
     <cac:ProjectReference>
@@ -207,7 +207,7 @@
     </cac:PaymentTerms>
     <cac:AllowanceCharge>
         <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-        <cbc:AllowanceChargeReasonCode>75</cbc:AllowanceChargeReasonCode>
+        <cbc:AllowanceChargeReasonCode>100</cbc:AllowanceChargeReasonCode>
         <cbc:AllowanceChargeReason>Loyal customer</cbc:AllowanceChargeReason>
         <cbc:MultiplierFactorNumeric>10</cbc:MultiplierFactorNumeric>
         <cbc:Amount currencyID="DKK">150.00</cbc:Amount>
@@ -222,7 +222,7 @@
     </cac:AllowanceCharge>
     <cac:AllowanceCharge>
         <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
-        <cbc:AllowanceChargeReasonCode>Packaging</cbc:AllowanceChargeReasonCode>
+        <cbc:AllowanceChargeReasonCode>ABL</cbc:AllowanceChargeReasonCode>
         <cbc:AllowanceChargeReason>Packaging</cbc:AllowanceChargeReason>
         <cbc:MultiplierFactorNumeric>10</cbc:MultiplierFactorNumeric>
         <cbc:Amount currencyID="DKK">150.00</cbc:Amount>
@@ -290,7 +290,7 @@
         </cac:DocumentReference>
         <cac:AllowanceCharge>
             <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-            <cbc:AllowanceChargeReasonCode>Loyal customer</cbc:AllowanceChargeReasonCode>
+            <cbc:AllowanceChargeReasonCode>100</cbc:AllowanceChargeReasonCode>
             <cbc:AllowanceChargeReason>Loyal customer</cbc:AllowanceChargeReason>
             <cbc:MultiplierFactorNumeric>10</cbc:MultiplierFactorNumeric>
             <cbc:Amount currencyID="DKK">100.00</cbc:Amount>
@@ -298,7 +298,7 @@
         </cac:AllowanceCharge>
         <cac:AllowanceCharge>
             <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
-            <cbc:AllowanceChargeReasonCode>Packaging</cbc:AllowanceChargeReasonCode>
+            <cbc:AllowanceChargeReasonCode>ABL</cbc:AllowanceChargeReasonCode>
             <cbc:AllowanceChargeReason>Packaging</cbc:AllowanceChargeReason>
             <cbc:MultiplierFactorNumeric>10</cbc:MultiplierFactorNumeric>
             <cbc:Amount currencyID="DKK">100.00</cbc:Amount>
