@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+    
+    <package>CEN TC434 UBL</package>
+    
+    <testfolder>test/CreditNote-unit-UBL</testfolder>
+    
+    <configuration>
+        <identifier>tc434-ubl-cn</identifier>
+        <title>TC434 UBL CreditNote</title>
+        <declaration type="xml.ubl">urn:cen.eu:en16931:2017</declaration>
+        <inherit>ubl-creditnote-2.1</inherit>
+        <inherit>ehf-t10-stylesheet-2.0</inherit>
+        <file source="rules/ubl/schematron/EN16931-UBL-model-cn.sch" path="xsl/EN16931-UBL-model-cn.xsl" />
+    </configuration>
+    
+</buildConfigurations>

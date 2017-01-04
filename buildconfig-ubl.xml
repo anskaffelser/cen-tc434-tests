@@ -5,7 +5,6 @@
 
 	<testfolder>rules/ubl/examples</testfolder>
 	<testfolder>test/Invoice-unit-UBL</testfolder>
-	<testfolder>test/CreditNote-unit-UBL</testfolder>
 	
 	<configuration>
 		<identifier>tc434-ubl</identifier>
@@ -14,7 +13,6 @@
 		<inherit>ubl-invoice-2.1</inherit>
 		<inherit>ehf-t10-stylesheet-2.0</inherit>
 		<file source="rules/ubl/schematron/EN16931-UBL-model.sch" path="xsl/EN16931-UBL-model.xsl" />
-		<file source="rules/ubl/schematron/EN16931-UBL-model-cn.sch" path="xsl/EN16931-UBL-model-cn.xsl" />
 		<file source="rules/ubl/schematron/EN16931-UBL-syntax.sch" path="xsl/EN16931-UBL-syntax.xsl" />
 	</configuration>
 
