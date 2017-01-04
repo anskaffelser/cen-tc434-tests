@@ -4,8 +4,9 @@
 	<package>CEN TC434 UBL</package>
 
 	<testfolder>rules/ubl/examples</testfolder>
-	<testfolder>test/unit-UBL</testfolder>
-
+	<testfolder>test/Invoice-unit-UBL</testfolder>
+	<testfolder>test/CreditNote-unit-UBL</testfolder>
+	
 	<configuration>
 		<identifier>tc434-ubl</identifier>
 		<title>TC434 UBL</title>
