@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl-cn">
 	<assert>
 		<scope>BR-13</scope>
 	</assert>
 	<test>
 		<assert>
-			<description>Verify invoice total amount without VAT in document totals is present</description>
+			<description>Verify credit note total amount without VAT in document totals is present</description>
 			<success>BR-13</success>
 		</assert>
 		<CreditNote
@@ -19,7 +19,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when invoice total amount without VAT in document totals is missing</description>
+			<description>Trigger error when credit note total amount without VAT in document totals is missing</description>
 			<error>BR-13</error>
 		</assert>
 		<CreditNote

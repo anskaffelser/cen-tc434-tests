@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl-cn">
     <assert>
         <scope>BR-43</scope>
     </assert>
     <test>
         <assert>
-            <description>Verify that an invoice line charge amount is
+            <description>Verify that an credit note line charge amount is
                 present</description>
             <success>BR-43</success>
         </assert>
@@ -25,7 +25,7 @@
     
     <test>
         <assert>
-            <description>Trigger error when invoice line charge amount is
+            <description>Trigger error when credit note line charge amount is
                 missing</description>
             <error>BR-43</error>
         </assert>

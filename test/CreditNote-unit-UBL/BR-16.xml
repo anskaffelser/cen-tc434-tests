@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl-cn">
 	<assert>
 		<scope>BR-16</scope>
 
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that each invoice has an invoice line</description>
+			<description>Verify that each credit note has an credit note line</description>
 			<success>BR-16</success>
 
 		</assert>
@@ -21,7 +21,7 @@
 
 	<test>
 		<assert>
-			<description>Trigger error if invoice line is missing</description>
+			<description>Trigger error if credit note line is missing</description>
 			<error>BR-16</error>
 
 		</assert>

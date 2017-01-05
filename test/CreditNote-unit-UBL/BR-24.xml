@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl-cn">
 	<assert>
 		<scope>BR-24</scope>
 
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that each invoice line has a line extension amount</description>
+			<description>Verify that each credit note line has a line extension amount</description>
 			<success>BR-24</success>
 
 		</assert>
@@ -22,7 +22,7 @@
 
 	<test>
 		<assert>
-			<description>Trigger error if invoice line extension amount is missing</description>
+			<description>Trigger error if credit note line extension amount is missing</description>
 			<error>BR-24</error>
 
 		</assert>

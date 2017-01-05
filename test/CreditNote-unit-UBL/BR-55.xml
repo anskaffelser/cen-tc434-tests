@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl-cn">
 	<assert>
 		<scope>BR-55</scope>
 
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that each preceding invoice references has in ID</description>
+			<description>Verify that each preceding credit note references has in ID</description>
 			<success>BR-55</success>
 
 		</assert>
@@ -24,7 +24,7 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error when a preceding invoice references does not have in ID</description>
+			<description>Trigger error when a preceding credit note references does not have in ID</description>
 			<error>BR-55</error>
 			
 		</assert>
@@ -42,7 +42,7 @@
 
 	<test>
 		<assert>
-			<description>Trigger error when a preceding invoice references does not have in ID</description>
+			<description>Trigger error when a preceding credit note references does not have in ID</description>
 			<error>BR-55</error>
 			
 		</assert>

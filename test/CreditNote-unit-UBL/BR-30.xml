@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl-cn">
 	<assert>
 		<scope>BR-30</scope>
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that if an invoice line period has a start date and an end date, the
+			<description>Verify that if an credit note line period has a start date and an end date, the
 				end date is equal to, or later than the start date </description>
 			<success>BR-29</success>
 			<success>BR-30</success>
@@ -25,7 +25,7 @@
 
 	<test>
 		<assert>
-			<description>Verify that if an invoice line period has a start date and an end date, the
+			<description>Verify that if an credit note line period has a start date and an end date, the
 				end date is equal to, or later than the start date </description>
 			<success>BR-30</success>
 		</assert>
@@ -44,7 +44,7 @@
 
 	<test>
 		<assert>
-			<description>Trigger error if an invoice line period has a start date and an end
+			<description>Trigger error if an credit note line period has a start date and an end
 				date,and the end date is earlier than the start date</description>
 			<error>BR-30</error>
 		</assert>
