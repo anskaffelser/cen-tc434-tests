@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<scope>BR-IG-04</scope>
+		<scope>BR-M-03</scope>
 
 	</assert>
 
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level charge where the Invoiced item VAT category code is “L” 
+			<description>Verify that an Invoice that contains a document level allowance where the Invoiced item VAT category code is “M” 
 				shall contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
-			<success>BR-IG-04</success>
+			<success>BR-M-03</success>
 
 		</assert>
 		<Invoice
@@ -25,9 +25,9 @@
 			</cac:AccountingSupplierParty>
 
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>L</cbc:ID>
+					<cbc:ID>M</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
@@ -35,8 +35,8 @@
 
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level charge where the Invoiced item VAT category code is “L” shall contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
-			<success>BR-IG-04</success>
+			<description>Verify that an Invoice that contains a document level allowance where the Invoiced item VAT category code is “M” shall contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
+			<success>BR-M-03</success>
 			
 		</assert>
 		<Invoice
@@ -51,9 +51,9 @@
 			</cac:TaxRepresentativeParty>
 			
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>L</cbc:ID>
+					<cbc:ID>M</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
@@ -61,8 +61,8 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “L” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
-			<error>BR-IG-04</error>
+			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code is “M” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
+			<error>BR-M-03</error>
 			
 		</assert>
 		<Invoice
@@ -77,17 +77,17 @@
 			</cac:TaxRepresentativeParty>-->
 			
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>L</cbc:ID>
+					<cbc:ID>M</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “L” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
-			<error>BR-IG-04</error>
+			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code is “M” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
+			<error>BR-M-03</error>
 			
 		</assert>
 		<Invoice
@@ -102,17 +102,17 @@
 			</cac:TaxRepresentativeParty>
 			
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>L</cbc:ID>
+					<cbc:ID>M</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “L” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
-			<error>BR-IG-04</error>
+			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code is “M” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
+			<error>BR-M-03</error>
 			
 		</assert>
 		<Invoice
@@ -127,17 +127,17 @@
 			</cac:TaxRepresentativeParty>
 			
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>L</cbc:ID>
+					<cbc:ID>M</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “L” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
-			<error>BR-IG-04</error>
+			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code is “M” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
+			<error>BR-M-03</error>
 			
 		</assert>
 		<Invoice
@@ -153,9 +153,9 @@
 			</cac:AccountingSupplierParty>
 			
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>L</cbc:ID>
+					<cbc:ID>M</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -163,8 +163,8 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level charge where the Invoiced item VAT category code is “L” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
-			<error>BR-IG-04</error>
+			<description>Trigger error if an Invoice that contains a document level allowance where the Invoiced item VAT category code is “M” does not contain the Sellers VAT Identifier, the Seller Tax registration identifier or the Seller tax representative VAT identifier.</description>
+			<error>BR-M-03</error>
 			
 		</assert>
 		<Invoice
@@ -180,9 +180,9 @@
 			</cac:AccountingSupplierParty>
 			
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>L</cbc:ID>
+					<cbc:ID>M</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
