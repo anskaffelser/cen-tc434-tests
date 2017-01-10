@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that invoiced quantity unitcode is present</description>
+			<description>Verify that credited quantity unitcode is present</description>
 			<success>BR-23</success>
 		</assert>
 		<CreditNote
@@ -14,7 +14,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 
 			<cac:CreditNoteLine>
-				<cbc:CreditedQuanity unitCode="NAR">1</cbc:CreditedQuanity>
+				<cbc:CreditedQuantity unitCode="NAR">1</cbc:CreditedQuantity>
 			</cac:CreditNoteLine>
 		</CreditNote>
 	</test>
@@ -22,7 +22,7 @@
 
 	<test>
 		<assert>
-			<description>Trigger error when invoiced quantity unitcode is missing</description>
+			<description>Trigger error when credited quantity unitcode is missing</description>
 			<error>BR-23</error>
 		</assert>
 		<CreditNote
@@ -31,7 +31,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 			
 			<cac:CreditNoteLine>
-				<cbc:CreditedQuanity>1</cbc:CreditedQuanity>
+				<cbc:CreditedQuantity>1</cbc:CreditedQuantity>
 			</cac:CreditNoteLine>
 		</CreditNote>
 	</test>

@@ -17,13 +17,5 @@
 		<file source="rules/ubl/schematron/EN16931-UBL-syntax.sch" path="xsl/EN16931-UBL-syntax.xsl" />
 	</configuration>
 
-	<configuration>
-		<identifier>tc434-ubl-cn</identifier>
-		<title>TC434 UBL CreditNote</title>
-		<declaration type="xml.ubl">CreditNote::urn:cen.eu:en16931:2017</declaration>
-		<inherit>ubl-creditnote-2.1</inherit>
-		<inherit>ehf-t10-stylesheet-2.0</inherit>
-		<file source="rules/ubl/schematron/EN16931-UBL-model-cn.sch" path="xsl/EN16931-UBL-model-cn.xsl" />
-	</configuration>
 
 </buildConfigurations>

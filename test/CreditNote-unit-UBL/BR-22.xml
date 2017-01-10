@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that invoiced quantity is present</description>
+			<description>Verify that credited quantity is present</description>
 			<success>BR-22</success>
 		</assert>
 		<CreditNote
@@ -14,7 +14,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 
 			<cac:CreditNoteLine>
-				<cbc:CreditedQuanity>1</cbc:CreditedQuanity>
+				<cbc:CreditedQuantity>1</cbc:CreditedQuantity>
 			</cac:CreditNoteLine>
 		</CreditNote>
 	</test>
@@ -22,7 +22,7 @@
 
 	<test>
 		<assert>
-			<description>Trigger error when invoiced quantity is missing</description>
+			<description>Trigger error when credited quantity is missing</description>
 			<error>BR-22</error>
 		</assert>
 		<CreditNote
@@ -31,7 +31,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 			
 			<cac:CreditNoteLine>
-				<!-- <cbc:CreditedQuanity>1</cbc:CreditedQuanity> -->
+				<!-- <cbc:CreditedQuantity>1</cbc:CreditedQuantity> -->
 			</cac:CreditNoteLine>
 		</CreditNote>
 	</test>
