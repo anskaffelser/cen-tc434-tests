@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TestSet no 1 for rule BR-L-08, testing calculation without any allowance or charge-->
+<!-- TestSet no 1 for rule BR-IG-08, testing calculation without any allowance or charge-->
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<scope>BR-L-08</scope>
+		<scope>BR-IG-08</scope>
 	</assert>
 	<test>
 		<assert>
@@ -11,7 +11,7 @@
 				the sum of Invoice line net amounts plus the sum of document level charge amounts
 				minus the sum of document level allowance amounts where the VAT category code is “L”
 				and the VAT rate equals the VAT category rate .</description>
-			<success>BR-L-08</success>
+			<success>BR-IG-08</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -44,7 +44,7 @@
 				the sum of Invoice line net amounts plus the sum of document level charge amounts
 				minus the sum of document level allowance amounts where the VAT category code is “L”
 				and the VAT rate equals the VAT category rate .</description>
-			<success>BR-L-08</success>
+			<success>BR-IG-08</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -86,7 +86,7 @@
 				the sum of Invoice line net amounts plus the sum of document level charge amounts
 				minus the sum of document level allowance amounts where the VAT category code is “L”
 				and the VAT rate equals the VAT category rate .</description>
-			<success>BR-L-08</success>
+			<success>BR-IG-08</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -127,7 +127,7 @@
 				the sum of Invoice line net amounts plus the sum of document level charge amounts
 				minus the sum of document level allowance amounts where the VAT category code is “L”
 				and the VAT rate equals the VAT category rate .</description>
-			<success>BR-L-08</success>
+			<success>BR-IG-08</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -176,7 +176,7 @@
 				equal the sum of Invoice line net amounts plus the sum of document level charge
 				amounts minus the sum of document level allowance amounts where the VAT category
 				code is “L” and the VAT rate does not equal the VAT category rate .</description>
-			<error>BR-L-08</error>
+			<error>BR-IG-08</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -209,7 +209,7 @@
 				equal the sum of Invoice line net amounts plus the sum of document level charge
 				amounts minus the sum of document level allowance amounts where the VAT category
 				code is “L” and the VAT rate does not equal the VAT category rate .</description>
-			<error>BR-L-08</error>
+			<error>BR-IG-08</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

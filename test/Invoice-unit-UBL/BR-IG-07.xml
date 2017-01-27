@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<scope>BR-M-07</scope>
+		<scope>BR-IG-07</scope>
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that in a document level charge where the Invoice item VAT category code is "M" the Invoiced item VAT rate shall be >= 0. </description>
-			<success>BR-M-07</success>
+			<description>Verify that in a document level charge where the Invoice item VAT category code is "L" the Invoiced item VAT rate shall be >= 0. </description>
+			<success>BR-IG-07</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -15,7 +15,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">M</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">L</cbc:ID>
 					<cbc:Percent>10</cbc:Percent>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
@@ -23,8 +23,8 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that in a document level charge where the Invoice item VAT category code is "M" the Invoiced item VAT rate shall be >= 0. </description>
-			<success>BR-M-07</success>
+			<description>Verify that in a document level charge where the Invoice item VAT category code is "L" the Invoiced item VAT rate shall be >= 0. </description>
+			<success>BR-IG-07</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -33,7 +33,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">M</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">L</cbc:ID>
 					<cbc:Percent>0</cbc:Percent>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
@@ -42,8 +42,8 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when a document level charge where the Invoice item VAT category code is "M" the Invoiced item VAT rate is negative. </description>
-			<error>BR-M-07</error>
+			<description>Trigger error when a document level charge where the Invoice item VAT category code is "L" the Invoiced item VAT rate is negative. </description>
+			<error>BR-IG-07</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -52,7 +52,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">M</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">L</cbc:ID>
 					<cbc:Percent>-10</cbc:Percent>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>

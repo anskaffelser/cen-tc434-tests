@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TestSet no 2 for rule BR-M-08, testing calculation with allowance-->
+<!-- TestSet no 2 for rule BR-IP-08, testing calculation with allowance-->
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<scope>BR-M-08</scope>
+		<scope>BR-IP-08</scope>
 	</assert>
 	<test>
 		<assert>
 			<description>Verify that for each different value of VAT category rate where the VAT category code is "M", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “M” and the VAT rate equals the VAT category rate (BT-119).</description>
-			<success>BR-M-08</success>
+			<success>BR-IP-08</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -48,7 +48,7 @@
 	<test>
 		<assert>
 			<description>Verify that for each different value of VAT category rate where the VAT category code is "M", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “M” and the VAT rate equals the VAT category rate (BT-119).</description>
-			<success>BR-M-08</success>
+			<success>BR-IP-08</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -103,7 +103,7 @@
 	<test>
 		<assert>
 			<description>Verify that for each different value of VAT category rate where the VAT category code is "M", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “M” and the VAT rate equals the VAT category rate (BT-119).</description>
-			<success>BR-M-08</success>
+			<success>BR-IP-08</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -165,7 +165,7 @@
 	<test>
 		<assert>
 			<description>Trigger error if for each different value of VAT category rate where the VAT category code is "M", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “M” and the VAT rate does not equal the VAT category rate (BT-119).</description>
-			<error>BR-M-08</error>
+			<error>BR-IP-08</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -203,7 +203,7 @@
 	<test>
 		<assert>
 			<description>Trigger error if for each different value of VAT category rate where the VAT category code is "M", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “M” and the VAT rate does not equal the VAT category rate (BT-119).</description>
-			<error>BR-M-08</error>
+			<error>BR-IP-08</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

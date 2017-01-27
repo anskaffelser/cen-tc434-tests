@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
- <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<scope>BR-M-01</scope>
+		<scope>BR-IG-01</scope>
 	</assert>
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line, a document level allowance or a document level charge 
-				where the Invoiced item VAT category code is “M” does contain in the VAT breakdown at least one VAT category code equal with "M"</description>
-			<success>BR-M-01</success>
+				where the Invoiced item VAT category code is “L” does contain in the VAT breakdown at least one VAT category code equal with "L"</description>
+			<success>BR-IG-01</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -16,7 +16,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>M</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -24,21 +24,21 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>M</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>M</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>M</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -46,8 +46,8 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “M” does contain in the VAT breakdown at least one VAT category code equal with "M"</description>
-			<success>BR-M-01</success>
+			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “L” does contain in the VAT breakdown at least one VAT category code equal with "L"</description>
+			<success>BR-IG-01</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -56,7 +56,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>M</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -64,7 +64,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>M</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -73,8 +73,8 @@
 	
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “M” does contain in the VAT breakdown at least one VAT category code equal with "M"</description>
-			<success>BR-M-01</success>
+			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “L” does contain in the VAT breakdown at least one VAT category code equal with "L"</description>
+			<success>BR-IG-01</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -83,7 +83,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>M</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -91,7 +91,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>M</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -99,8 +99,8 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “M” does contain in the VAT breakdown at least one VAT category code equal with "M"</description>
-			<success>BR-M-01</success>
+			<description>Verify that an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “L” does contain in the VAT breakdown at least one VAT category code equal with "L"</description>
+			<success>BR-IG-01</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -109,7 +109,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>M</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -117,7 +117,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>M</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -125,8 +125,8 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “M” does not contain in the VAT breakdown at least one VAT category code equal with "M"</description>
-			<error>BR-M-01</error>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “L” does not contain in the VAT breakdown at least one VAT category code equal with "L"</description>
+			<error>BR-IG-01</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -143,7 +143,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>M</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -154,8 +154,8 @@
 
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “M” does not contain in the VAT breakdown at least one VAT category code equal with "M"</description>
-			<error>BR-M-01</error>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “L” does not contain in the VAT breakdown at least one VAT category code equal with "L"</description>
+			<error>BR-IG-01</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -164,7 +164,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<!-- <cbc:ID>M</cbc:ID> -->
+						<!-- <cbc:ID>L</cbc:ID> -->
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -172,7 +172,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>M</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -180,8 +180,8 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “M” does not contain in the VAT breakdown at least one VAT category code equal with "M"</description>
-			<error>BR-M-01</error>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “L” does not contain in the VAT breakdown at least one VAT category code equal with "L"</description>
+			<error>BR-IG-01</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -190,7 +190,7 @@
 			<!-- <cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>M</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal> -->
@@ -198,7 +198,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>M</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -207,8 +207,8 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “M” does not contain in the VAT breakdown at least one VAT category code equal with "M"</description>
-			<error>BR-M-01</error>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code is “L” does not contain in the VAT breakdown at least one VAT category code equal with "L"</description>
+			<error>BR-IG-01</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -217,7 +217,7 @@
 			<cac:TaxTotal>
 				<!-- <cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>M</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal> -->
 			</cac:TaxTotal>
@@ -225,7 +225,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>M</cbc:ID>
+					<cbc:ID>L</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			

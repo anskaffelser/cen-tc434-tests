@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<scope>BR-L-02</scope>
+		<scope>BR-IP-02</scope>
 	</assert>
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line where the Invoiced item VAT
-				category code = “L” contain the Seller's VAT identifier or the Seller tax
+				category code = “M” contain the Seller's VAT identifier or the Seller tax
 				representative.</description>
-			<success>BR-L-02</success>
+			<success>BR-IP-02</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -25,7 +25,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>L</cbc:ID>
+						<cbc:ID>M</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -34,9 +34,9 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line where the Invoiced item VAT
-				category code = “L” contain the Seller's VAT identifier or the Seller tax
+				category code = “M” contain the Seller's VAT identifier or the Seller tax
 				representative.</description>
-			<success>BR-L-02</success>
+			<success>BR-IP-02</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -51,7 +51,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>L</cbc:ID>
+						<cbc:ID>M</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -60,9 +60,9 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “L” does not contain the Seller's VAT identifier or the Seller tax
+				VAT category code = “M” does not contain the Seller's VAT identifier or the Seller tax
 				representative.</description>
-			<error>BR-L-02</error>
+			<error>BR-IP-02</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -79,7 +79,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>L</cbc:ID>
+						<cbc:ID>M</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -89,9 +89,9 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “L” does not contain the Seller's VAT identifier or the Seller tax
+				VAT category code = “M” does not contain the Seller's VAT identifier or the Seller tax
 				representative.</description>
-			<error>BR-L-02</error>
+			<error>BR-IP-02</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -108,7 +108,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>L</cbc:ID>
+						<cbc:ID>M</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -120,9 +120,9 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “L” does not contain the Seller's VAT identifier or the Seller tax
+				VAT category code = “M” does not contain the Seller's VAT identifier or the Seller tax
 				representative.</description>
-			<error>BR-L-02</error>
+			<error>BR-IP-02</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -139,7 +139,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>L</cbc:ID>
+						<cbc:ID>M</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -150,9 +150,9 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “L” does not contain the Seller's VAT identifier or the Seller tax
+				VAT category code = “M” does not contain the Seller's VAT identifier or the Seller tax
 				representative.</description>
-			<error>BR-L-02</error>
+			<error>BR-IP-02</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -167,7 +167,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>L</cbc:ID>
+						<cbc:ID>M</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -177,9 +177,9 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “L” does not contain the Seller's VAT identifier or the Seller tax
+				VAT category code = “M” does not contain the Seller's VAT identifier or the Seller tax
 				representative.</description>
-			<error>BR-L-02</error>
+			<error>BR-IP-02</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -194,7 +194,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>L</cbc:ID>
+						<cbc:ID>M</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>

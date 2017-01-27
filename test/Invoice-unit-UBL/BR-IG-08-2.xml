@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TestSet no 3 for rule BR-L-01, testing calculation with charge-->
+<!-- TestSet no 2 for rule BR-IG-01, testing calculation with allowance-->
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<scope>BR-L-08</scope>
+		<scope>BR-IG-08</scope>
 	</assert>
 	<test>
 		<assert>
 			<description>Verify that for each different value of VAT category rate where the VAT category code is "L", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “L” and the VAT rate equals the VAT category rate (BT-119).</description>
-			<success>BR-L-08</success>
+			<success>BR-IG-08</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -15,7 +15,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">L</cbc:ID>
@@ -24,7 +24,7 @@
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="EUR">200</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">0</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25.0</cbc:Percent>
@@ -48,14 +48,14 @@
 	<test>
 		<assert>
 			<description>Verify that for each different value of VAT category rate where the VAT category code is "L", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “L” and the VAT rate equals the VAT category rate (BT-119).</description>
-			<success>BR-L-08</success>
+			<success>BR-IG-08</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">L</cbc:ID>
@@ -63,7 +63,7 @@
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">E</cbc:ID>
@@ -72,7 +72,7 @@
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="EUR">300</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
@@ -103,14 +103,14 @@
 	<test>
 		<assert>
 			<description>Verify that for each different value of VAT category rate where the VAT category code is "L", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “L” and the VAT rate equals the VAT category rate (BT-119).</description>
-			<success>BR-L-08</success>
+			<success>BR-IG-08</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">L</cbc:ID>
@@ -118,7 +118,7 @@
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">L</cbc:ID>
@@ -127,14 +127,14 @@
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="EUR">500</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">300</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="EUR">300</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>15.00</cbc:Percent>
@@ -165,14 +165,14 @@
 	<test>
 		<assert>
 			<description>Trigger error if for each different value of VAT category rate where the VAT category code is "L", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “L” and the VAT rate does not equal the VAT category rate (BT-119).</description>
-			<error>BR-L-08</error>
+			<error>BR-IG-08</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">L</cbc:ID>
@@ -181,7 +181,7 @@
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="EUR">0</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">200</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
@@ -203,14 +203,14 @@
 	<test>
 		<assert>
 			<description>Trigger error if for each different value of VAT category rate where the VAT category code is "L", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “L” and the VAT rate does not equal the VAT category rate (BT-119).</description>
-			<error>BR-L-08</error>
+			<error>BR-IG-08</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305"> L </cbc:ID>
@@ -219,7 +219,7 @@
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
-					<cbc:TaxableAmount currencyID="EUR">300</cbc:TaxableAmount>
+					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
@@ -230,7 +230,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID> L</cbc:ID>
+						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
