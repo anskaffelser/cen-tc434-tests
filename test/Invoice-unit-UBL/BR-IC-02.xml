@@ -6,7 +6,7 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “IC” contains the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				category code (BT-142) is “K” contains the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
 				Buyer's VAT identifier (BT-46).</description>
 			<success>BR-IC-02</success>
 		</assert>
@@ -33,7 +33,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -42,7 +42,7 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “IC” contains the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				category code (BT-142) is “K” contains the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
 				Buyer's VAT identifier (BT-46).</description>
 			<success>BR-IC-02</success>
 		</assert>
@@ -67,7 +67,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -76,7 +76,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “IC” does not contain both the Seller's VAT identifier (BT-30)or the Seller tax representative VAT identifier,  and
+				category code (BT-142) is “K” does not contain both the Seller's VAT identifier (BT-30)or the Seller tax representative VAT identifier,  and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-02</error>
 		</assert>
@@ -103,7 +103,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -113,7 +113,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “IC” does not contain both the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				category code (BT-142) is “K” does not contain both the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-02</error>
 		</assert>
@@ -140,7 +140,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -150,7 +150,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “IC” does not contain both the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				category code (BT-142) is “K” does not contain both the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-02</error>
 		</assert>
@@ -177,7 +177,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -187,7 +187,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “IC” does not contain both the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				category code (BT-142) is “K” does not contain both the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-02</error>
 		</assert>
@@ -214,7 +214,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -224,7 +224,7 @@
 	<test>
 		<assert>
 			<description>Trigger error if an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “IC” does not contain the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				category code (BT-142) is “K” does not contain the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-02</error>
 		</assert>
@@ -249,7 +249,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -258,7 +258,7 @@
 	<test>
 		<assert>
 			<description>Trigger error if an Invoice that contains a line where the invoiced item VAT
-				category code (BT-142) is “IC” does not contain the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
+				category code (BT-142) is “K” does not contain the Seller's VAT identifier (BT-30) or the Seller tax representative VAT identifier, and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-02</error>
 		</assert>
@@ -283,7 +283,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID> IC</cbc:ID>
+						<cbc:ID> K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>

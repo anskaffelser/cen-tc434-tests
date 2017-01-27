@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that in a document level allowance where the Invoice item VAT category code (BT-95) is "IC" the Invoiced item VAT rate (BT-96) shall be 0 (zero). </description>
+			<description>Verify that in a document level allowance where the Invoice item VAT category code (BT-95) is "K" the Invoiced item VAT rate (BT-96) shall be 0 (zero). </description>
 			<success>BR-IC-06</success>
 		</assert>
 		<Invoice
@@ -15,7 +15,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">IC</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 					<cbc:Percent>0</cbc:Percent>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
@@ -23,7 +23,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when a document level allowance where the Invoice item VAT category code (BT-95) is "IC" the Invoiced item VAT rate (BT-96) is not 0 (zero). </description>
+			<description>Trigger error when a document level allowance where the Invoice item VAT category code (BT-95) is "K" the Invoiced item VAT rate (BT-96) is not 0 (zero). </description>
 			<error>BR-IC-06</error>
 		</assert>
 		<Invoice
@@ -33,7 +33,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">IC</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 					<cbc:Percent>10</cbc:Percent>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
@@ -42,7 +42,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when a document level allowance where the Invoice item VAT category code (BT-95) is "IC" the Invoiced item VAT rate (BT-96) is not 0 (zero). </description>
+			<description>Trigger error when a document level allowance where the Invoice item VAT category code (BT-95) is "K" the Invoiced item VAT rate (BT-96) is not 0 (zero). </description>
 			<error>BR-IC-06</error>
 		</assert>
 		<Invoice
@@ -52,7 +52,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">IC</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 					<cbc:Percent>-10</cbc:Percent>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>

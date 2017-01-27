@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that the VAT category tax amount (BT-110) in a VAT breakdown (BG-21) where the VAT category code (BT-111) is “IC” = 0 (zero)  </description>
+			<description>Verify that the VAT category tax amount (BT-110) in a VAT breakdown (BG-21) where the VAT category code (BT-111) is “K” = 0 (zero)  </description>
 			<success>BR-IC-09</success>
 		</assert>
 		<Invoice
@@ -16,7 +16,7 @@
 				<cac:TaxSubtotal>
 					<cbc:TaxAmount>0.00</cbc:TaxAmount>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -24,7 +24,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when the VAT category tax amount (BT-110) in a VAT breakdown (BG-21) where the VAT category code (BT-111) is “IC” != 0 (zero) </description>
+			<description>Trigger error when the VAT category tax amount (BT-110) in a VAT breakdown (BG-21) where the VAT category code (BT-111) is “K” != 0 (zero) </description>
 			<error>BR-IC-09</error>
 		</assert>
 		<Invoice
@@ -35,7 +35,7 @@
 				<cac:TaxSubtotal>
 					<cbc:TaxAmount>10.00</cbc:TaxAmount>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -43,7 +43,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when the VAT category tax amount (BT-110) in a VAT breakdown (BG-21) where the VAT category code (BT-111) is “IC” != 0 (zero) </description>
+			<description>Trigger error when the VAT category tax amount (BT-110) in a VAT breakdown (BG-21) where the VAT category code (BT-111) is “K” != 0 (zero) </description>
 			<error>BR-IC-09</error>
 		</assert>
 		<Invoice
@@ -54,7 +54,7 @@
 				<cac:TaxSubtotal>
 					<cbc:TaxAmount>-10.00</cbc:TaxAmount>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>

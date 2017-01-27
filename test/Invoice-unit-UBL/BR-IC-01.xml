@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that An Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “Intra-community supply” contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "Intra-community supply".</description>
+			<description>Verify that An Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “K” contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "K".</description>
 			<success>BR-IC-01</success>
 		</assert>
 		<Invoice
@@ -15,7 +15,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -23,21 +23,21 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -45,7 +45,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that An Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “Intra-community supply” contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "Intra-community supply".</description>
+			<description>Verify that An Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “K” contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "K".</description>
 			<success>BR-IC-01</success>
 		</assert>
 		<Invoice
@@ -55,7 +55,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -63,7 +63,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -72,7 +72,7 @@
 	
 	<test>
 		<assert>
-			<description>Verify that An Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “Intra-community supply” contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "Intra-community supply".</description>
+			<description>Verify that An Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “K” contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "K".</description>
 			<success>BR-IC-01</success>
 		</assert>
 		<Invoice
@@ -82,7 +82,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -90,7 +90,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -98,7 +98,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that An Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “Intra-community supply” contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "Intra-community supply".</description>
+			<description>Verify that An Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “K” contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "K".</description>
 			<success>BR-IC-01</success>
 		</assert>
 		<Invoice
@@ -108,7 +108,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -116,7 +116,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -124,7 +124,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “Intra-community supply” does not contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "Intra-community supply".</description>
+			<description>Trigger error if an Invoice that contains a line, a document level allowance or a document level  charge where the Invoiced item VAT category code (BT-151, BT-95 or BT-102) is “K” does not contain in the VAT breakdown (BG-23) exactly one VAT category code (BT-118) equal with "K".</description>
 			<error>BR-IC-01</error>
 		</assert>
 		<Invoice
@@ -142,7 +142,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -162,7 +162,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -170,7 +170,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -178,7 +178,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -196,7 +196,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<!-- <cbc:ID>IC</cbc:ID> -->
+						<!-- <cbc:ID>K</cbc:ID> -->
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -204,7 +204,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -222,7 +222,7 @@
 			<!-- <cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal> -->
@@ -230,7 +230,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -249,7 +249,7 @@
 			<cac:TaxTotal>
 				<!-- <cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal> -->
 			</cac:TaxTotal>
@@ -257,7 +257,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			

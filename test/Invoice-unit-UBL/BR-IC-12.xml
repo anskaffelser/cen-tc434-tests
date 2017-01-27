@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that in an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC" the deliver to country code (BT-75) is not blank</description>
+			<description>Verify that in an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K" the deliver to country code (BT-75) is not blank</description>
 			<success>BR-IC-12</success>
 		</assert>
 		<Invoice
@@ -26,7 +26,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -34,7 +34,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the deliver to country code (BT-75) blank</description>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K", has the deliver to country code (BT-75) blank</description>
 			<error>BR-IC-12</error>
 		</assert>
 		<Invoice
@@ -54,7 +54,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -63,7 +63,7 @@
 
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the deliver to country code (BT-75) blank</description>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K", has the deliver to country code (BT-75) blank</description>
 			<error>BR-IC-12</error>
 		</assert>
 		<Invoice
@@ -83,7 +83,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -92,7 +92,7 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the deliver to country code (BT-75) blank</description>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K", has the deliver to country code (BT-75) blank</description>
 			<error>BR-IC-12</error>
 		</assert>
 		<Invoice
@@ -112,7 +112,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -120,7 +120,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the deliver to country code (BT-75) blank</description>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K", has the deliver to country code (BT-75) blank</description>
 			<error>BR-IC-12</error>
 		</assert>
 		<Invoice
@@ -140,7 +140,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -148,7 +148,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the deliver to country code (BT-75) blank</description>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K", has the deliver to country code (BT-75) blank</description>
 			<error>BR-IC-12</error>
 		</assert>
 		<Invoice
@@ -168,7 +168,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -177,7 +177,7 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the deliver to country code (BT-75) blank</description>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K", has the deliver to country code (BT-75) blank</description>
 			<error>BR-IC-12</error>
 		</assert>
 		<Invoice
@@ -197,7 +197,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -206,7 +206,7 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "IC", has the deliver to country code (BT-75) blank</description>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K", has the deliver to country code (BT-75) blank</description>
 			<error>BR-IC-12</error>
 		</assert>
 		<Invoice
@@ -226,7 +226,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>

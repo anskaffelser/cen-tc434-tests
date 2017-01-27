@@ -6,7 +6,7 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice line where the Invoice item VAT category code
-				(BT-142) is "IC" the Invoiced item VAT rate (BT-143) = 0 (zero). </description>
+				(BT-142) is "K" the Invoiced item VAT rate (BT-143) = 0 (zero). </description>
 			<success>BR-IC-05</success>
 		</assert>
 		<Invoice
@@ -16,7 +16,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 						<cbc:Percent>0</cbc:Percent>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
@@ -26,7 +26,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice line where the Invoice item VAT category code
-				(BT-142) is "IC" the Invoiced item VAT rate (BT-143) != 0 (zero). </description>
+				(BT-142) is "K" the Invoiced item VAT rate (BT-143) != 0 (zero). </description>
 			<error>BR-IC-05</error>
 		</assert>
 		<Invoice
@@ -36,7 +36,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 						<cbc:Percent>2</cbc:Percent>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
@@ -47,7 +47,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice line where the Invoice item VAT category code
-				(BT-142) is "IC" the Invoiced item VAT rate (BT-143) != 0 (zero). </description>
+				(BT-142) is "K" the Invoiced item VAT rate (BT-143) != 0 (zero). </description>
 			<error>BR-IC-05</error>
 		</assert>
 		<Invoice
@@ -57,7 +57,7 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 						<cbc:Percent>-10</cbc:Percent>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>

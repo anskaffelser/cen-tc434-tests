@@ -7,7 +7,6 @@
 		<assert>
 			<description>Verify that if a period has a start date and an end date, the end date is equal to, or later than the start date </description>
 			<success>BR-29</success>
-			<success>BR-30</success>
 		</assert>
 		<CreditNote
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

@@ -8,7 +8,7 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a document level charge with a
-				document level charge VAT category code that is "IC" contains both the Seller's
+				document level charge VAT category code that is "K" contains both the Seller's
 				VAT identifier or the Sellers Tax Representative VAT identifier (BT-30) and Buyer's
 				VAT identifier (BT-46).</description>
 			<success>BR-IC-04</success>
@@ -37,7 +37,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
@@ -45,7 +45,7 @@
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a document level charge with a
-				document level charge VAT category code that is "IC" contains both the Seller's
+				document level charge VAT category code that is "K" contains both the Seller's
 				VAT identifier or the Sellers Tax Representative VAT identifier (BT-30) and Buyer's
 				VAT identifier (BT-46).</description>
 			<success>BR-IC-04</success>
@@ -72,7 +72,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
@@ -81,7 +81,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a document level charge with
-				a document level charge VAT category code that is "IC" does not contain both the
+				a document level charge VAT category code that is "K" does not contain both the
 				Seller's VAT identifier (BT-30) or the Sellers Tax Representative VAT identifier and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-04</error>
@@ -110,7 +110,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -121,7 +121,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a document level charge or
-				charge with a document level charge VAT category code that is "IC" does not
+				charge with a document level charge VAT category code that is "K" does not
 				contain both the Seller's VAT identifier (BT-30) or the Sellers Tax Representative
 				VAT identifier and Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-04</error>
@@ -149,7 +149,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -158,7 +158,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a document level charge with
-				a document level charge VAT category code that is "IC" does not contain both the
+				a document level charge VAT category code that is "K" does not contain both the
 				Seller's VAT identifier (BT-30) or the Sellers Tax Representative VAT identifier and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-04</error>
@@ -187,7 +187,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -196,7 +196,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a document level charge with
-				a document level charge VAT category code that is "IC" does not contain both the
+				a document level charge VAT category code that is "K" does not contain both the
 				Seller's VAT identifier (BT-30) or the Sellers Tax Representative VAT identifier and
 				Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-04</error>
@@ -224,7 +224,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -233,7 +233,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a document level charge or
-				charge with a document level charge VAT category code that is "IC" does not
+				charge with a document level charge VAT category code that is "K" does not
 				contain both the Seller's VAT identifier (BT-30) or the Sellers Tax Representative
 				VAT identifier and Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-04</error>
@@ -259,7 +259,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -268,7 +268,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when an Invoice that contains a document level charge or
-				charge with a document level charge VAT category code that is "IC" does not
+				charge with a document level charge VAT category code that is "K" does not
 				contain both the Seller's VAT identifier (BT-30) or the Sellers Tax Representative
 				VAT identifier and Buyer's VAT identifier (BT-46).</description>
 			<error>BR-IC-04</error>
@@ -295,7 +295,7 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>IC</cbc:ID>
+					<cbc:ID>K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 

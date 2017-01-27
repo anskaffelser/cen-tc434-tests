@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "IC" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “IC".</description>
+			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "K" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “K".</description>
 			<success>BR-IC-08</success>
 		</assert>
 		<Invoice
@@ -16,7 +16,7 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">IC</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -24,14 +24,14 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">IC</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -39,7 +39,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -48,7 +48,7 @@
 	
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "IC" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “IC".</description>
+			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "K" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “K".</description>
 			<success>BR-IC-08</success>
 		</assert>
 		<Invoice
@@ -59,7 +59,7 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">IC</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -67,7 +67,7 @@
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="EUR">200</cbc:TaxableAmount>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -75,7 +75,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -83,7 +83,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "IC" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “IC".</description>
+			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "K" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “K".</description>
 			<success>BR-IC-08</success>
 		</assert>
 		<Invoice
@@ -95,14 +95,14 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">IC</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="EUR">0</cbc:TaxableAmount>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -110,7 +110,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -119,7 +119,7 @@
 	
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "IC" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “IC".</description>
+			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "K" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “K".</description>
 			<success>BR-IC-08</success>
 		</assert>
 		<Invoice
@@ -130,7 +130,7 @@
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -138,7 +138,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -146,7 +146,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "IC" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “IC".</description>
+			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "K" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “K".</description>
 			<success>BR-IC-08</success>
 		</assert>
 		<Invoice
@@ -158,7 +158,7 @@
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -166,7 +166,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -182,7 +182,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "IC" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “IC".</description>
+			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "K" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “K".</description>
 			<success>BR-IC-08</success>
 		</assert>
 		<Invoice
@@ -194,7 +194,7 @@
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="EUR">600</cbc:TaxableAmount>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -202,7 +202,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -210,7 +210,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">500</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -218,7 +218,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "IC" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “IC".</description>
+			<description>Verify that in a VAT breakdown (BG-23) where VAT category code (BT-118) is "K" the VAT category taxable amount (BT-116) shall equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “K".</description>
 			<success>BR-IC-08</success>
 		</assert>
 		<Invoice
@@ -229,7 +229,7 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">IC</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -237,14 +237,14 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">50</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">IC</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="EUR">350</cbc:TaxableAmount>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -252,7 +252,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -260,7 +260,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -276,7 +276,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if a VAT breakdown (BG-23) where VAT category code (BT-118) is "IC" the VAT category taxable amount (BT-116) is not equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “IC".</description>
+			<description>Trigger error if a VAT breakdown (BG-23) where VAT category code (BT-118) is "K" the VAT category taxable amount (BT-116) is not equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “K".</description>
 			<error>BR-IC-08</error>
 		</assert>
 		<Invoice
@@ -287,7 +287,7 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">IC</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -295,14 +295,14 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">IC</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="EUR">200</cbc:TaxableAmount>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -310,7 +310,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -319,7 +319,7 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error if a VAT breakdown (BG-23) where VAT category code (BT-118) is "IC" the VAT category taxable amount (BT-116) is not equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “IC".</description>
+			<description>Trigger error if a VAT breakdown (BG-23) where VAT category code (BT-118) is "K" the VAT category taxable amount (BT-116) is not equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “K".</description>
 			<error>BR-IC-08</error>
 		</assert>
 		<Invoice
@@ -330,7 +330,7 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">IC</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -338,14 +338,14 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">IC</cbc:ID>
+					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="EUR">200</cbc:TaxableAmount>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -353,7 +353,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -361,7 +361,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if a VAT breakdown (BG-23) where VAT category code (BT-118) is "IC" the VAT category taxable amount (BT-116) is not equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “IC".</description>
+			<description>Trigger error if a VAT breakdown (BG-23) where VAT category code (BT-118) is "K" the VAT category taxable amount (BT-116) is not equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “K".</description>
 			<error>BR-IC-08</error>
 		</assert>
 		<Invoice
@@ -373,7 +373,7 @@
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -381,7 +381,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -389,7 +389,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -397,7 +397,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if a VAT breakdown (BG-23) where VAT category code (BT-118) is "IC" the VAT category taxable amount (BT-116) is not equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “IC".</description>
+			<description>Trigger error if a VAT breakdown (BG-23) where VAT category code (BT-118) is "K" the VAT category taxable amount (BT-116) is not equal the sum of Invoice line net amounts (BT-131) minus document level allowance amounts (BT-92) plus document level charge amounts (BT-99) where the VAT category codes (BT-151, BT-95, BT-102) are “K".</description>
 			<error>BR-IC-08</error>
 		</assert>
 		<Invoice
@@ -409,7 +409,7 @@
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="EUR">300</cbc:TaxableAmount>
 					<cac:TaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -417,7 +417,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -425,7 +425,7 @@
 				<cbc:LineExtensionAmount currencyID="EUR">100</cbc:LineExtensionAmount>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID>IC</cbc:ID>
+						<cbc:ID>K</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
