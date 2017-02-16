@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
+	<assert>
+		<description>Item classification code scheme id SHOULD be coded using UNCL7143</description>
+		<scope>BR-CL-24</scope>
+	</assert>
+	<test id="1">
+		<assert>
+			<success>BR-CL-24</success>
+		</assert>
+		<CreditNote
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
+			<cac:CreditNoteLine>
+				<cac:Item>
+					<cac:CommodityClassification>
+						<cbc:ItemClassificationCode listID="STI"/>
+					</cac:CommodityClassification>
+				</cac:Item>
+			</cac:CreditNoteLine>
+		</CreditNote>
+	</test>
+
+	<test id="2">
+		<assert>
+			<error>BR-CL-24</error>
+		</assert>
+		<CreditNote
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
+			<cac:CreditNoteLine>
+				<cac:Item>
+					<cac:CommodityClassification>
+						<cbc:ItemClassificationCode listID="VVV"/>
+					</cac:CommodityClassification>
+				</cac:Item>
+			</cac:CreditNoteLine>
+		</CreditNote>
+	</test>
+
+</testSet>
