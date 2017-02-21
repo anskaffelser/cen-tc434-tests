@@ -16,7 +16,7 @@
 			<cac:AccountingSupplierParty>
 				<cac:Party>
 					<cac:PartyLegalEntity>
-						<cbc:CompanyID shemeID="0088"/>
+						<cbc:CompanyID schemeID="0088"/>
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
@@ -24,7 +24,7 @@
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<cac:PartyLegalEntity>
-						<cbc:CompanyID shemeID="0007"/>
+						<cbc:CompanyID schemeID="0007"/>
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
@@ -32,7 +32,7 @@
 			<cac:PayeeParty>
 				<cac:Party>
 					<cac:PartyLegalEntity>
-						<cbc:CompanyID shemeID="0033"/>
+						<cbc:CompanyID schemeID="0033"/>
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:PayeeParty>
@@ -52,7 +52,7 @@
 			<cac:AccountingSupplierParty>
 				<cac:Party>
 					<cac:PartyLegalEntity>
-						<cbc:CompanyID shemeID="0181"/>
+						<cbc:CompanyID schemeID="0181"/>
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
@@ -60,7 +60,7 @@
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<cac:PartyLegalEntity>
-						<cbc:CompanyID shemeID="0187"/>
+						<cbc:CompanyID schemeID="0187"/>
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
@@ -68,7 +68,7 @@
 			<cac:PayeeParty>
 				<cac:Party>
 					<cac:PartyLegalEntity>
-						<cbc:CompanyID shemeID="0283"/>
+						<cbc:CompanyID schemeID="0283"/>
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:PayeeParty>

@@ -26,10 +26,9 @@
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			
-			<cac:InvoicePeriod>
-				<cbc:DescriptionCode>MM</cbc:DescriptionCode>
-			</cac:InvoicePeriod>
+			<cac:AdditionalDocumentReference>
+				<cbc:ID schemeID="MM"/>
+			</cac:AdditionalDocumentReference>
 		</Invoice>
 	</test>
 </testSet>
