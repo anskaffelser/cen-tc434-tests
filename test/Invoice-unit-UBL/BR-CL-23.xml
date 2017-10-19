@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<description>Party identification scheme identifier MUST be coded using ISO/IEC 6523</description>
-		<scope>BR-CL-22</scope>
+		<description>Unit code MUST be coded according to the UN/ECE Recommendation 20 with
+			Rec 21 extension</description>
+		<scope>BR-CL-23</scope>
 	</assert>
 	<test id="1">
 		<assert>
-			<success>BR-CL-22</success>
+			<success>BR-CL-23</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -29,7 +30,7 @@
 	
 	<test id="2">
 		<assert>
-			<error number="2">BR-CL-22</error>
+			<error number="2">BR-CL-23</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

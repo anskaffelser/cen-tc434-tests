@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
+		<description>Item classification identifier identification scheme identifier MUST be
+			coded using one of the UNTDID 7143 list.</description>
 		<scope>BR-CL-13</scope>
 	</assert>
 	<test>
 		<assert>
-			<description>Coded allowance reasons SHOULD belong to the UNCL 5189 code
-				list</description>
 			<success>BR-CL-13</success>
 		</assert>
 		<Invoice
@@ -14,16 +14,15 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			
-			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-				<cbc:AllowanceChargeReasonCode>17</cbc:AllowanceChargeReasonCode>
-			</cac:AllowanceCharge>
-			
 			<cac:InvoiceLine>
-				<cac:AllowanceCharge>
-					<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-					<cbc:AllowanceChargeReasonCode>29</cbc:AllowanceChargeReasonCode>
-				</cac:AllowanceCharge>
+			
+				<cac:Item>
+					
+					<cac:CommodityClassification>
+						<cbc:ItemClassificationCode listID="STS"/>
+					</cac:CommodityClassification>
+					
+				</cac:Item>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
@@ -38,16 +37,15 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			
-			<cac:AllowanceCharge>
-				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-				<cbc:AllowanceChargeReasonCode>43</cbc:AllowanceChargeReasonCode>
-			</cac:AllowanceCharge>
-			
 			<cac:InvoiceLine>
-				<cac:AllowanceCharge>
-					<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-					<cbc:AllowanceChargeReasonCode>102</cbc:AllowanceChargeReasonCode>
-				</cac:AllowanceCharge>
+				
+				<cac:Item>
+					
+					<cac:CommodityClassification>
+						<cbc:ItemClassificationCode listID="XXX"/>
+					</cac:CommodityClassification>
+					
+				</cac:Item>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
