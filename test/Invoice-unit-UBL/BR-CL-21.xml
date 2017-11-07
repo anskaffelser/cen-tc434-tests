@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<description>Party identification scheme identifier MUST be coded using ISO/IEC 6523</description>
+		<description>Item standard identifier scheme identifier MUST belong to the ISO 6523 ICD code list</description>
 		<scope>BR-CL-21</scope>
 	</assert>
 	<test id="1">

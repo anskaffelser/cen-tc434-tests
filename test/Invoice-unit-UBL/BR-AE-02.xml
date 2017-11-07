@@ -22,7 +22,7 @@
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>NO123456789</cbc:CompanyID>
 						<cac:TaxScheme>
-							<cbc:ID>VA</cbc:ID>
+							<cbc:ID>VAT</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
@@ -31,9 +31,9 @@
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<cac:PartyTaxScheme>
-						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+						<cbc:CompanyID>NO987654321MVA</cbc:CompanyID>
 						<cac:TaxScheme>
-							<cbc:ID>VA</cbc:ID>
+							<cbc:ID>VAT</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
@@ -48,6 +48,7 @@
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
+	
 	<test id="2">
 		<assert>
 			<description>TaxRepresentative and Buyer legal registration is present</description>
@@ -61,7 +62,7 @@
 				<cac:PartyTaxScheme>
 					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
 					<cac:TaxScheme>
-						<cbc:ID>VA</cbc:ID>
+						<cbc:ID>VAT</cbc:ID>
 					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
@@ -71,7 +72,7 @@
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>987654321</cbc:CompanyID>
 						<cac:TaxScheme>
-							<cbc:ID>FC</cbc:ID>
+							<cbc:ID>TAX</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
@@ -101,7 +102,7 @@
 					<cac:PartyTaxScheme>
 						<!-- <cbc:CompanyID>NO123456789</cbc:CompanyID>-->
 						<cac:TaxScheme>
-							<cbc:ID>VA</cbc:ID>
+							<cbc:ID>VAT</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
@@ -112,7 +113,7 @@
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
 						<cac:TaxScheme>
-							<cbc:ID>VA</cbc:ID>
+							<cbc:ID>VAT</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
@@ -154,7 +155,7 @@
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
 						<cac:TaxScheme>
-							<cbc:ID>VA</cbc:ID>
+							<cbc:ID>VAT</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
@@ -184,7 +185,7 @@
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>NO123456789</cbc:CompanyID>
 						<cac:TaxScheme>
-							<cbc:ID>VA</cbc:ID>
+							<cbc:ID>VAT</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
@@ -195,7 +196,7 @@
 					<cac:PartyTaxScheme>
 						<!-- <cbc:CompanyID>987654321MVA</cbc:CompanyID>-->
 						<cac:TaxScheme>
-							<cbc:ID>VA</cbc:ID>
+							<cbc:ID>VAT</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
@@ -225,7 +226,7 @@
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>NO123456789</cbc:CompanyID>
 						<cac:TaxScheme>
-							<cbc:ID>VA</cbc:ID>
+							<cbc:ID>VAT</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
@@ -275,7 +276,7 @@
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
 						<cac:TaxScheme>
-							<cbc:ID>FC</cbc:ID>
+							<cbc:ID>TAX</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
@@ -304,7 +305,7 @@
 				<cac:PartyTaxScheme>
 					<!--					<cbc:CompanyID>999999999MVA</cbc:CompanyID>-->
 					<cac:TaxScheme>
-						<cbc:ID>VA</cbc:ID>
+						<cbc:ID>VAT</cbc:ID>
 					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
@@ -314,7 +315,7 @@
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
 						<cac:TaxScheme>
-							<cbc:ID>VA</cbc:ID>
+							<cbc:ID>VAT</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
@@ -343,7 +344,7 @@
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>NO123456789</cbc:CompanyID>
 						<cac:TaxScheme>
-							<cbc:ID>FC</cbc:ID>
+							<cbc:ID>TAX</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
@@ -354,7 +355,7 @@
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>987654321</cbc:CompanyID>
 						<cac:TaxScheme>
-							<cbc:ID>FC</cbc:ID>
+							<cbc:ID>TAX</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
