@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
+		<description>Verify that an Invoice that contains a document level charge
+			with a document level charge VAT category code that is "E" does
+			contain the Sellers VAT Identifier  the Seller Tax registration identifier
+			or the Seller tax representative VAT identifier </description>
 		<scope>BR-E-04</scope>
 	</assert>
-	<test>
+	<test id="1">
 		<assert>
-			<description>Verify that an Invoice that contains a document level charge
-				with a document level charge VAT category code that is "E" does
-				contain the Sellers VAT Identifier  the Seller Tax registration identifier
-			 or the Seller tax representative VAT identifier </description>
 			<success>BR-E-04</success>
 		</assert>
 		<Invoice
@@ -19,6 +19,9 @@
 				<cac:Party>
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>123456789MVA</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
@@ -31,12 +34,35 @@
 			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
-	<test>
+	<test id="2">
+		<assert>
+			<success>BR-E-04</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>123456789MVA</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>TAX</cbc:ID>
+						</cac:TaxScheme>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>E</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+		</Invoice>
+	</test>
+	<test id="3">
 			<assert>
-				<description>Verify that an Invoice that contains a document level charge
-					with a document level charge VAT category code that is "E" does
-					contain the Sellers VAT Identifier  the Seller Tax registration identifier
-				 or the Seller tax representative VAT identifier </description>
 				<success>BR-E-04</success>
 		</assert>
 		<Invoice
@@ -46,6 +72,9 @@
 			<cac:TaxRepresentativeParty>
 				<cac:PartyTaxScheme>
 					<cbc:CompanyID>999999999</cbc:CompanyID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
 
@@ -58,12 +87,8 @@
 		</Invoice>
 	</test>
 	
-	<test>
+	<test id="3">
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level
-				charge with a document level charge VAT category code that is "E"
-				does not contain the Sellers VAT Identifier  the Seller Tax registration
-				identifier or the Seller tax representative VAT identifier </description>
 			<error>BR-E-04</error>
 		</assert>
 		<Invoice
@@ -73,6 +98,9 @@
 			<cac:TaxRepresentativeParty>
 				<!--				<cac:PartyTaxScheme>
 					<cbc:CompanyID>999999999</cbc:CompanyID>
+											<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 				</cac:PartyTaxScheme>-->
 			</cac:TaxRepresentativeParty>
 
@@ -85,12 +113,8 @@
 
 		</Invoice>
 	</test>
-	<test>
+	<test id="4">
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level 
-				charge with a document level charge VAT category code that is "E"
-				does not contain the Sellers VAT Identifier  the Seller Tax registration
-				identifier or the Seller tax representative VAT identifier </description>
 			<error>BR-E-04</error>
 		</assert>
 		<Invoice
@@ -100,6 +124,9 @@
 			<cac:TaxRepresentativeParty>
 				<cac:PartyTaxScheme>
 					<!--					<cbc:CompanyID>999999999</cbc:CompanyID>-->
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
 
@@ -113,12 +140,8 @@
 		</Invoice>
 	</test>
 
-	<test>
+	<test id="5">
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level 
-				charge with a document level charge VAT category code that is "E"
-				does not contain the Sellers VAT Identifier  the Seller Tax registration
-				identifier or the Seller tax representative VAT identifier </description>
 			<error>BR-E-04</error>
 		</assert>
 		<Invoice
@@ -129,6 +152,9 @@
 				<cac:Party>
 					<cac:PartyTaxScheme>
 						<!--<cbc:CompanyID>123456789MVA</cbc:CompanyID>-->
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
@@ -142,12 +168,8 @@
 
 		</Invoice>
 	</test>
-	<test>
+	<test id="6">
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level 
-				charge with a document level charge VAT category code that is "E"
-				does not contain the Sellers VAT Identifier  the Seller Tax registration
-				identifier or the Seller tax representative VAT identifier </description>
 			<error>BR-E-04</error>
 		</assert>
 		<Invoice
@@ -171,8 +193,30 @@
 
 		</Invoice>
 	</test>
-
-
-
+	<test id="7">
+		<assert>
+			<error>BR-E-04</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AccountingSupplierParty>
+<!--				<cac:Party>
+						<cac:PartyTaxScheme>
+						<cbc:CompanyID>123456789MVA</cbc:CompanyID>
+					</cac:PartyTaxScheme> 
+				</cac:Party>-->
+			</cac:AccountingSupplierParty>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>E</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
 
 </testSet>
