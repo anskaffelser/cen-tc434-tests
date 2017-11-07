@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<description>Invoice that contains an Invoice line (BG-25) where the Invoiced item VAT category code (BT-151) is “Reverse charge” 
-			shall contain the Seller VAT Identifier (BT-31), the Seller Tax registration identifier (BT-32) and/or the Seller tax representative VAT identifier (BT-63) 
-			and the Buyer VAT identifier (BT-48) and/or the Buyer legal registration identifier (BT-47)</description>
+		<description>Invoice that contains an Invoice line (BG-25) where the Invoiced item VAT
+			category code (BT-151) is “Reverse charge” shall contain the Seller VAT Identifier
+			(BT-31), the Seller Tax registration identifier (BT-32) and/or the Seller tax
+			representative VAT identifier (BT-63) and the Buyer VAT identifier (BT-48) and/or the
+			Buyer legal registration identifier (BT-47)</description>
 		<scope>BR-AE-02</scope>
 
 	</assert>
@@ -67,7 +69,7 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<cac:PartyTaxScheme>
@@ -78,7 +80,7 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -126,7 +128,7 @@
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-	
+
 	<test id="4">
 		<assert>
 			<description>BT-31 and BT-47 present</description>
@@ -146,7 +148,7 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<cac:PartyLegalEntity>
@@ -154,7 +156,7 @@
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -183,7 +185,7 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<cac:PartyLegalEntity>
@@ -191,7 +193,7 @@
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -218,7 +220,7 @@
 					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<cac:PartyLegalEntity>
@@ -226,7 +228,7 @@
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -236,8 +238,8 @@
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-	
-	
+
+
 
 	<test id="7">
 		<assert>
@@ -466,7 +468,7 @@
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
-<
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -474,13 +476,13 @@
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-			
+
 		</Invoice>
 	</test>
 	<test id="13">
 		<assert>
 			<error>BR-AE-02</error>
-			
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -494,15 +496,15 @@
 					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<cac:PartyLegalEntity>
-<!--						<cbc:CompanyID>987654321</cbc:CompanyID>-->
+						<!--						<cbc:CompanyID>987654321</cbc:CompanyID>-->
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -510,13 +512,13 @@
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-			
+
 		</Invoice>
 	</test>
 	<test id="14">
 		<assert>
 			<error>BR-AE-02</error>
-			
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -530,15 +532,15 @@
 					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:AccountingCustomerParty>
 				<cac:Party>
-<!--					<cac:PartyLegalEntity>
+					<!--					<cac:PartyLegalEntity>
 						<cbc:CompanyID>987654321</cbc:CompanyID>
 					</cac:PartyLegalEntity>-->
 				</cac:Party>
 			</cac:AccountingCustomerParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -546,7 +548,7 @@
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-			
+
 		</Invoice>
 	</test>
 </testSet>

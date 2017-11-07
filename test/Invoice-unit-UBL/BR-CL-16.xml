@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
+		<description>Verify that Payment means in an invoice MUST be coded using UNCL4461 code list</description>
 		<scope>BR-CL-16</scope>
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that Payment means in an invoice MUST be coded using UNCL 4461 code
-				list</description>
 			<success>BR-CL-16</success>
 		</assert>
 		<Invoice
@@ -20,8 +19,6 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if Payment means in an invoice is not coded using UNCL 4461 code
-				list</description>
 			<error>BR-CL-16</error>
 		</assert>
 		<Invoice

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
+		<description>Verify that an Invoice that contains a line where the Invoiced item VAT
+			category code is “Z” contain the Sellers VAT Identifier
+			the Seller Tax registration identifier or the Seller tax
+			representative VAT identifier </description>
 		<scope>BR-Z-02</scope>
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a line where the Invoiced item VAT
-				category code is “Z” contain the Sellers VAT Identifier
-				the Seller Tax registration identifier or the Seller tax
-				representative VAT identifier </description>
+
 				<success>BR-Z-02</success>
 		</assert>
 		<Invoice
@@ -19,6 +20,9 @@
 				<cac:Party>
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
@@ -34,10 +38,6 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a line where the Invoiced item VAT
-				category code is “Z” contain the Sellers VAT Identifier
-				the Seller Tax registration identifier or the Seller tax
-				representative VAT identifier (BT-63</description>
 			<success>BR-Z-02</success>
 		</assert>
 		<Invoice
@@ -47,6 +47,9 @@
 			<cac:TaxRepresentativeParty>
 				<cac:PartyTaxScheme>
 					<cbc:CompanyID>999999999</cbc:CompanyID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
 			
@@ -61,10 +64,6 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “Z” does not contain the Sellers VAT Identifier
-				the Seller Tax registration identifier or the Seller tax
-				representative VAT identifier </description>
 				<error>BR-Z-02</error>
 		</assert>
 		<Invoice
@@ -74,6 +73,9 @@
 			<cac:TaxRepresentativeParty>
 				<!--				<cac:PartyTaxScheme>
 					<cbc:CompanyID>999999999</cbc:CompanyID>
+											<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 				</cac:PartyTaxScheme>-->
 			</cac:TaxRepresentativeParty>
 			
@@ -89,10 +91,6 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “Z” does not contain the Sellers VAT Identifier
-				the Seller Tax registration identifier or the Seller tax
-				representative VAT identifier </description>
 			<error>BR-Z-02</error>
 		</assert>
 		<Invoice
@@ -102,6 +100,9 @@
 			<cac:TaxRepresentativeParty>
 				<cac:PartyTaxScheme>
 					<!--					<cbc:CompanyID>999999999</cbc:CompanyID>-->
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
 			
@@ -117,10 +118,6 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “Z” does not contain the Sellers VAT Identifier
-				the Seller Tax registration identifier or the Seller tax
-				representative VAT identifier </description>
 				<error>BR-Z-02</error>
 		</assert>
 		<Invoice
@@ -131,6 +128,9 @@
 				<!-- <cac:Party>
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+												<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party> -->
 			</cac:AccountingSupplierParty>
@@ -147,10 +147,6 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code is “Z”, does not contain the Sellers VAT Identifier
-				the Seller Tax registration identifier or the Seller tax
-				representative VAT identifier </description>
 				<error>BR-Z-02</error>
 		</assert>
 		<Invoice
@@ -161,6 +157,9 @@
 				<cac:Party>
 					<!-- 	<cac:PartyTaxScheme>
 						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+												<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme> -->
 				</cac:Party>
 			</cac:AccountingSupplierParty>
@@ -179,10 +178,6 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code is “Z”,does not contain the Sellers VAT Identifier
-				the Seller Tax registration identifier or the Seller tax
-				representative VAT identifier </description>
 			<error>BR-Z-02</error>
 		</assert>
 		<Invoice
@@ -193,6 +188,9 @@
 				<cac:Party>
 					<cac:PartyTaxScheme>
 						<!-- <cbc:CompanyID>NO123456789</cbc:CompanyID> -->
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>

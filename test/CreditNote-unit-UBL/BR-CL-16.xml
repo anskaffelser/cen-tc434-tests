@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
-	<assert>		
-		<description>Credit note type code MUST be coded using UNCL100 invoice codes</description>
+	<assert>
+		<description>Verify that Payment means in a credit note MUST be coded using UNCL4461 code list</description>
 		<scope>BR-CL-16</scope>
 	</assert>
-	<test id="1">
+	<test>
 		<assert>
-	
 			<success>BR-CL-16</success>
 		</assert>
 		<CreditNote
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
-			
-			<cbc:CreditNoteTypeCode>381</cbc:CreditNoteTypeCode>
+			<cac:PaymentMeans>
+				<cbc:PaymentMeansCode>31</cbc:PaymentMeansCode>
+			</cac:PaymentMeans>
 		</CreditNote>
 	</test>
-	<test id="2">
+	<test>
 		<assert>
 			<error>BR-CL-16</error>
 		</assert>
@@ -25,8 +25,11 @@
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
-			
-			<cbc:CreditNoteTypeCode>001</cbc:CreditNoteTypeCode>
+			<cac:PaymentMeans>
+				<cbc:PaymentMeansCode>98</cbc:PaymentMeansCode>
+			</cac:PaymentMeans>
 		</CreditNote>
 	</test>
+	
 </testSet>
+

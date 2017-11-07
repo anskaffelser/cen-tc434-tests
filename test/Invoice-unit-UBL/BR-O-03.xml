@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
+		<description>Invoice that contains a Document level allowance (BG-20) where the Document level allowance VAT category code (BT-95) is “Not subject to VAT” 
+			shall not contain the Seller VAT identifier (BT-31), the Seller tax representative VAT identifier (BT-63) or the Buyer VAT identifier (BT-48)</description>
 		<scope>BR-O-03</scope>
-
 	</assert>
 
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level allowance with a
-				document level allowance VAT category code that is "O" does not contain the Seller's
-				VAT identifier or the Sellers Tax Representative VAT identifier or Buyer's VAT
-				identifier.</description>
+			<description>Invoice that contains a Document level allowance (BG-20) where the Document level allowance VAT category code (BT-95) is “Not subject to VAT” 
+				shall not contain the Seller VAT identifier (BT-31), the Seller tax representative VAT identifier (BT-63) or the Buyer VAT identifier (BT-48)</description>
 			<success>BR-O-03</success>
 
 		</assert>
@@ -31,10 +30,6 @@
 
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance with a
-				document level allowance VAT category code that = "O" does contain the Seller's VAT
-				identifier or the Sellers Tax Representative VAT identifier or Buyer's VAT
-				identifier.</description>
 			<error>BR-O-03</error>
 
 		</assert>
@@ -46,6 +41,9 @@
 				<cac:Party>
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
@@ -62,10 +60,6 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance with a
-				document level allowance VAT category code that = "O" does contain the Seller's VAT
-				identifier or the Sellers Tax Representative VAT identifier or Buyer's VAT
-				identifier.</description>
 			<error>BR-O-03</error>
 			
 		</assert>
@@ -78,6 +72,9 @@
 				<cac:Party>
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
@@ -93,10 +90,6 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a document level allowance or
-				charge with a document level allowance VAT category code that is "O" does not
-				contain both the Seller's VAT identifier (BT-30) or the Sellers Tax Representative
-				VAT identifier and Buyer's VAT identifier (BT-46).</description>
 			<error>BR-O-03</error>
 
 		</assert>
@@ -107,6 +100,9 @@
 			<cac:TaxRepresentativeParty>
 				<cac:PartyTaxScheme>
 					<cbc:CompanyID>1234567</cbc:CompanyID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
 

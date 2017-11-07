@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
+		<description>Verify that an Invoice that contains a document level charge
+			with a document level charge VAT category code that is "Z" does
+			contain the Sellers VAT Identifier  the Seller Tax registration identifier
+			or the Seller tax representative VAT identifier </description>
 		<scope>BR-Z-04</scope>
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level charge
-				with a document level charge VAT category code that is "Z" does
-				contain the Sellers VAT Identifier  the Seller Tax registration identifier
-				or the Seller tax representative VAT identifier </description>
+
 			<success>BR-Z-04</success>
 		</assert>
 		<Invoice
@@ -19,6 +20,9 @@
 				<cac:Party>
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>123456789MVA</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
@@ -34,10 +38,6 @@
 	
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level charge
-				with a document level charge VAT category code that is "Z" does
-				contain the Sellers VAT Identifier  the Seller Tax registration identifier
-				or the Seller tax representative VAT identifier </description>
 			<success>BR-Z-04</success>
 		</assert>
 		<Invoice
@@ -48,6 +48,9 @@
 				<cac:Party>
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>123456789MVA</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
@@ -63,10 +66,6 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level charge
-				with a document level charge VAT category code that is "Z" does
-				contain the Sellers VAT Identifier  the Seller Tax registration identifier
-				or the Seller tax representative VAT identifier </description>
 			<success>BR-Z-04</success>
 		</assert>
 		<Invoice
@@ -76,6 +75,9 @@
 			<cac:TaxRepresentativeParty>
 				<cac:PartyTaxScheme>
 					<cbc:CompanyID>999999999</cbc:CompanyID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
 			
@@ -90,10 +92,6 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level
-				charge with a document level charge VAT category code that is "Z"
-				does not contain the Sellers VAT Identifier  the Seller Tax registration
-				identifier or the Seller tax representative VAT identifier </description>
 			<error>BR-Z-04</error>
 		</assert>
 		<Invoice
@@ -103,6 +101,9 @@
 			<cac:TaxRepresentativeParty>
 				<!--				<cac:PartyTaxScheme>
 					<cbc:CompanyID>999999999</cbc:CompanyID>
+											<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 				</cac:PartyTaxScheme>-->
 			</cac:TaxRepresentativeParty>
 			
@@ -117,10 +118,6 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level 
-				charge with a document level charge VAT category code that is "Z"
-				does not contain the Sellers VAT Identifier  the Seller Tax registration
-				identifier or the Seller tax representative VAT identifier </description>
 			<error>BR-Z-04</error>
 		</assert>
 		<Invoice
@@ -130,6 +127,9 @@
 			<cac:TaxRepresentativeParty>
 				<cac:PartyTaxScheme>
 					<!--					<cbc:CompanyID>999999999</cbc:CompanyID>-->
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
 			
@@ -145,11 +145,6 @@
 	
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level 
-				charge with a document level charge VAT category code that is "Z"
-				does not contain the Sellers VAT Identifier  the Seller Tax registration
-				identifier or the Seller tax representative VAT identifier </description>
-			<error>BR-Z-04</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -159,6 +154,9 @@
 				<cac:Party>
 					<cac:PartyTaxScheme>
 						<!--<cbc:CompanyID>123456789MVA</cbc:CompanyID>-->
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
@@ -174,10 +172,33 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level 
-				charge with a document level charge VAT category code that is "Z"
-				does not contain the Sellers VAT Identifier  the Seller Tax registration
-				identifier or the Seller tax representative VAT identifier </description>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<!--<cbc:CompanyID>123456789MVA</cbc:CompanyID>-->
+						<cac:TaxScheme>
+							<cbc:ID>TAX</cbc:ID>
+						</cac:TaxScheme>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+			
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+				<cac:TaxCategory>
+					<cbc:ID>Z</cbc:ID>
+				</cac:TaxCategory>
+			</cac:AllowanceCharge>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
 			<error>BR-Z-04</error>
 		</assert>
 		<Invoice
@@ -188,6 +209,9 @@
 				<cac:Party>
 					<!--	<cac:PartyTaxScheme>
 						<cbc:CompanyID>123456789MVA</cbc:CompanyID>
+												<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme> -->
 				</cac:Party>
 			</cac:AccountingSupplierParty>
