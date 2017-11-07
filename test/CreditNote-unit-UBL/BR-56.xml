@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
+		<description>Each Seller tax representative party (BG-11) shall have a Seller tax representative VAT identifier (BT-63).</description>
 		<scope>BR-56</scope>
+		
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that each Seller tax representative shall have a Seller tax representative VAT identifier</description>
+			
 			<success>BR-56</success>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -14,18 +16,18 @@
 			
 			<cac:TaxRepresentativeParty>
 				<cac:PartyTaxScheme>
-					<cbc:CompanyID schemeID="NO:VAT">999999999MVA</cbc:CompanyID>
+					<cbc:CompanyID>EL9999</cbc:CompanyID>
 					<cac:TaxScheme>
-						<cbc:ID>VA</cbc:ID>
+						<cbc:ID>VAT</cbc:ID>
 					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
-
+			
 		</CreditNote>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when a Seller tax representative does not have a Seller tax representative VAT identifier</description>
+			
 			<error>BR-56</error>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -33,16 +35,18 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 			
 			<cac:TaxRepresentativeParty>
-				<!--<cac:PartyTaxScheme>
-					<cbc:CompanyID schemeID="NO:VAT">999999999MVA</cbc:CompanyID>
-				</cac:PartyTaxScheme> -->
+				<!--				<cac:PartyTaxScheme>
+					<cbc:CompanyID>EL9999</cbc:CompanyID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
+				</cac:PartyTaxScheme>-->
 			</cac:TaxRepresentativeParty>
 			
 		</CreditNote>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when a Seller tax representative does not have a Seller tax representative VAT identifier</description>
 			<error>BR-56</error>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -51,14 +55,14 @@
 			
 			<cac:TaxRepresentativeParty>
 				<cac:PartyTaxScheme>
-					<!-- <cbc:CompanyID schemeID="NO:VAT">999999999MVA</cbc:CompanyID> -->
+					<cbc:CompanyID>EL9999</cbc:CompanyID>
 					<cac:TaxScheme>
-						<cbc:ID>VA</cbc:ID>
+						<cbc:ID>COM</cbc:ID>
 					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
 			
 		</CreditNote>
 	</test>
-
+	
 </testSet>
