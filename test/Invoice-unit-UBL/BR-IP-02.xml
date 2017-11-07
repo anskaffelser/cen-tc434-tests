@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
+		<description>Invoice that contains an Invoice line (BG-25) where the Invoiced item VAT category code (BT-151) is “IPSI” 
+			shall contain the Seller VAT Identifier (BT-31), the Seller tax registration identifier (BT-32) and/or the Seller tax representative VAT identifier (BT-63)</description>
 		<scope>BR-IP-02</scope>
 	</assert>
-	<test>
+	<test id="1">
 		<assert>
-			<description>Verify that an Invoice that contains a line where the Invoiced item VAT
-				category code = “M” contain the Seller's VAT identifier or the Seller tax
-				representative.</description>
+			
 			<success>BR-IP-02</success>
 		</assert>
 		<Invoice
@@ -18,10 +18,13 @@
 				<cac:Party>
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-
+			
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -31,11 +34,8 @@
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-	<test>
+	<test id="2">
 		<assert>
-			<description>Verify that an Invoice that contains a line where the Invoiced item VAT
-				category code = “M” contain the Seller's VAT identifier or the Seller tax
-				representative.</description>
 			<success>BR-IP-02</success>
 		</assert>
 		<Invoice
@@ -44,10 +44,13 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:TaxRepresentativeParty>
 				<cac:PartyTaxScheme>
-					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
+					<cbc:CompanyID>EL9999</cbc:CompanyID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
-
+			
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -57,11 +60,8 @@
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-	<test>
+	<test id="3">
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “M” does not contain the Seller's VAT identifier or the Seller tax
-				representative.</description>
 			<error>BR-IP-02</error>
 		</assert>
 		<Invoice
@@ -72,10 +72,13 @@
 				<!-- <cac:Party>
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+						<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party> -->
 			</cac:AccountingSupplierParty>
-
+			
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -83,14 +86,11 @@
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-
+			
 		</Invoice>
 	</test>
-	<test>
+	<test id="4">
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “M” does not contain the Seller's VAT identifier or the Seller tax
-				representative.</description>
 			<error>BR-IP-02</error>
 		</assert>
 		<Invoice
@@ -101,10 +101,13 @@
 				<cac:Party>
 					<!-- 	<cac:PartyTaxScheme>
 						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+						<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 					</cac:PartyTaxScheme> -->
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-
+			
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -112,16 +115,13 @@
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-
+			
 		</Invoice>
 	</test>
-
-
-	<test>
+	
+	
+	<test id="5">
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “M” does not contain the Seller's VAT identifier or the Seller tax
-				representative.</description>
 			<error>BR-IP-02</error>
 		</assert>
 		<Invoice
@@ -132,10 +132,13 @@
 				<cac:Party>
 					<cac:PartyTaxScheme>
 						<!-- <cbc:CompanyID>NO123456789</cbc:CompanyID> -->
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-
+			
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -143,15 +146,12 @@
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-
+			
 		</Invoice>
 	</test>
-
-	<test>
+	
+	<test id="6">
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “M” does not contain the Seller's VAT identifier or the Seller tax
-				representative.</description>
 			<error>BR-IP-02</error>
 		</assert>
 		<Invoice
@@ -161,9 +161,12 @@
 			<cac:TaxRepresentativeParty>
 				<!--				<cac:PartyTaxScheme>
 					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
+										<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:PartyTaxScheme>-->
 			</cac:TaxRepresentativeParty>
-
+			
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -171,14 +174,11 @@
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-
+			
 		</Invoice>
 	</test>
-	<test>
+	<test id="7">
 		<assert>
-			<description>Trigger error when an Invoice that contains a line where the Invoiced item
-				VAT category code = “M” does not contain the Seller's VAT identifier or the Seller tax
-				representative.</description>
 			<error>BR-IP-02</error>
 		</assert>
 		<Invoice
@@ -188,9 +188,12 @@
 			<cac:TaxRepresentativeParty>
 				<cac:PartyTaxScheme>
 					<!--					<cbc:CompanyID>999999999MVA</cbc:CompanyID>-->
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
-
+			
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -198,8 +201,8 @@
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-
+			
 		</Invoice>
 	</test>
-
+	
 </testSet>

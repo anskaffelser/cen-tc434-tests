@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<description>Verify that an Invoice that contains an Invoice line (BG-25) where the Invoiced
-			item VAT category code (BT-151) is “Reverse charge” shall contain the Seller VAT
-			Identifier (BT-31), the Seller Tax registration identifier (BT-32) and/or the Seller tax
-			representative VAT identifier (BT-63) and the Buyer VAT identifier (BT-48) and/or the
-			Buyer legal registration identifier (BT-47).</description>
+		<description>Invoice that contains an Invoice line (BG-25) where the Invoiced item VAT category code (BT-151) is “Reverse charge” 
+			shall contain the Seller VAT Identifier (BT-31), the Seller Tax registration identifier (BT-32) and/or the Seller tax representative VAT identifier (BT-63) 
+			and the Buyer VAT identifier (BT-48) and/or the Buyer legal registration identifier (BT-47)</description>
 		<scope>BR-AE-02</scope>
+
 	</assert>
+
 	<test id="1">
 		<assert>
-			<description>Seller and Buyer VAT identifier present</description>
+			<description>BT-31 and BT-48 present</description>
 			<success>BR-AE-02</success>
 		</assert>
 		<Invoice
@@ -31,7 +31,85 @@
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<cac:PartyTaxScheme>
-						<cbc:CompanyID>NO987654321MVA</cbc:CompanyID>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>AE</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test id="2">
+		<assert>
+			<description>BT-32 and BT-48 present</description>
+			<success>BR-AE-02</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>TAX</cbc:ID>
+						</cac:TaxScheme>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>EL23424234</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>AE</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test id="3">
+		<assert>
+			<description>BT-63 and BT-48 present</description>
+			<success>BR-AE-02</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<cbc:CompanyID>1234567</cbc:CompanyID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
 						<cac:TaxScheme>
 							<cbc:ID>VAT</cbc:ID>
 						</cac:TaxScheme>
@@ -49,24 +127,26 @@
 		</Invoice>
 	</test>
 	
-	<test id="2">
+	<test id="4">
 		<assert>
-			<description>TaxRepresentative and Buyer legal registration is present</description>
+			<description>BT-31 and BT-47 present</description>
 			<success>BR-AE-02</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxRepresentativeParty>
-				<cac:PartyTaxScheme>
-					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
-					<cac:TaxScheme>
-						<cbc:ID>VAT</cbc:ID>
-					</cac:TaxScheme>
-				</cac:PartyTaxScheme>
-			</cac:TaxRepresentativeParty>
-
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+			
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<cac:PartyLegalEntity>
@@ -74,7 +154,7 @@
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
-
+			
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -84,10 +164,83 @@
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-	<test id="3">
+	<test id="5">
 		<assert>
-			<description>No VAT or tax identification is present for seller or
-				TaxRepresentative</description>
+			<description>BT-32 and BT-47 present</description>
+			<success>BR-AE-02</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:AccountingSupplierParty>
+				<cac:Party>
+					<cac:PartyTaxScheme>
+						<cbc:CompanyID>NO123456789</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>TAX</cbc:ID>
+						</cac:TaxScheme>
+					</cac:PartyTaxScheme>
+				</cac:Party>
+			</cac:AccountingSupplierParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyLegalEntity>
+						<cbc:CompanyID>987654321</cbc:CompanyID>
+					</cac:PartyLegalEntity>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>AE</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	<test id="6">
+		<assert>
+			<description>BT-63 and BT-47 present</description>
+			<success>BR-AE-02</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<cbc:CompanyID>1234567</cbc:CompanyID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+					<cac:PartyLegalEntity>
+						<cbc:CompanyID>987654321</cbc:CompanyID>
+					</cac:PartyLegalEntity>
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>AE</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+		</Invoice>
+	</test>
+	
+	
+
+	<test id="7">
+		<assert>
 			<error>BR-AE-02</error>
 		</assert>
 		<Invoice
@@ -126,10 +279,10 @@
 
 		</Invoice>
 	</test>
-	<test id="4">
+
+
+	<test id="8">
 		<assert>
-			<description>No VAT or tax identification is present for seller or
-				TaxRepresentative</description>
 			<error>BR-AE-02</error>
 		</assert>
 		<Invoice
@@ -140,8 +293,8 @@
 				<cac:Party>
 					<!--	<cac:PartyTaxScheme>
 						 <cbc:CompanyID>NO123456789</cbc:CompanyID>
-						 	<cac:TaxScheme>
-							<cbc:ID>VA</cbc:ID>
+						 						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme> -->
 				</cac:Party>
@@ -168,10 +321,10 @@
 
 		</Invoice>
 	</test>
-	<test id="5">
+	<test id="9">
 		<assert>
-			<description>No VAT or tax identification is present for buyer</description>
 			<error>BR-AE-02</error>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -209,9 +362,8 @@
 
 		</Invoice>
 	</test>
-	<test id="6">
+	<test id="10">
 		<assert>
-			<description>No VAT or tax identification is present for buyer</description>
 			<error>BR-AE-02</error>
 		</assert>
 		<Invoice
@@ -233,8 +385,8 @@
 				<cac:Party>
 					<!-- <cac:PartyTaxScheme>
 						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
-						<cac:TaxScheme>
-							<cbc:ID>VA</cbc:ID>
+												<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
 						</cac:TaxScheme>
 					</cac:PartyTaxScheme> -->
 				</cac:Party>
@@ -250,13 +402,10 @@
 
 		</Invoice>
 	</test>
-	<test id="7">
+	<test id="11">
 		<assert>
-			<description>Trigger error if an Invoice that contains a line where the invoiced item
-				VAT category code (BT-142) is “AE” does not contain the Seller's VAT identifier
-				(BT-30) or the Seller tax representative VAT identifier, and Buyer's VAT identifier
-				(BT-46).</description>
 			<error>BR-AE-02</error>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -264,47 +413,11 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:TaxRepresentativeParty>
 				<!--				<cac:PartyTaxScheme>
-					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
-				</cac:PartyTaxScheme>-->
-			</cac:TaxRepresentativeParty>
-
-			<cac:AccountingCustomerParty>
-				<cac:Party>
-					<cac:PartyTaxScheme>
-						<cbc:CompanyID>987654321MVA</cbc:CompanyID>
+					<cbc:CompanyID>1234567</cbc:CompanyID>
 						<cac:TaxScheme>
-							<cbc:ID>TAX</cbc:ID>
+							<cbc:ID>VAT</cbc:ID>
 						</cac:TaxScheme>
-					</cac:PartyTaxScheme>
-				</cac:Party>
-			</cac:AccountingCustomerParty>
-
-			<cac:InvoiceLine>
-				<cac:Item>
-					<cac:ClassifiedTaxCategory>
-						<cbc:ID>AE</cbc:ID>
-					</cac:ClassifiedTaxCategory>
-				</cac:Item>
-			</cac:InvoiceLine>
-		</Invoice>
-	</test>
-	<test id="8">
-		<assert>
-			<description>No VAT or tax identification is present for seller or
-				TaxRepresentative</description>
-			<error>BR-AE-02</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:TaxRepresentativeParty>
-				<cac:PartyTaxScheme>
-					<!--					<cbc:CompanyID>999999999MVA</cbc:CompanyID>-->
-					<cac:TaxScheme>
-						<cbc:ID>VAT</cbc:ID>
-					</cac:TaxScheme>
-				</cac:PartyTaxScheme>
+				</cac:PartyTaxScheme>-->
 			</cac:TaxRepresentativeParty>
 
 			<cac:AccountingCustomerParty>
@@ -321,31 +434,30 @@
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
-						<cbc:ID> AE</cbc:ID>
+						<cbc:ID>AE</cbc:ID>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
+
 		</Invoice>
 	</test>
-	<test id="9">
+	<test id="12">
 		<assert>
-			<description>Seller and Buyer tax identifier present</description>
-			<success>BR-AE-02</success>
+			<error>BR-AE-02</error>
+
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:AccountingSupplierParty>
-				<cac:Party>
-					<cac:PartyTaxScheme>
-						<cbc:CompanyID>NO123456789</cbc:CompanyID>
-						<cac:TaxScheme>
-							<cbc:ID>TAX</cbc:ID>
-						</cac:TaxScheme>
-					</cac:PartyTaxScheme>
-				</cac:Party>
-			</cac:AccountingSupplierParty>
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<!--					<cbc:CompanyID>1234567</cbc:CompanyID>-->
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
 
 			<cac:AccountingCustomerParty>
 				<cac:Party>
@@ -354,7 +466,7 @@
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
-
+<
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
@@ -362,27 +474,26 @@
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
+			
 		</Invoice>
 	</test>
-	<test id="10">
+	<test id="13">
 		<assert>
-			<description>Seller and Buyer tax identifier present</description>
 			<error>BR-AE-02</error>
+			
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:AccountingSupplierParty>
-				<cac:Party>
-					<cac:PartyTaxScheme>
-						<cbc:CompanyID>NO123456789</cbc:CompanyID>
-						<cac:TaxScheme>
-							<cbc:ID>TAX</cbc:ID>
-						</cac:TaxScheme>
-					</cac:PartyTaxScheme>
-				</cac:Party>
-			</cac:AccountingSupplierParty>
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<cbc:CompanyID>1234567</cbc:CompanyID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
 			
 			<cac:AccountingCustomerParty>
 				<cac:Party>
@@ -399,6 +510,43 @@
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
+			
+		</Invoice>
+	</test>
+	<test id="14">
+		<assert>
+			<error>BR-AE-02</error>
+			
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxRepresentativeParty>
+				<cac:PartyTaxScheme>
+					<cbc:CompanyID>1234567</cbc:CompanyID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
+				</cac:PartyTaxScheme>
+			</cac:TaxRepresentativeParty>
+			
+			<cac:AccountingCustomerParty>
+				<cac:Party>
+<!--					<cac:PartyLegalEntity>
+						<cbc:CompanyID>987654321</cbc:CompanyID>
+					</cac:PartyLegalEntity>-->
+				</cac:Party>
+			</cac:AccountingCustomerParty>
+			
+			<cac:InvoiceLine>
+				<cac:Item>
+					<cac:ClassifiedTaxCategory>
+						<cbc:ID>AE</cbc:ID>
+					</cac:ClassifiedTaxCategory>
+				</cac:Item>
+			</cac:InvoiceLine>
+			
 		</Invoice>
 	</test>
 </testSet>
