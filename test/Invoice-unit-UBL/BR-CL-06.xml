@@ -15,9 +15,9 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			
 			<cac:InvoicePeriod>
-				<cbc:DescriptionCode>5</cbc:DescriptionCode>
-				<cbc:DescriptionCode>29</cbc:DescriptionCode>
-				<cbc:DescriptionCode>72</cbc:DescriptionCode>			
+				<cbc:DescriptionCode>3</cbc:DescriptionCode>
+				<cbc:DescriptionCode>35</cbc:DescriptionCode>
+				<cbc:DescriptionCode>432</cbc:DescriptionCode>			
 			</cac:InvoicePeriod>
 		</Invoice>
 	</test>

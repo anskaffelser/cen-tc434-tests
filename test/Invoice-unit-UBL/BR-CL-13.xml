@@ -28,9 +28,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when coded allowance reasons does not belong to the UNCL 5189 code
-				list</description>
-			<error number="2">BR-CL-13</error>
+			<error>BR-CL-13</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
