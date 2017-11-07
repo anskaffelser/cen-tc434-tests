@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
+		<description>Verify that an Invoice that contains a Document level allowance (BG-20) where
+			the Document level allowance VAT category code (BT-95) is “Export outside the EU” shall
+			contain the Seller VAT Identifier (BT-31) or the Seller tax representative VAT
+			identifier (BT-63). </description>
 		<scope>BR-G-03</scope>
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level allowance
-				with a document level allowance VAT category code (BT-89) that is "G" does
-				contain the Seller's VAT identifier (BT-30) or the seller tax representative VAT identifier. </description>
 			<success>BR-G-03</success>
 		</assert>
 		<Invoice
@@ -18,6 +19,9 @@
 				<cac:Party>
 					<cac:PartyTaxScheme>
 						<cbc:CompanyID>123456789MVA</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
@@ -32,9 +36,6 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that an Invoice that contains a document level allowance
-				with a document level allowance VAT category code (BT-89) that is "G" does
-				contain the Seller's VAT identifier (BT-30) or the seller tax representative VAT identifier. </description>
 			<success>BR-G-03</success>
 		</assert>
 		<Invoice
@@ -43,10 +44,13 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:TaxRepresentativeParty>
 				<cac:PartyTaxScheme>
-					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
+					<cbc:CompanyID>99999</cbc:CompanyID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
@@ -57,9 +61,6 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance
-				with a document level allowance VAT category code (BT-89) that is "G" does not
-				contain the Seller's VAT identifier (BT-30) or the seller tax representative VAT identifier.. </description>
 			<error>BR-G-03</error>
 		</assert>
 		<Invoice
@@ -70,10 +71,13 @@
 				<cac:Party>
 					<cac:PartyTaxScheme>
 						<!--<cbc:CompanyID>123456789MVA</cbc:CompanyID>-->
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
@@ -85,9 +89,6 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance
-				with a document level allowance VAT category code (BT-89) that is "G" does not
-				contain the Seller's VAT identifier (BT-30)or the seller tax representative VAT identifier.. </description>
 			<error>BR-G-03</error>
 		</assert>
 		<Invoice
@@ -96,26 +97,26 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:AccountingSupplierParty>
 				<cac:Party>
-				<!--	<cac:PartyTaxScheme>
+					<!--<cac:PartyTaxScheme>
 						<cbc:CompanyID>123456789MVA</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:PartyTaxScheme> -->
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>G</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance
-				with a document level allowance VAT category code (BT-89) that is "G" does not
-				contain the Seller's VAT identifier (BT-30) or the seller tax representative VAT identifier.. </description>
 			<error>BR-G-03</error>
 		</assert>
 		<Invoice
@@ -123,25 +124,25 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:TaxRepresentativeParty>
-<!--				<cac:PartyTaxScheme>
+				<!--				<cac:PartyTaxScheme>
 					<cbc:CompanyID>999999999MVA</cbc:CompanyID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 				</cac:PartyTaxScheme>-->
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>G</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a document level allowance
-				with a document level allowance VAT category code (BT-89) that is "G" does not
-				contain the Seller's VAT identifier (BT-30)or the seller tax representative VAT identifier.. </description>
 			<error>BR-G-03</error>
 		</assert>
 		<Invoice
@@ -150,17 +151,20 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:TaxRepresentativeParty>
 				<cac:PartyTaxScheme>
-<!--					<cbc:CompanyID>999999999MVA</cbc:CompanyID>-->
+					<!--					<cbc:CompanyID>999999999MVA</cbc:CompanyID>-->
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>G</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 </testSet>
