@@ -14,7 +14,7 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:LegalMonetaryTotal>
-				<cbc:TaxInclusiveAmount>1200.00</cbc:TaxInclusiveAmount>
+				<cbc:TaxInclusiveAmount>1200</cbc:TaxInclusiveAmount>
 				<cbc:PrepaidAmount>1000</cbc:PrepaidAmount>
 				<cbc:PayableAmount>200.00</cbc:PayableAmount>
 			</cac:LegalMonetaryTotal>
