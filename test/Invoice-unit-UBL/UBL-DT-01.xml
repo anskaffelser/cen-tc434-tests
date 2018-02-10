@@ -42,8 +42,8 @@
 
 				<cac:Price>
 					<cac:AllowanceCharge>
-						<cbc:Amount>225.0</cbc:Amount>
-						<cbc:BaseAmount>1500.00</cbc:BaseAmount>
+						<cbc:Amount>225.0000</cbc:Amount>
+						<cbc:BaseAmount>1500.000</cbc:BaseAmount>
 					</cac:AllowanceCharge>
 				</cac:Price>
 			</cac:InvoiceLine>
@@ -52,7 +52,7 @@
 	<test>
 		<assert>
 			<description>Trigger error if amounts have more than two fraction digits</description>
-			<error number="16">UBL-DT-01</error>
+			<error number="13">UBL-DT-01</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
