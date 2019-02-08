@@ -29,6 +29,12 @@
 					<cac:PartyIdentification>
 						<cbc:ID schemeID="0007"/>
 					</cac:PartyIdentification>
+					<cac:PartyIdentification>
+						<cbc:ID schemeID="0195"/>
+					</cac:PartyIdentification>
+					<cac:PartyIdentification>
+						<cbc:ID schemeID="0196"/>
+					</cac:PartyIdentification>
 				</cac:Party>
 			</cac:AccountingCustomerParty>
 			
@@ -63,6 +69,9 @@
 					<cac:PartyIdentification>
 						<cbc:ID schemeID="0181"/>
 						</cac:PartyIdentification>
+					<cac:PartyIdentification>
+						<cbc:ID schemeID="0196"/>
+					</cac:PartyIdentification>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
 			
@@ -80,6 +89,9 @@
 			<cac:PayeeParty>
 				<cac:PartyIdentification>
 					<cbc:ID schemeID="0213"/>
+				</cac:PartyIdentification>
+				<cac:PartyIdentification>
+					<cbc:ID schemeID="0195"/>
 				</cac:PartyIdentification>
 			</cac:PayeeParty>
 			

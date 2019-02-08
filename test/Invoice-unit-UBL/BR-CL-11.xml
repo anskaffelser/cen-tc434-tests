@@ -18,6 +18,9 @@
 					<cac:PartyLegalEntity>
 						<cbc:CompanyID schemeID="0088"/>
 					</cac:PartyLegalEntity>
+					<cac:PartyLegalEntity>
+						<cbc:CompanyID schemeID="0195"/>
+					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
 			
@@ -25,6 +28,9 @@
 				<cac:Party>
 					<cac:PartyLegalEntity>
 						<cbc:CompanyID schemeID="0007"/>
+					</cac:PartyLegalEntity>
+					<cac:PartyLegalEntity>
+						<cbc:CompanyID schemeID="0196"/>
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingCustomerParty>

@@ -38,6 +38,18 @@
 						<cbc:ID schemeID="0180"/>
 					</cac:StandardItemIdentification>
 				</cac:Item>
+		
+			<cac:Item>
+				<cac:StandardItemIdentification>
+					<cbc:ID schemeID="0195"/>
+				</cac:StandardItemIdentification>
+			</cac:Item>
+			
+			<cac:Item>
+				<cac:StandardItemIdentification>
+					<cbc:ID schemeID="0196"/>
+				</cac:StandardItemIdentification>
+			</cac:Item>
 			</cac:InvoiceLine>
 			
 		</Invoice>
