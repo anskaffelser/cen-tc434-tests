@@ -5,7 +5,8 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that the VAT category tax amount in a VAT breakdown where the VAT category code is “Z” = 0 (zero). </description>
+			<description>Verify that the VAT category tax amount in a VAT breakdown where the VAT
+				category code is “Z” = 0 (zero). </description>
 			<success>BR-Z-09</success>
 		</assert>
 		<Invoice
@@ -17,16 +18,20 @@
 					<cbc:TaxAmount>0</cbc:TaxAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
-			<description>Trigger error if the VAT category tax amount in a VAT breakdown where the VAT category code is “Z” != 0 (zero). </description>
+			<description>Trigger error if the VAT category tax amount in a VAT breakdown where the
+				VAT category code is “Z” != 0 (zero). </description>
 			<error>BR-Z-09</error>
 		</assert>
 		<Invoice
@@ -38,16 +43,20 @@
 					<cbc:TaxAmount>10</cbc:TaxAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
-	
-	
+
+
 	<test>
 		<assert>
-			<description>Trigger error if the VAT category tax amount in a VAT breakdown where the VAT category code is “Z” != 0 (zero). </description>
+			<description>Trigger error if the VAT category tax amount in a VAT breakdown where the
+				VAT category code is “Z” != 0 (zero). </description>
 			<error>BR-Z-09</error>
 		</assert>
 		<Invoice
@@ -59,10 +68,13 @@
 					<cbc:TaxAmount>-10</cbc:TaxAmount>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
-	
+
 </testSet>

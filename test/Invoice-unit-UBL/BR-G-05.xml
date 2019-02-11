@@ -17,6 +17,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
 						<cbc:Percent>0</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -36,6 +39,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
 						<cbc:Percent>2</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -56,6 +62,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
 						<cbc:Percent>-10</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>

@@ -69,9 +69,6 @@
 					<cac:PartyIdentification>
 						<cbc:ID schemeID="0181"/>
 						</cac:PartyIdentification>
-					<cac:PartyIdentification>
-						<cbc:ID schemeID="0196"/>
-					</cac:PartyIdentification>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
 			

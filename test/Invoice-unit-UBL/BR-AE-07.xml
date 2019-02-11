@@ -15,8 +15,11 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">AE</cbc:ID>
+					<cbc:ID>AE</cbc:ID>
 					<cbc:Percent>0</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
@@ -33,8 +36,11 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">AE</cbc:ID>
+					<cbc:ID>AE</cbc:ID>
 					<cbc:Percent>10</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -52,8 +58,11 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">AE</cbc:ID>
+					<cbc:ID>AE</cbc:ID>
 					<cbc:Percent>-10</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			

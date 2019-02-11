@@ -5,14 +5,16 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that in an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K" the deliver to country code (BT-75) is not blank</description>
+			<description>Verify that in an Invoice with a VAT breakdown (BG-21) where the VAT
+				category code (BT-111) is "K" the deliver to country code (BT-75) is not
+				blank</description>
 			<success>BR-IC-12</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			
+
 			<cac:Delivery>
 				<cac:DeliveryLocation>
 					<cac:Address>
@@ -22,77 +24,24 @@
 					</cac:Address>
 				</cac:DeliveryLocation>
 			</cac:Delivery>
-			
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:ID>K</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
-		</Invoice>
-	</test>
-	<test>
-		<assert>
-			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K", has the deliver to country code (BT-75) blank</description>
-			<error>BR-IC-12</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:Delivery>
-				<cac:DeliveryLocation>
-					<cac:Address>
-						<cac:Country>
-							<cbc:IdentificationCode></cbc:IdentificationCode>
-						</cac:Country>
-					</cac:Address>
-				</cac:DeliveryLocation>
-			</cac:Delivery>
-			
-			<cac:TaxTotal>
-				<cac:TaxSubtotal>
-					<cac:TaxCategory>
-						<cbc:ID>K</cbc:ID>
-					</cac:TaxCategory>
-				</cac:TaxSubtotal>
-			</cac:TaxTotal>
-		</Invoice>
-	</test>
 
-	<test>
-		<assert>
-			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K", has the deliver to country code (BT-75) blank</description>
-			<error>BR-IC-12</error>
-		</assert>
-		<Invoice
-			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			<cac:Delivery>
-				<cac:DeliveryLocation>
-					<cac:Address>
-						<cac:Country>
-							<cbc:IdentificationCode><!--comment only--></cbc:IdentificationCode>
-						</cac:Country>
-					</cac:Address>
-				</cac:DeliveryLocation>
-			</cac:Delivery>
-			
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>K</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
-	
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K", has the deliver to country code (BT-75) blank</description>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT
+				category code (BT-111) is "K", has the deliver to country code (BT-75)
+				blank</description>
 			<error>BR-IC-12</error>
 		</assert>
 		<Invoice
@@ -108,11 +57,82 @@
 					</cac:Address>
 				</cac:DeliveryLocation>
 			</cac:Delivery>
-			
+
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>K</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT
+				category code (BT-111) is "K", has the deliver to country code (BT-75)
+				blank</description>
+			<error>BR-IC-12</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:Delivery>
+				<cac:DeliveryLocation>
+					<cac:Address>
+						<cac:Country>
+							<cbc:IdentificationCode><!--comment only--></cbc:IdentificationCode>
+						</cac:Country>
+					</cac:Address>
+				</cac:DeliveryLocation>
+			</cac:Delivery>
+
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>K</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+
+	<test>
+		<assert>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT
+				category code (BT-111) is "K", has the deliver to country code (BT-75)
+				blank</description>
+			<error>BR-IC-12</error>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:Delivery>
+				<cac:DeliveryLocation>
+					<cac:Address>
+						<cac:Country>
+							<cbc:IdentificationCode/>
+						</cac:Country>
+					</cac:Address>
+				</cac:DeliveryLocation>
+			</cac:Delivery>
+
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cac:TaxCategory>
+						<cbc:ID>K</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -120,7 +140,9 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K", has the deliver to country code (BT-75) blank</description>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT
+				category code (BT-111) is "K", has the deliver to country code (BT-75)
+				blank</description>
 			<error>BR-IC-12</error>
 		</assert>
 		<Invoice
@@ -136,11 +158,14 @@
 					</cac:Address>
 				</cac:DeliveryLocation>
 			</cac:Delivery>
-			
+
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>K</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -148,7 +173,9 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K", has the deliver to country code (BT-75) blank</description>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT
+				category code (BT-111) is "K", has the deliver to country code (BT-75)
+				blank</description>
 			<error>BR-IC-12</error>
 		</assert>
 		<Invoice
@@ -164,20 +191,25 @@
 					</cac:Address> -->
 				</cac:DeliveryLocation>
 			</cac:Delivery>
-			
+
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>K</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K", has the deliver to country code (BT-75) blank</description>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT
+				category code (BT-111) is "K", has the deliver to country code (BT-75)
+				blank</description>
 			<error>BR-IC-12</error>
 		</assert>
 		<Invoice
@@ -193,20 +225,25 @@
 					</cac:Address> 
 				</cac:DeliveryLocation> -->
 			</cac:Delivery>
-			
+
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>K</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT category code (BT-111) is "K", has the deliver to country code (BT-75) blank</description>
+			<description>Trigger error if an Invoice with a VAT breakdown (BG-21) where the VAT
+				category code (BT-111) is "K", has the deliver to country code (BT-75)
+				blank</description>
 			<error>BR-IC-12</error>
 		</assert>
 		<Invoice
@@ -222,11 +259,14 @@
 					</cac:Address> 
 				</cac:DeliveryLocation> 
 			</cac:Delivery> -->
-			
+
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>K</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>

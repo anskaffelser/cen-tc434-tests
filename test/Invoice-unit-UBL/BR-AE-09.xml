@@ -17,6 +17,9 @@
 					<cbc:TaxAmount>0</cbc:TaxAmount>
 					<cac:TaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -38,6 +41,9 @@
 					<cbc:TaxAmount>10</cbc:TaxAmount>
 					<cac:TaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -59,6 +65,9 @@
 					<cbc:TaxAmount>-10</cbc:TaxAmount>
 					<cac:TaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>

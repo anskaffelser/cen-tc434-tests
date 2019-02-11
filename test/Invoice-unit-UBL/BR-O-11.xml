@@ -18,18 +18,21 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
-			<description>Trigger error when an Invoice that contains a VAT breakdown group (BG-21) with a VAT
-				category code (BT-111) as "O" does contain other VAT category codes (BT-111)
-				that are not "O". </description>
+			<description>Trigger error when an Invoice that contains a VAT breakdown group (BG-21)
+				with a VAT category code (BT-111) as "O" does contain other VAT category codes
+				(BT-111) that are not "O". </description>
 			<error>BR-O-11</error>
 		</assert>
 		<Invoice
@@ -40,11 +43,17 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>

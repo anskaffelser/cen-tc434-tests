@@ -19,28 +19,40 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -62,20 +74,26 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
 			<description>Verify that an Invoice that contains a line, a document level allowance or
@@ -92,17 +110,23 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 	<test>
@@ -121,24 +145,30 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a line, a document level allowance or
-				charge where the invoiced item VAT category code (BT-142) is “O” does not contain in
-				the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
+			<description>Trigger error if an Invoice that contains a line, a document level
+				allowance or charge where the invoiced item VAT category code (BT-142) is “O” does
+				not contain in the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
 				"O".</description>
 			<error>BR-O-01</error>
 		</assert>
@@ -153,23 +183,26 @@
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-			
+
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a line, a document level allowance or
-				charge where the invoiced item VAT category code (BT-142) is “O” does not contain in
-				the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
+			<description>Trigger error if an Invoice that contains a line, a document level
+				allowance or charge where the invoiced item VAT category code (BT-142) is “O” does
+				not contain in the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
 				"O".</description>
 			<error>BR-O-01</error>
 		</assert>
@@ -181,32 +214,41 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a line, a document level allowance or
-				charge where the invoiced item VAT category code (BT-142) is “O” does not contain in
-				the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
+			<description>Trigger error if an Invoice that contains a line, a document level
+				allowance or charge where the invoiced item VAT category code (BT-142) is “O” does
+				not contain in the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
 				"O".</description>
 			<error>BR-O-01</error>
 		</assert>
@@ -221,21 +263,24 @@
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a line, a document level allowance or
-				charge where the invoiced item VAT category code (BT-142) is “O” does not contain in
-				the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
+			<description>Trigger error if an Invoice that contains a line, a document level
+				allowance or charge where the invoiced item VAT category code (BT-142) is “O” does
+				not contain in the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
 				"O".</description>
 			<error>BR-O-01</error>
 		</assert>
@@ -247,25 +292,28 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
-					</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal> -->
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-			
+
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if an Invoice that contains a line, a document level allowance or
-				charge where the invoiced item VAT category code (BT-142) is “O” does not contain in
-				the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
+			<description>Trigger error if an Invoice that contains a line, a document level
+				allowance or charge where the invoiced item VAT category code (BT-142) is “O” does
+				not contain in the VAT breakdown (BG-21) one VAT category code (BT-111) equal with
 				"O".</description>
 			<error>BR-O-01</error>
 		</assert>
@@ -277,19 +325,22 @@
 				<!-- <cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
-					</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>					</cac:TaxCategory>
 				</cac:TaxSubtotal> -->
 			</cac:TaxTotal>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
-	
-	
+
+
 </testSet>

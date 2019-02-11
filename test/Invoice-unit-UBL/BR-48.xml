@@ -19,6 +19,9 @@
 						<cbc:ID>S</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
 					</cac:TaxCategory>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 		</Invoice>
@@ -38,6 +41,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
 					</cac:TaxCategory>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 		</Invoice>
@@ -58,6 +64,9 @@
 						<cbc:ID>S</cbc:ID>
 						<!-- <cbc:Percent>25</cbc:Percent> -->
 					</cac:TaxCategory>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 

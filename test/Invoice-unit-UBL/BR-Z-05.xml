@@ -5,7 +5,8 @@
     </assert>
     <test>
         <assert>
-            <description>Verify that an Invoice line where the Invoice item VAT category code is "Z"  has an Invoiced item VAT rate   </description>
+            <description>Verify that an Invoice line where the Invoice item VAT category code is "Z"
+                has an Invoiced item VAT rate </description>
             <success>BR-Z-05</success>
         </assert>
         <Invoice
@@ -17,6 +18,9 @@
                     <cac:ClassifiedTaxCategory>
                         <cbc:ID>Z</cbc:ID>
                         <cbc:Percent>0</cbc:Percent>
+                        <cac:TaxScheme>
+                            <cbc:ID>VAT</cbc:ID>
+                        </cac:TaxScheme>
                     </cac:ClassifiedTaxCategory>
                 </cac:Item>
             </cac:InvoiceLine>
@@ -24,7 +28,8 @@
     </test>
     <test>
         <assert>
-            <description>Trigger error when an Invoice line where the Invoice item VAT category code is "Z"  has an Invoiced item VAT rate not equal to 0 (zero). </description>
+            <description>Trigger error when an Invoice line where the Invoice item VAT category code
+                is "Z" has an Invoiced item VAT rate not equal to 0 (zero). </description>
             <error>BR-Z-05</error>
         </assert>
         <Invoice
@@ -36,15 +41,19 @@
                     <cac:ClassifiedTaxCategory>
                         <cbc:ID>Z</cbc:ID>
                         <cbc:Percent>2</cbc:Percent>
+                        <cac:TaxScheme>
+                            <cbc:ID>VAT</cbc:ID>
+                        </cac:TaxScheme>
                     </cac:ClassifiedTaxCategory>
                 </cac:Item>
             </cac:InvoiceLine>
-            
+
         </Invoice>
     </test>
     <test>
         <assert>
-            <description>Trigger error when an Invoice line where the Invoice item VAT category code is "Z"  has an Invoiced item VAT rate not equal to 0 (zero). </description>
+            <description>Trigger error when an Invoice line where the Invoice item VAT category code
+                is "Z" has an Invoiced item VAT rate not equal to 0 (zero). </description>
             <error>BR-Z-05</error>
         </assert>
         <Invoice
@@ -56,13 +65,16 @@
                     <cac:ClassifiedTaxCategory>
                         <cbc:ID>Z</cbc:ID>
                         <cbc:Percent>-10</cbc:Percent>
+                        <cac:TaxScheme>
+                            <cbc:ID>VAT</cbc:ID>
+                        </cac:TaxScheme>
                     </cac:ClassifiedTaxCategory>
                 </cac:Item>
             </cac:InvoiceLine>
-            
+
         </Invoice>
     </test>
-    
-    
-    
+
+
+
 </testSet>

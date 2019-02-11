@@ -30,6 +30,9 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
@@ -55,6 +58,9 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
@@ -82,6 +88,9 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -110,6 +119,9 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -136,6 +148,9 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -162,6 +177,9 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 

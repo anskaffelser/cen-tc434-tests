@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<description>Verify that an Invoice that contains a Document level allowance (BG-20) where the Document level allowance VAT category code (BT-95) is “IPSI” 
-			shall contain the Seller VAT Identifier (BT-31), the Seller Tax registration identifier (BT-32) and/or the Seller tax representative VAT identifier (BT-63) </description>
+		<description>Verify that an Invoice that contains a Document level allowance (BG-20) where
+			the Document level allowance VAT category code (BT-95) is “IPSI” shall contain the
+			Seller VAT Identifier (BT-31), the Seller Tax registration identifier (BT-32) and/or the
+			Seller tax representative VAT identifier (BT-63) </description>
 		<scope>BR-IP-03</scope>
 	</assert>
 	<test>
@@ -23,11 +25,14 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>M</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
@@ -48,11 +53,14 @@
 					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>M</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
@@ -75,14 +83,17 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>M</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 	<test>
@@ -103,14 +114,17 @@
 					</cac:PartyTaxScheme> -->
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>M</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 	<test>
@@ -129,14 +143,17 @@
 						</cac:TaxScheme>
 				</cac:PartyTaxScheme>-->
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>M</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 	<test>
@@ -155,14 +172,17 @@
 					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>M</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 </testSet>

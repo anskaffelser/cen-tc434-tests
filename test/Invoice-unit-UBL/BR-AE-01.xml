@@ -19,7 +19,11 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
+				
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 
@@ -27,6 +31,9 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>AE</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -34,6 +41,9 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>AE</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -41,6 +51,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -62,7 +75,11 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
+					
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 
@@ -70,6 +87,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -92,7 +112,11 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
+				
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 
@@ -100,7 +124,11 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>AE</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
+				
 			</cac:AllowanceCharge>
 
 		</Invoice>
@@ -121,6 +149,9 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -128,7 +159,10 @@
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
-					<cbc:ID>AE</cbc:ID>
+					<cbc:ID>AE</cbc:ID>	
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -151,6 +185,9 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>S</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -159,6 +196,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -183,6 +223,9 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -191,6 +234,9 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -199,6 +245,9 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>AE</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -221,6 +270,9 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<!-- <cbc:ID>AE</cbc:ID> -->
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -229,6 +281,9 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>AE</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 
@@ -251,6 +306,9 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>AE</cbc:ID>
+							<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal> -->
@@ -259,6 +317,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -282,6 +343,9 @@
 				<!-- <cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>AE</cbc:ID>
+							<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal> -->
 			</cac:TaxTotal>
@@ -290,6 +354,9 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>AE</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 

@@ -5,7 +5,8 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that in a document level charge where the Invoice item VAT category code (BT-95) is "K" the Invoiced item VAT rate (BT-96) shall be 0 (zero). </description>
+			<description>Verify that in a document level charge where the Invoice item VAT category
+				code (BT-95) is "K" the Invoiced item VAT rate (BT-96) shall be 0 (zero). </description>
 			<success>BR-IC-07</success>
 		</assert>
 		<Invoice
@@ -17,13 +18,17 @@
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 					<cbc:Percent>0</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when a document level charge where the Invoice item VAT category code (BT-95) is "K" the Invoiced item VAT rate (BT-96) is not 0 (zero). </description>
+			<description>Trigger error when a document level charge where the Invoice item VAT
+				category code (BT-95) is "K" the Invoiced item VAT rate (BT-96) is not 0 (zero). </description>
 			<error>BR-IC-07</error>
 		</assert>
 		<Invoice
@@ -35,14 +40,18 @@
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 					<cbc:Percent>10</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when a document level charge where the Invoice item VAT category code (BT-95) is "K" the Invoiced item VAT rate (BT-96) is not 0 (zero). </description>
+			<description>Trigger error when a document level charge where the Invoice item VAT
+				category code (BT-95) is "K" the Invoiced item VAT rate (BT-96) is not 0 (zero). </description>
 			<error>BR-IC-07</error>
 		</assert>
 		<Invoice
@@ -54,12 +63,15 @@
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">K</cbc:ID>
 					<cbc:Percent>-10</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
-	
-	
-	
+
+
+
 </testSet>

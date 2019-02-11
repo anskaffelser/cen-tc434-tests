@@ -23,6 +23,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -32,6 +35,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -56,6 +62,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -65,6 +74,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25.0</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -74,6 +86,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25.00</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -98,6 +113,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -107,6 +125,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25.0</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -139,6 +160,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 				<cac:TaxSubtotal>
@@ -146,6 +170,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>10.00</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -155,6 +182,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>10</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -164,6 +194,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -188,6 +221,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -197,6 +233,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -221,6 +260,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -230,6 +272,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -239,6 +284,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>IC</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>

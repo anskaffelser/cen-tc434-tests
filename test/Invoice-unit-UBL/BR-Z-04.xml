@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<description>Verify that an Invoice that contains a document level charge
-			with a document level charge VAT category code that is "Z" does
-			contain the Sellers VAT Identifier  the Seller Tax registration identifier
-			or the Seller tax representative VAT identifier </description>
+		<description>Verify that an Invoice that contains a document level charge with a document
+			level charge VAT category code that is "Z" does contain the Sellers VAT Identifier the
+			Seller Tax registration identifier or the Seller tax representative VAT identifier </description>
 		<scope>BR-Z-04</scope>
 	</assert>
 	<test>
@@ -26,16 +25,19 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>Z</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
 			<success>BR-Z-04</success>
@@ -54,11 +56,14 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>Z</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -80,16 +85,19 @@
 					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>Z</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
 			<error>BR-Z-04</error>
@@ -106,14 +114,17 @@
 						</cac:TaxScheme>
 				</cac:PartyTaxScheme>-->
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>Z</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 	<test>
@@ -132,17 +143,20 @@
 					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>Z</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
 			<error>BR-Z-04</error>
@@ -161,14 +175,17 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>Z</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 	<test>
@@ -189,14 +206,17 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>Z</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 	<test>
@@ -217,18 +237,21 @@
 					</cac:PartyTaxScheme> -->
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>Z</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
-	
-	
-	
-	
+
+
+
+
 </testSet>

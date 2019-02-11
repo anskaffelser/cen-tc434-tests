@@ -5,11 +5,10 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown where VAT category code = "O" the VAT category taxable amount 
-				shall equal the sum of Invoice line net amounts 
-				minus document level allowance amounts 
-				plus document level charge amounts 
-				where the VAT category code = “O".</description>
+			<description>Verify that in a VAT breakdown where VAT category code = "O" the VAT
+				category taxable amount shall equal the sum of Invoice line net amounts minus
+				document level allowance amounts plus document level charge amounts where the VAT
+				category code = “O".</description>
 			<success>BR-O-08</success>
 		</assert>
 		<Invoice
@@ -21,14 +20,20 @@
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -36,6 +41,9 @@
 					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -44,19 +52,21 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown where VAT category code = "O" the VAT category taxable amount 
-				shall equal the sum of Invoice line net amounts 
-				minus document level allowance amounts 
-				plus document level charge amounts 
-				where the VAT category code = “O".</description>
+			<description>Verify that in a VAT breakdown where VAT category code = "O" the VAT
+				category taxable amount shall equal the sum of Invoice line net amounts minus
+				document level allowance amounts plus document level charge amounts where the VAT
+				category code = “O".</description>
 			<success>BR-O-08</success>
 		</assert>
 		<Invoice
@@ -68,14 +78,20 @@
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="EUR">200</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -84,6 +100,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -91,23 +110,25 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown where VAT category code = "O" the VAT category taxable amount 
-				shall equal the sum of Invoice line net amounts 
-				minus document level allowance amounts 
-				plus document level charge amounts 
-				where the VAT category code = “O".</description>
+			<description>Verify that in a VAT breakdown where VAT category code = "O" the VAT
+				category taxable amount shall equal the sum of Invoice line net amounts minus
+				document level allowance amounts plus document level charge amounts where the VAT
+				category code = “O".</description>
 			<success>BR-O-08</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -115,6 +136,9 @@
 					<cbc:TaxableAmount currencyID="EUR">0</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -123,19 +147,21 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown where VAT category code = "O" the VAT category taxable amount 
-				shall equal the sum of Invoice line net amounts 
-				minus document level allowance amounts 
-				plus document level charge amounts 
-				where the VAT category code = “O".</description>
+			<description>Verify that in a VAT breakdown where VAT category code = "O" the VAT
+				category taxable amount shall equal the sum of Invoice line net amounts minus
+				document level allowance amounts plus document level charge amounts where the VAT
+				category code = “O".</description>
 			<success>BR-O-08</success>
 		</assert>
 		<Invoice
@@ -147,6 +173,9 @@
 					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -155,6 +184,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -162,11 +194,10 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown where VAT category code = "O" the VAT category taxable amount 
-				shall equal the sum of Invoice line net amounts 
-				minus document level allowance amounts 
-				plus document level charge amounts 
-				where the VAT category code = “O".</description>
+			<description>Verify that in a VAT breakdown where VAT category code = "O" the VAT
+				category taxable amount shall equal the sum of Invoice line net amounts minus
+				document level allowance amounts plus document level charge amounts where the VAT
+				category code = “O".</description>
 			<success>BR-O-08</success>
 		</assert>
 		<Invoice
@@ -179,6 +210,9 @@
 					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -187,6 +221,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -202,23 +239,25 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown where VAT category code = "O" the VAT category taxable amount 
-				shall equal the sum of Invoice line net amounts 
-				minus document level allowance amounts 
-				plus document level charge amounts 
-				where the VAT category code = “O".</description>
+			<description>Verify that in a VAT breakdown where VAT category code = "O" the VAT
+				category taxable amount shall equal the sum of Invoice line net amounts minus
+				document level allowance amounts plus document level charge amounts where the VAT
+				category code = “O".</description>
 			<success>BR-O-08</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			
+
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="EUR">600</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -227,6 +266,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -235,6 +277,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -242,11 +287,10 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that in a VAT breakdown where VAT category code = "O" the VAT category taxable amount 
-				shall equal the sum of Invoice line net amounts 
-				minus document level allowance amounts 
-				plus document level charge amounts 
-				where the VAT category code = “O".</description>
+			<description>Verify that in a VAT breakdown where VAT category code = "O" the VAT
+				category taxable amount shall equal the sum of Invoice line net amounts minus
+				document level allowance amounts plus document level charge amounts where the VAT
+				category code = “O".</description>
 			<success>BR-O-08</success>
 		</assert>
 		<Invoice
@@ -258,14 +302,20 @@
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">50</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -273,6 +323,9 @@
 					<cbc:TaxableAmount currencyID="EUR">350</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -281,6 +334,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -289,6 +345,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -304,11 +363,10 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if a VAT breakdown where VAT category code = "O" the VAT category taxable amount 
-				!=  sum of Invoice line net amounts 
-				minus document level allowance amounts 
-				plus document level charge amounts 
-				where the VAT category code = “O".</description>
+			<description>Trigger error if a VAT breakdown where VAT category code = "O" the VAT
+				category taxable amount != sum of Invoice line net amounts minus document level
+				allowance amounts plus document level charge amounts where the VAT category code =
+				“O".</description>
 			<error>BR-O-08</error>
 		</assert>
 		<Invoice
@@ -320,14 +378,20 @@
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -335,6 +399,9 @@
 					<cbc:TaxableAmount currencyID="EUR">200</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -343,19 +410,21 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
-			<description>Trigger error if a VAT breakdown where VAT category code = "O" the VAT category taxable amount 
-				!=  sum of Invoice line net amounts 
-				minus document level allowance amounts 
-				plus document level charge amounts 
-				where the VAT category code = “O".</description>
+			<description>Trigger error if a VAT breakdown where VAT category code = "O" the VAT
+				category taxable amount != sum of Invoice line net amounts minus document level
+				allowance amounts plus document level charge amounts where the VAT category code =
+				“O".</description>
 			<error>BR-O-08</error>
 		</assert>
 		<Invoice
@@ -367,14 +436,20 @@
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">O</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -382,6 +457,9 @@
 					<cbc:TaxableAmount currencyID="EUR">200</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -390,6 +468,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -397,11 +478,10 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if a VAT breakdown where VAT category code = "O" the VAT category taxable amount 
-				!=  sum of Invoice line net amounts 
-				minus document level allowance amounts 
-				plus document level charge amounts 
-				where the VAT category code = “O".</description>
+			<description>Trigger error if a VAT breakdown where VAT category code = "O" the VAT
+				category taxable amount != sum of Invoice line net amounts minus document level
+				allowance amounts plus document level charge amounts where the VAT category code =
+				“O".</description>
 			<error>BR-O-08</error>
 		</assert>
 		<Invoice
@@ -414,6 +494,9 @@
 					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -422,6 +505,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -430,6 +516,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -437,23 +526,25 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error if a VAT breakdown where VAT category code = "O" the VAT category taxable amount 
-				!=  sum of Invoice line net amounts 
-				minus document level allowance amounts 
-				plus document level charge amounts 
-				where the VAT category code = “O".</description>
+			<description>Trigger error if a VAT breakdown where VAT category code = "O" the VAT
+				category taxable amount != sum of Invoice line net amounts minus document level
+				allowance amounts plus document level charge amounts where the VAT category code =
+				“O".</description>
 			<error>BR-O-08</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			
+
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount currencyID="EUR">300</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -462,6 +553,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -470,6 +564,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>O</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -483,5 +580,5 @@
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-	
+
 </testSet>

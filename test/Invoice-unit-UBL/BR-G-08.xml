@@ -16,7 +16,10 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">G</cbc:ID>
+					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -24,7 +27,7 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">G</cbc:ID>
+					<cbc:ID>G</cbc:ID>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -32,6 +35,9 @@
 					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -40,6 +46,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -59,7 +68,10 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">G</cbc:ID>
+					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -68,6 +80,9 @@
 					<cbc:TaxableAmount currencyID="EUR">200</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -76,6 +91,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -95,7 +113,10 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">G</cbc:ID>
+					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -103,6 +124,9 @@
 					<cbc:TaxableAmount currencyID="EUR">0</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -111,6 +135,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -131,6 +158,9 @@
 					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -139,6 +169,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -159,6 +192,9 @@
 					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -167,6 +203,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -175,6 +214,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>S</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -195,6 +237,9 @@
 					<cbc:TaxableAmount currencyID="EUR">600</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -203,6 +248,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -211,6 +259,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -229,7 +280,10 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">G</cbc:ID>
+					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -237,7 +291,10 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">50</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">G</cbc:ID>
+					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -245,6 +302,9 @@
 					<cbc:TaxableAmount currencyID="EUR">350</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -253,6 +313,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -261,6 +324,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -269,6 +335,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>S</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -287,7 +356,10 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">G</cbc:ID>
+					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -295,7 +367,10 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">G</cbc:ID>
+					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -303,6 +378,9 @@
 					<cbc:TaxableAmount currencyID="EUR">200</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -311,6 +389,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -330,7 +411,10 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">G</cbc:ID>
+					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
@@ -338,7 +422,10 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
-					<cbc:ID schemeID="UNCL5305">G</cbc:ID>
+					<cbc:ID>G</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -346,6 +433,9 @@
 					<cbc:TaxableAmount currencyID="EUR">200</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -354,6 +444,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -374,6 +467,9 @@
 					<cbc:TaxableAmount currencyID="EUR">100</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -382,6 +478,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -390,6 +489,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -410,6 +512,9 @@
 					<cbc:TaxableAmount currencyID="EUR">300</cbc:TaxableAmount>
 					<cac:TaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -418,6 +523,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -426,6 +534,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>G</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -434,6 +545,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>S</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>

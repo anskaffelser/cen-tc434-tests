@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<description>Invoice that contains an Invoice line (BG-25) where the Invoiced item VAT category code (BT-151) is “IPSI” 
-			shall contain the Seller VAT Identifier (BT-31), the Seller tax registration identifier (BT-32) and/or the Seller tax representative VAT identifier (BT-63)</description>
+		<description>Invoice that contains an Invoice line (BG-25) where the Invoiced item VAT
+			category code (BT-151) is “IPSI” shall contain the Seller VAT Identifier (BT-31), the
+			Seller tax registration identifier (BT-32) and/or the Seller tax representative VAT
+			identifier (BT-63)</description>
 		<scope>BR-IP-02</scope>
 	</assert>
 	<test id="1">
 		<assert>
-			
+
 			<success>BR-IP-02</success>
 		</assert>
 		<Invoice
@@ -24,11 +26,14 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>M</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -50,11 +55,14 @@
 					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>M</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -78,15 +86,18 @@
 					</cac:PartyTaxScheme>
 				</cac:Party> -->
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>M</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-			
+
 		</Invoice>
 	</test>
 	<test id="4">
@@ -107,19 +118,22 @@
 					</cac:PartyTaxScheme> -->
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>M</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-			
+
 		</Invoice>
 	</test>
-	
-	
+
+
 	<test id="5">
 		<assert>
 			<error>BR-IP-02</error>
@@ -138,18 +152,21 @@
 					</cac:PartyTaxScheme>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>M</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-			
+
 		</Invoice>
 	</test>
-	
+
 	<test id="6">
 		<assert>
 			<error>BR-IP-02</error>
@@ -166,15 +183,18 @@
 					</cac:TaxScheme>
 				</cac:PartyTaxScheme>-->
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>M</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-			
+
 		</Invoice>
 	</test>
 	<test id="7">
@@ -193,16 +213,19 @@
 					</cac:TaxScheme>
 				</cac:PartyTaxScheme>
 			</cac:TaxRepresentativeParty>
-			
+
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>M</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-			
+
 		</Invoice>
 	</test>
-	
+
 </testSet>

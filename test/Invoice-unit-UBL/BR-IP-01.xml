@@ -17,7 +17,7 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>M</cbc:ID>
-					</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			
@@ -25,21 +25,21 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>M</cbc:ID>
-				</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>M</cbc:ID>
-				</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
 			<cac:InvoiceLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>M</cbc:ID>
-					</cac:ClassifiedTaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
 		</Invoice>
@@ -57,7 +57,7 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>M</cbc:ID>
-					</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			
@@ -65,7 +65,7 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>M</cbc:ID>
-					</cac:ClassifiedTaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
 		</Invoice>
@@ -84,7 +84,7 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>M</cbc:ID>
-					</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			
@@ -92,7 +92,7 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>M</cbc:ID>
-				</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
 		</Invoice>
@@ -110,7 +110,7 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>M</cbc:ID>
-					</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
 			
@@ -118,7 +118,7 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>M</cbc:ID>
-				</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
 		</Invoice>
@@ -144,7 +144,7 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>M</cbc:ID>
-					</cac:ClassifiedTaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
 			
@@ -173,7 +173,7 @@
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>M</cbc:ID>
-				</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
 		</Invoice>
@@ -191,7 +191,7 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>M</cbc:ID>
-					</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal> -->
 			
@@ -199,7 +199,7 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>M</cbc:ID>
-					</cac:ClassifiedTaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
 			
@@ -218,7 +218,7 @@
 				<!-- <cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>M</cbc:ID>
-					</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>					</cac:TaxCategory>
 				</cac:TaxSubtotal> -->
 			</cac:TaxTotal>
 			
@@ -226,7 +226,7 @@
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>M</cbc:ID>
-				</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			
 		</Invoice>

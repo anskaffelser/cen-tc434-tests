@@ -18,6 +18,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
 						<cbc:TaxExemptionReason>Reverse charge</cbc:TaxExemptionReason>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -39,6 +42,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>O</cbc:ID>
 						<cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -62,6 +68,9 @@
 						<cbc:ID>O</cbc:ID>
 						<cbc:TaxExemptionReason>Not subject to VAT</cbc:TaxExemptionReason>
 						<cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -86,6 +95,9 @@
 						<cbc:ID>O</cbc:ID>
 					<!--	<cbc:TaxExemptionReason>Not subject to VAT</cbc:TaxExemptionReason>
 						<cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode> -->
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>

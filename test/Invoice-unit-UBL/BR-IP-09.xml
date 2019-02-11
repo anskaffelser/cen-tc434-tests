@@ -5,7 +5,8 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that the VAT category tax amount in VAT breakdown where VAT category code is "M" = the VAT category taxable amount multiplied by the VAT category rate  </description>
+			<description>Verify that the VAT category tax amount in VAT breakdown where VAT category
+				code is "M" = the VAT category taxable amount multiplied by the VAT category rate </description>
 			<success>BR-IP-09</success>
 		</assert>
 		<Invoice
@@ -19,6 +20,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>M</cbc:ID>
 						<cbc:Percent>15</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -27,7 +31,8 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify that the VAT category tax amount in VAT breakdown where VAT category code is "M" = the VAT category taxable amount multiplied by the VAT category rate  </description>
+			<description>Verify that the VAT category tax amount in VAT breakdown where VAT category
+				code is "M" = the VAT category taxable amount multiplied by the VAT category rate </description>
 			<success>BR-IP-09</success>
 		</assert>
 		<Invoice
@@ -41,15 +46,19 @@
 					<cac:TaxCategory>
 						<cbc:ID>M</cbc:ID>
 						<cbc:Percent>4.8</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Verify that the VAT category tax amount in VAT breakdown where VAT category code is "M" = the VAT category taxable amount multiplied by the VAT category rate  </description>
+			<description>Verify that the VAT category tax amount in VAT breakdown where VAT category
+				code is "M" = the VAT category taxable amount multiplied by the VAT category rate </description>
 			<success>BR-IP-09</success>
 		</assert>
 		<Invoice
@@ -63,6 +72,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>M</cbc:ID>
 						<cbc:Percent>13</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 				<cac:TaxSubtotal>
@@ -71,16 +83,21 @@
 					<cac:TaxCategory>
 						<cbc:ID>M</cbc:ID>
 						<cbc:Percent>4.8</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
-			<description>Trigger errror if the VAT category tax amount in VAT breakdown where VAT category code is "M" != the VAT category taxable amount multiplied by the VAT category rate  </description>
+			<description>Trigger errror if the VAT category tax amount in VAT breakdown where VAT
+				category code is "M" != the VAT category taxable amount multiplied by the VAT
+				category rate </description>
 			<error>BR-IP-09</error>
 		</assert>
 		<Invoice
@@ -94,10 +111,13 @@
 					<cac:TaxCategory>
 						<cbc:ID> M</cbc:ID>
 						<cbc:Percent>15</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 		</Invoice>
 	</test>
 

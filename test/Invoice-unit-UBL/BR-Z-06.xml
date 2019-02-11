@@ -5,7 +5,8 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that in a document level allowance where the Invoice item VAT category code is "Z" the Invoiced item VAT rate shall be 0 (zero). </description>
+			<description>Verify that in a document level allowance where the Invoice item VAT
+				category code is "Z" the Invoiced item VAT rate shall be 0 (zero). </description>
 			<success>BR-Z-06</success>
 		</assert>
 		<Invoice
@@ -17,13 +18,17 @@
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">Z</cbc:ID>
 					<cbc:Percent>0</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when a document level allowance where the Invoice item VAT category code is "Z" the Invoiced item VAT rate != 0  </description>
+			<description>Trigger error when a document level allowance where the Invoice item VAT
+				category code is "Z" the Invoiced item VAT rate != 0 </description>
 			<error>BR-Z-06</error>
 		</assert>
 		<Invoice
@@ -35,14 +40,18 @@
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">Z</cbc:ID>
 					<cbc:Percent>10</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
 	<test>
 		<assert>
-			<description>Trigger error when a document level allowance where the Invoice item VAT category code is "Z" the Invoiced item VAT rate != 0  </description>
+			<description>Trigger error when a document level allowance where the Invoice item VAT
+				category code is "Z" the Invoiced item VAT rate != 0 </description>
 			<error>BR-Z-06</error>
 		</assert>
 		<Invoice
@@ -54,12 +63,15 @@
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">Z</cbc:ID>
 					<cbc:Percent>-10</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</Invoice>
 	</test>
-	
-	
-	
+
+
+
 </testSet>

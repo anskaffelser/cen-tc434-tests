@@ -6,20 +6,27 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify that for each different value of VAT category rate where the VAT category code is "L", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “L” and the VAT rate equals the VAT category rate (BT-119).</description>
+			<description>Verify that for each different value of VAT category rate where the VAT
+				category code is "L", the VAT category taxable amount in a VAT breakdown shall equal
+				the sum of Invoice line net amounts plus the sum of document level charge amounts
+				minus the sum of document level allowance amounts where the VAT category code is “L”
+				and the VAT rate equals the VAT category rate (BT-119).</description>
 			<success>BR-IG-08</success>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cbc:Amount currencyID="NOK">100</cbc:Amount>
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">L</cbc:ID>
 					<cbc:Percent>25</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -28,6 +35,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25.0</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -37,17 +47,24 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25.00</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
-			
+
 		</Invoice>
 	</test>
-	
+
 
 	<test>
 		<assert>
-			<description>Verify that for each different value of VAT category rate where the VAT category code is "L", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “L” and the VAT rate equals the VAT category rate (BT-119).</description>
+			<description>Verify that for each different value of VAT category rate where the VAT
+				category code is "L", the VAT category taxable amount in a VAT breakdown shall equal
+				the sum of Invoice line net amounts plus the sum of document level charge amounts
+				minus the sum of document level allowance amounts where the VAT category code is “L”
+				and the VAT rate equals the VAT category rate (BT-119).</description>
 			<success>BR-IG-08</success>
 		</assert>
 		<Invoice
@@ -60,6 +77,9 @@
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">L</cbc:ID>
 					<cbc:Percent>25</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:AllowanceCharge>
@@ -68,6 +88,9 @@
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">E</cbc:ID>
 					<cbc:Percent>0</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -76,6 +99,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -85,6 +111,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25.0</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -94,6 +123,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25.00</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -102,7 +134,11 @@
 
 	<test>
 		<assert>
-			<description>Verify that for each different value of VAT category rate where the VAT category code is "L", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “L” and the VAT rate equals the VAT category rate (BT-119).</description>
+			<description>Verify that for each different value of VAT category rate where the VAT
+				category code is "L", the VAT category taxable amount in a VAT breakdown shall equal
+				the sum of Invoice line net amounts plus the sum of document level charge amounts
+				minus the sum of document level allowance amounts where the VAT category code is “L”
+				and the VAT rate equals the VAT category rate (BT-119).</description>
 			<success>BR-IG-08</success>
 		</assert>
 		<Invoice
@@ -115,6 +151,9 @@
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">L</cbc:ID>
 					<cbc:Percent>25</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:AllowanceCharge>
@@ -123,6 +162,9 @@
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">L</cbc:ID>
 					<cbc:Percent>15</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -131,6 +173,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 				<cac:TaxSubtotal>
@@ -138,6 +183,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>15.00</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -147,6 +195,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25.0</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -156,15 +207,23 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>15.0</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
-			<description>Trigger error if for each different value of VAT category rate where the VAT category code is "L", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “L” and the VAT rate does not equal the VAT category rate (BT-119).</description>
+			<description>Trigger error if for each different value of VAT category rate where the
+				VAT category code is "L", the VAT category taxable amount in a VAT breakdown shall
+				equal the sum of Invoice line net amounts plus the sum of document level charge
+				amounts minus the sum of document level allowance amounts where the VAT category
+				code is “L” and the VAT rate does not equal the VAT category rate
+				(BT-119).</description>
 			<error>BR-IG-08</error>
 		</assert>
 		<Invoice
@@ -177,6 +236,9 @@
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305">L</cbc:ID>
 					<cbc:Percent>25</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -185,6 +247,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -194,15 +259,23 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID> L</cbc:ID>
 						<cbc:Percent>25.0</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
 		</Invoice>
 	</test>
-	
+
 	<test>
 		<assert>
-			<description>Trigger error if for each different value of VAT category rate where the VAT category code is "L", the VAT category taxable amount in a VAT breakdown shall equal the sum of Invoice line net amounts plus the sum of document level charge amounts minus the sum of document level allowance amounts where the VAT category code is “L” and the VAT rate does not equal the VAT category rate (BT-119).</description>
+			<description>Trigger error if for each different value of VAT category rate where the
+				VAT category code is "L", the VAT category taxable amount in a VAT breakdown shall
+				equal the sum of Invoice line net amounts plus the sum of document level charge
+				amounts minus the sum of document level allowance amounts where the VAT category
+				code is “L” and the VAT rate does not equal the VAT category rate
+				(BT-119).</description>
 			<error>BR-IG-08</error>
 		</assert>
 		<Invoice
@@ -215,6 +288,9 @@
 				<cac:TaxCategory>
 					<cbc:ID schemeID="UNCL5305"> L </cbc:ID>
 					<cbc:Percent>25</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
 			<cac:TaxTotal>
@@ -223,6 +299,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -232,6 +311,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>L</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -241,6 +323,9 @@
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>IC</cbc:ID>
 						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>

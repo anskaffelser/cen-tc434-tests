@@ -45,6 +45,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -85,6 +88,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -123,6 +129,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -161,6 +170,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -198,6 +210,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -233,6 +248,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -275,6 +293,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -317,6 +338,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -358,6 +382,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -398,6 +425,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -437,6 +467,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -473,6 +506,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -509,6 +545,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
@@ -545,6 +584,9 @@
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>AE</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:InvoiceLine>
