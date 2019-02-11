@@ -69,8 +69,7 @@
 			</cac:AllowanceCharge>
 
 			<cac:LegalMonetaryTotal>
-				<cbc:AllowanceTotalAmount>0.00</cbc:AllowanceTotalAmount>
-				<cbc:ChargeTotalAmount>100</cbc:ChargeTotalAmount>
+				<cbc:ChargeTotalAmount>.00</cbc:ChargeTotalAmount>
 			</cac:LegalMonetaryTotal>
 
 		</Invoice>
