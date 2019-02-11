@@ -4,7 +4,7 @@
 		<description>Invoice that contains an Invoice line (BG-25) where the Invoiced item VAT
 			category code (BT-151) is “Not subject to VAT” shall not contain the Seller VAT
 			identifier (BT-31), the Seller tax representative VAT identifier (BT-63) or the Buyer
-			VAT identifier (BT-46)</description>
+			VAT identifier (BT-48)</description>
 		<scope>BR-O-02</scope>
 	</assert>
 	<test>

@@ -3,7 +3,7 @@
 	<assert>
 		<scope>BR-CO-17</scope>
 	</assert>
-	<test>
+	<test id="1">
 		<assert>
 			<description>Verify that VAT category tax amount = VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
 			<success>BR-CO-17</success>
@@ -26,7 +26,32 @@
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
-	<test>
+	
+	<test id="2">
+		<assert>
+			<description>Verify that VAT category tax amount = VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
+			<success>BR-CO-17</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxableAmount>-6491.34</cbc:TaxableAmount>
+					<cbc:TaxAmount>-1622.84</cbc:TaxAmount>
+					<cac:TaxCategory>
+						<cbc:Percent>25</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+	
+	<test id="3">
 		<assert>
 			<description>Verify that VAT category tax amount = VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
 			<success>BR-CO-17</success>
@@ -50,7 +75,7 @@
 		</Invoice>
 	</test>
 
-	<test>
+	<test id="4">
 		<assert>
 			<description>Verify that VAT category tax amount = VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
 			<success>BR-CO-17</success>
@@ -73,7 +98,7 @@
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
-	<test>
+	<test id="5">
 		<assert>
 			<description>Verify that VAT category tax amount = VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
 			<success>BR-CO-17</success>
@@ -96,7 +121,7 @@
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
-	<test>
+	<test id="6">
 		<assert>
 			<description>Verify that VAT category tax amount = VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
 			<success>BR-CO-17</success>
@@ -120,7 +145,7 @@
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
-	<test>
+	<test id="7">
 		<assert>
 			<description>Verify that VAT category tax amount = VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
 			<success>BR-CO-17</success>
@@ -143,7 +168,7 @@
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
-	<test>
+	<test id="8">
 		<assert>
 			<description>Verify that VAT category tax amount = VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
 			<success>BR-CO-17</success>
@@ -170,7 +195,7 @@
 	
 	
 
-	<test>
+	<test id="9">
 		<assert>
 			<description>Trigger error if VAT category tax amount != VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
 			<error>BR-CO-17</error>
@@ -194,7 +219,7 @@
 		</Invoice>
 	</test>
 	
-	<test>
+	<test id="10">
 		<assert>
 			<description>Trigger error if VAT category tax amount != VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
 			<error>BR-CO-17</error>
@@ -217,7 +242,7 @@
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
-	<test>
+	<test id="11">
 		<assert>
 			<description>Verify that VAT category tax amount = VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
 			<success>BR-CO-17</success>
@@ -232,6 +257,31 @@
 					<cbc:TaxAmount>-117.77</cbc:TaxAmount>
 					<cac:TaxCategory>
 						<cbc:Percent>5.5</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+		</Invoice>
+	</test>
+	
+	
+	<test id="12">
+		<assert>
+			<description>Verify that VAT category tax amount = VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
+			<success>BR-CO-17</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxableAmount>6491.34</cbc:TaxableAmount>
+					<cbc:TaxAmount>1622.84</cbc:TaxAmount>
+					<cac:TaxCategory>
+						<cbc:Percent>25</cbc:Percent>
 						<cac:TaxScheme>
 							<cbc:ID>VAT</cbc:ID>
 						</cac:TaxScheme>
