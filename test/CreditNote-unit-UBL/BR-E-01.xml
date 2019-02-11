@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<description>An CreditNote that contains a line, a document level allowance or
-			charge where the item VAT category code is “E” shall contain in
-			the VAT breakdown one VAT category code equal with
-			"E".</description>
-		
+		<description>An CreditNote that contains a line, a document level allowance or charge where
+			the item VAT category code is “E” shall contain in the VAT breakdown one VAT category
+			code equal with "E".</description>
+
 		<scope>BR-E-01</scope>
 	</assert>
 	<test id="1">
@@ -20,28 +19,40 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>E</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>E</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>E</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 			<cac:CreditNoteLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>E</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:CreditNoteLine>
@@ -59,20 +70,26 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>E</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:CreditNoteLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>E</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:CreditNoteLine>
 		</CreditNote>
 	</test>
-	
+
 	<test id="3">
 		<assert>
 			<success>BR-E-01</success>
@@ -85,17 +102,23 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>E</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>E</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</CreditNote>
 	</test>
 	<test id="4">
@@ -110,17 +133,23 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>E</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>E</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</CreditNote>
 	</test>
 	<test id="5">
@@ -138,18 +167,21 @@
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:CreditNoteLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>E</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:CreditNoteLine>
-			
+
 		</CreditNote>
 	</test>
-	
+
 	<test id="6">
 		<assert>
 			<error>BR-E-01</error>
@@ -162,25 +194,34 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>E</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>E</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>E</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</CreditNote>
 	</test>
 	<test id="7">
@@ -198,14 +239,17 @@
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>E</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</CreditNote>
 	</test>
 	<test id="8">
@@ -220,18 +264,21 @@
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>E</cbc:ID>
-					</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal> -->
-			
+
 			<cac:CreditNoteLine>
 				<cac:Item>
 					<cac:ClassifiedTaxCategory>
 						<cbc:ID>E</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:ClassifiedTaxCategory>
 				</cac:Item>
 			</cac:CreditNoteLine>
-			
+
 		</CreditNote>
 	</test>
 	<test id="9">
@@ -246,19 +293,22 @@
 				<!-- <cac:TaxSubtotal>
 					<cac:TaxCategory>
 						<cbc:ID>E</cbc:ID>
-					</cac:TaxCategory>
+<cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme>					</cac:TaxCategory>
 				</cac:TaxSubtotal> -->
 			</cac:TaxTotal>
-			
+
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 				<cac:TaxCategory>
 					<cbc:ID>E</cbc:ID>
+					<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>
+					</cac:TaxScheme>
 				</cac:TaxCategory>
 			</cac:AllowanceCharge>
-			
+
 		</CreditNote>
 	</test>
-	
-	
+
+
 </testSet>

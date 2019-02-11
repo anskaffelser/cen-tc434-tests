@@ -20,6 +20,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>S</cbc:ID>
 						<cbc:Percent>15</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -41,6 +44,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>S</cbc:ID>
 						<cbc:Percent>4.8</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -62,6 +68,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>S</cbc:ID>
 						<cbc:Percent>13</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 				<cac:TaxSubtotal>
@@ -70,6 +79,9 @@
 					<cac:TaxCategory>
 						<cbc:ID>S</cbc:ID>
 						<cbc:Percent>4.8</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
@@ -92,6 +104,9 @@
 					<cac:TaxCategory>
 						<cbc:ID> S</cbc:ID>
 						<cbc:Percent>15</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
