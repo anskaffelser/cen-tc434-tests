@@ -13,7 +13,7 @@
 		<declaration type="xml.ubl">Invoice::urn:cen.eu:en16931:2017</declaration>
 		<inherit>ubl-invoice-2.1</inherit>
 		<inherit>ehf-t10-stylesheet-2.0</inherit>
-		<file source="rules/ubl/schematron/UBL/EN16931-UBL-model.sch" path="xsl/EN16931-UBL-model.xsl" />
+		<file source="rules/ubl/schematron/ubl/EN16931-UBL-model.sch" path="xsl/EN16931-UBL-model.xsl" />
 	</configuration>
 
 
