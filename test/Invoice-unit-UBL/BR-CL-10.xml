@@ -57,7 +57,7 @@
 	
 	<test id="2">
 		<assert>
-			<error number="5">BR-CL-10</error>
+			<error number="6">BR-CL-10</error>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
