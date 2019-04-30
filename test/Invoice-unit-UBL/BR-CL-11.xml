@@ -66,7 +66,7 @@
 			<cac:AccountingCustomerParty>
 				<cac:Party>
 					<cac:PartyLegalEntity>
-						<cbc:CompanyID schemeID="0187"/>
+						<cbc:CompanyID schemeID="9901"/>
 					</cac:PartyLegalEntity>
 				</cac:Party>
 			</cac:AccountingCustomerParty>

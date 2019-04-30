@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="tc434-ubl">
 	<assert>
-		<description>Coded allowance reasons MUST belong to the UNCL 4465 code list</description>
+		<description>Coded allowance reasons MUST belong to the UNCL 5189 code list</description>
 		<scope>BR-CL-19</scope>
 	</assert>
 	<test>
@@ -16,13 +16,13 @@
 			
 			<cac:AllowanceCharge>
 				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-				<cbc:AllowanceChargeReasonCode>17</cbc:AllowanceChargeReasonCode>
+				<cbc:AllowanceChargeReasonCode>41</cbc:AllowanceChargeReasonCode>
 			</cac:AllowanceCharge>
 			
 			<cac:InvoiceLine>
 				<cac:AllowanceCharge>
 					<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-					<cbc:AllowanceChargeReasonCode>ZZZ</cbc:AllowanceChargeReasonCode>
+					<cbc:AllowanceChargeReasonCode>71</cbc:AllowanceChargeReasonCode>
 				</cac:AllowanceCharge>
 			</cac:InvoiceLine>
 		</Invoice>

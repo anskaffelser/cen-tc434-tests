@@ -231,7 +231,7 @@
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cbc:TaxableAmount>2141.19</cbc:TaxableAmount>
-					<cbc:TaxAmount>44.97</cbc:TaxAmount>
+					<cbc:TaxAmount>44.91</cbc:TaxAmount>
 					<cac:TaxCategory>
 						<cbc:Percent>2.1</cbc:Percent>
 						<cac:TaxScheme>
@@ -242,6 +242,7 @@
 			</cac:TaxTotal>
 		</Invoice>
 	</test>
+	
 	<test id="11">
 		<assert>
 			<description>Verify that VAT category tax amount = VAT category taxable amount x (VAT category rate / 100), rounded "half up" to two decimals.</description>
