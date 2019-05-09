@@ -14,10 +14,10 @@
 			<cbc:IssueDate>2017-09-12</cbc:IssueDate>
 			
 			<cac:BillingReference>
-				<cac:CreditNoteDocumentReference>
+				<cac:InvoiceDocumentReference>
 					<cbc:ID>PrecCreditNoteID</cbc:ID>
 					<cbc:IssueDate>2017-09-12</cbc:IssueDate>
-				</cac:CreditNoteDocumentReference>
+				</cac:InvoiceDocumentReference>
 			</cac:BillingReference>
 		</CreditNote>
 	</test>
@@ -31,10 +31,10 @@
 			<cbc:IssueDate>2017-09-12</cbc:IssueDate>
 			
 			<cac:BillingReference>
-				<cac:CreditNoteDocumentReference>
+				<cac:InvoiceDocumentReference>
 					<cbc:ID>PrecCreditNoteID</cbc:ID>
 					<cbc:IssueDate>2017-09-01</cbc:IssueDate>
-				</cac:CreditNoteDocumentReference>
+				</cac:InvoiceDocumentReference>
 			</cac:BillingReference>
 		</CreditNote>
 	</test>
@@ -48,10 +48,10 @@
 			<cbc:IssueDate>2017-09-12</cbc:IssueDate>
 			
 			<cac:BillingReference>
-				<cac:CreditNoteDocumentReference>
+				<cac:InvoiceDocumentReference>
 					<cbc:ID>PrecCreditNoteID</cbc:ID>
 					<cbc:IssueDate>2017-09-21</cbc:IssueDate>
-				</cac:CreditNoteDocumentReference>
+				</cac:InvoiceDocumentReference>
 			</cac:BillingReference>
 		</CreditNote>
 	</test>

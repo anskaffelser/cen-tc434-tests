@@ -85,7 +85,7 @@
 			
 			<cac:PaymentMeans>
 				<cbc:PaymentMeansCode>30</cbc:PaymentMeansCode>
-				<cbc:PaymentID>Payment1</cbc:PaymentID>
+				<cbc:PaymentID>Payment2</cbc:PaymentID>
 				<cac:PayeeFinancialAccount>
 					<cbc:ID>BBAN1234645</cbc:ID>
 					<cbc:Name>AccountName2</cbc:Name>
