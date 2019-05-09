@@ -3,7 +3,7 @@
 	<assert>
 		<scope>BR-CO-25</scope>
 	</assert>
-	<test>
+	<test number="1">
 		<assert>
 			<description>Verify that if the Amount due for payment (BT-115) is positive, either the Payment due date (BT-9) or the Payment terms (BT-20) shall be present.
 			</description>
@@ -25,7 +25,7 @@
 
 		</Invoice>
 	</test>
-	<test>
+	<test number="2">
 		<assert>
 			<description>Verify that if the Amount due for payment (BT-115) is positive, either the Payment due date (BT-9) or the Payment terms (BT-20) shall be present.
 			</description>
@@ -48,7 +48,7 @@
 		</Invoice>
 	</test>
 
-	<test>
+	<test number="3">
 		<assert>
 			<description>Verify that if the Amount due for payment (BT-115) is positive, either the Payment due date (BT-9) or the Payment terms (BT-20) shall be present.
 			</description>
@@ -70,7 +70,7 @@
 			
 		</Invoice>
 	</test>
-	<test>
+	<test number="4">
 		<assert>
 			<description>Verify that if the Amount due for payment (BT-115) is positive, either the Payment due date (BT-9) or the Payment terms (BT-20) shall be present.
 			</description>
@@ -92,7 +92,7 @@
 			
 		</Invoice>
 	</test>
-	<test>
+	<test number="5">
 		<assert>
 			<description>Verify that if the Amount due for payment (BT-115) is positive, either the Payment due date (BT-9) or the Payment terms (BT-20) shall be present.
 			</description>
@@ -114,7 +114,7 @@
 			
 		</Invoice>
 	</test>
-	<test>
+	<test number="6">
 		<assert>
 			<description>Trigger error if the Amount due for payment (BT-115) is positive, and neither the Payment due date (BT-9) or the Payment terms (BT-20) are present.
 			</description>
@@ -136,6 +136,48 @@
 			
 		</Invoice>
 	</test>
-
+	
+	<test number="7">
+		<assert>
+			
+			<success>BR-CO-25</success>
+		</assert>
+		<CreditNote
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
+			
+			<!--
+			<cac:PaymentMeans>
+				<cbc:PaymentDueDate>2019-07-01</cbc:PaymentDueDate>
+			</cac:PaymentMeans>-->
+			
+			<cac:LegalMonetaryTotal>
+				<cbc:PayableAmount currencyID="NOK">1000.00</cbc:PayableAmount>
+			</cac:LegalMonetaryTotal>
+			
+		</CreditNote>
+	</test>
+	<test number="8">
+		<assert>
+			
+			<success>BR-CO-25</success>
+		</assert>
+		<CreditNote
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
+			
+			
+			<cac:PaymentMeans>
+				<cbc:PaymentDueDate>2019-07-01</cbc:PaymentDueDate>
+			</cac:PaymentMeans>
+			
+			<cac:LegalMonetaryTotal>
+				<cbc:PayableAmount currencyID="NOK">1000.00</cbc:PayableAmount>
+			</cac:LegalMonetaryTotal>
+			
+		</CreditNote>
+	</test>
 
 </testSet>
