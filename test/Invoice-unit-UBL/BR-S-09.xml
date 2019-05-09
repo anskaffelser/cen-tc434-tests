@@ -70,6 +70,60 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
+					<cbc:TaxAmount>-592.45</cbc:TaxAmount>
+					<cbc:TaxableAmount>-12342.61</cbc:TaxableAmount>
+					<cac:TaxCategory>
+						<cbc:ID>S</cbc:ID>
+						<cbc:Percent>4.8</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Verify that the VAT category tax amount in VAT breakdown where VAT category
+				code is "Standard rated" = the VAT category taxable amount multiplied by the VAT
+				category rate </description>
+			<success>BR-S-09</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
+					<cbc:TaxAmount>-1234.14</cbc:TaxAmount>
+					<cbc:TaxableAmount>-6170.72</cbc:TaxableAmount>
+					<cac:TaxCategory>
+						<cbc:ID>S</cbc:ID>
+						<cbc:Percent>20</cbc:Percent>
+						<cac:TaxScheme>
+							<cbc:ID>VAT</cbc:ID>
+						</cac:TaxScheme>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<description>Verify that the VAT category tax amount in VAT breakdown where VAT category
+				code is "Standard rated" = the VAT category taxable amount multiplied by the VAT
+				category rate </description>
+			<success>BR-S-09</success>
+		</assert>
+		<Invoice
+			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			<cac:TaxTotal>
+				<cac:TaxSubtotal>
 					<cbc:TaxAmount>130</cbc:TaxAmount>
 					<cbc:TaxableAmount>1000</cbc:TaxableAmount>
 					<cac:TaxCategory>
