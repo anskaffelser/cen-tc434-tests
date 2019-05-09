@@ -63,9 +63,9 @@
 		</Invoice>
 	</test>
 	
-	<test id="2">
+	<test id="3">
 		<assert>
-			<error>UBL-SR-44</error>
+			<warning>UBL-SR-44</warning>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
