@@ -8,10 +8,10 @@
 		<assert>
 			<success>UBL-SR-42</success>
 		</assert>
-		<Invoice
+		<CreditNote
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 
 			<cac:AccountingSupplierParty>
 				<cac:Party>
@@ -31,17 +31,17 @@
 			</cac:AccountingSupplierParty>
 
 
-		</Invoice>
+		</CreditNote>
 	</test>
 	
 	<test id="2">
 		<assert>
 			<error>UBL-SR-42</error>
 		</assert>
-		<Invoice
+		<CreditNote
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 			
 			<cac:AccountingSupplierParty>
 				<cac:Party>
@@ -69,7 +69,7 @@
 				</cac:Party>
 			</cac:AccountingSupplierParty>
 			
-		</Invoice>
+		</CreditNote>
 	</test>
 	
 	
