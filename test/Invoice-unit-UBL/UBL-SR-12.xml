@@ -36,7 +36,7 @@
 	
 	<test id="2">
 		<assert>
-			<error>UBL-SR-12</error>
+			<warning>UBL-SR-12</warning>
 		</assert>
 		<Invoice
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
