@@ -63,7 +63,7 @@
 		</Invoice>
 	</test>
 	
-	<test id="3">
+	<test id="4">
 		<assert>
 			<warning>UBL-SR-47</warning>
 		</assert>

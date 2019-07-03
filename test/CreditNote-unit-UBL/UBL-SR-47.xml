@@ -12,7 +12,6 @@
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
-
 			<cac:PaymentMeans>
 				<cbc:PaymentMeansCode name="Credit transfer">30</cbc:PaymentMeansCode>
 			</cac:PaymentMeans>
@@ -63,7 +62,7 @@
 		</CreditNote>
 	</test>
 	
-	<test id="3">
+	<test id="4">
 		<assert>
 			<warning>UBL-SR-47</warning>
 		</assert>
