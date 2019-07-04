@@ -100,7 +100,7 @@
 	
 	<test id="4">
 		<assert>
-			<warning>UBL-SR-44</warning>
+			<success>UBL-SR-44</success>
 		</assert>
 		<CreditNote
 			xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
