@@ -88,7 +88,7 @@
 					<cbc:ID schemeID="0213"/>
 				</cac:PartyIdentification>
 				<cac:PartyIdentification>
-					<cbc:ID schemeID="0201"/>
+					<cbc:ID schemeID="0210"/>
 				</cac:PartyIdentification>
 			</cac:PayeeParty>
 			
